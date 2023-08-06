@@ -1,6 +1,5 @@
 #include "login.h"
 #include "adminlogin.h"
-#include "adminhome.h"
 #include "./ui_login.h"
 #include <QDebug>
 #include <QMessageBox>

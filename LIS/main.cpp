@@ -1,5 +1,7 @@
 #include "login.h"
 #include "adminlogin.h"
+#include "adminhome.h"
+#include "catalogue.h"
 #include <Qfile>
 
 #include <QApplication>
