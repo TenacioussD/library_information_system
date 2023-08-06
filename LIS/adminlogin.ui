@@ -46,8 +46,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">background: white;
-border-radius: 20px;
-box-shadow: 10px 10px ;</string>
+border-radius: 20px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>

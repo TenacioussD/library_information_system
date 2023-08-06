@@ -65,28 +65,6 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="logout">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>600</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font-family: Baloo 2;
-background: white;
-font-size: 10px;
-border-radis: 5px;</string>
-     </property>
-     <property name="text">
-      <string>Logout</string>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-    </widget>
     <widget class="QFrame" name="menu">
      <property name="geometry">
       <rect>
@@ -385,13 +363,29 @@ font-size: 15px;</string>
       </widget>
      </widget>
     </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>610</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Logout</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="heading">
     <property name="geometry">
      <rect>
       <x>300</x>
       <y>20</y>
-      <width>631</width>
+      <width>641</width>
       <height>121</height>
      </rect>
     </property>
@@ -406,7 +400,7 @@ font-size: 15px;</string>
       <rect>
        <x>0</x>
        <y>20</y>
-       <width>631</width>
+       <width>641</width>
        <height>91</height>
       </rect>
      </property>
@@ -531,9 +525,9 @@ border-radius: 10px;</string>
     <widget class="QPlainTextEdit" name="plainTextEdit_5">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>80</x>
        <y>20</y>
-       <width>141</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -551,7 +545,7 @@ font-size: 12pt;</string>
     <widget class="QPlainTextEdit" name="plainTextEdit">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>80</x>
        <y>40</y>
        <width>61</width>
        <height>31</height>
@@ -574,9 +568,9 @@ font-size: 17px;</string>
     <property name="geometry">
      <rect>
       <x>520</x>
-      <y>180</y>
-      <width>191</width>
-      <height>111</height>
+      <y>170</y>
+      <width>201</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -590,12 +584,12 @@ font-size: 17px;</string>
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>191</width>
-       <height>91</height>
+       <width>201</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background: rgb(235, 235, 235);
+      <string notr="true">background: rgb(220, 245, 255);
 border-radius: 10px;</string>
      </property>
      <property name="frameShadow">
@@ -605,14 +599,83 @@ border-radius: 10px;</string>
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resources.qrc">:/images/Icons/book1.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::NoTextInteraction</set>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_10">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-size: 12pt;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>Books Available</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_11">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-weight: bold;
+font-size: 17px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>1,950</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_4">
     <property name="geometry">
      <rect>
       <x>740</x>
-      <y>180</y>
-      <width>191</width>
-      <height>111</height>
+      <y>170</y>
+      <width>201</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -626,8 +689,8 @@ border-radius: 10px;</string>
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>191</width>
-       <height>91</height>
+       <width>201</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -639,6 +702,170 @@ border-radius: 10px;</string>
      </property>
      <property name="plainText">
       <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resources.qrc">:/images/Icons/warning.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::NoTextInteraction</set>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_12">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>20</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-size: 12pt;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>Overdue Books</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_13">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>21</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-weight: bold;
+font-size: 17px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>5</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_5">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>300</y>
+      <width>421</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>421</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resources.qrc">:/images/library.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_6">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>290</y>
+      <width>201</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPlainTextEdit" name="plainTextEdit_14">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>201</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(220, 245, 255);
+border-radius: 10px;</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_15">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-size: 11pt;
+font-weight: bold;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>Returns</string>
      </property>
     </widget>
    </widget>

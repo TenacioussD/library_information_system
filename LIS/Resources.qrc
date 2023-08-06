@@ -9,5 +9,6 @@
         <file>images/Icons/book1.png</file>
         <file>images/Icons/users.png</file>
         <file>images/Icons/warning.png</file>
+        <file>images/library.jpg</file>
     </qresource>
 </RCC>
