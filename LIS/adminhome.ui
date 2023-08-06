@@ -841,7 +841,7 @@ font-size: 17px;</string>
 border-radius: 10px;</string>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Plain</enum>
      </property>
      <property name="plainText">
       <string/>
@@ -850,15 +850,15 @@ border-radius: 10px;</string>
     <widget class="QPlainTextEdit" name="plainTextEdit_15">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>70</x>
        <y>20</y>
-       <width>71</width>
+       <width>61</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background: transparent;
-font-size: 11pt;
+font-size: 10pt;
 font-weight: bold;</string>
      </property>
      <property name="frameShape">
@@ -868,6 +868,198 @@ font-weight: bold;</string>
       <string>Returns</string>
      </property>
     </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_19">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+font-size: 10pt;
+font-weight: bold;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="plainText">
+      <string>Overdue</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+background: rgb(220, 245, 255);
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="plainText">
+      <string>Different Winter  |  Mia Jackson</string>
+     </property>
+    </widget>
+    <zorder>plainTextEdit_14</zorder>
+    <zorder>plainTextEdit_15</zorder>
+    <zorder>plainTextEdit_19</zorder>
+    <zorder>plainTextEdit_20</zorder>
+    <zorder>plainTextEdit_21</zorder>
+    <zorder>plainTextEdit_22</zorder>
+    <zorder>plainTextEdit_16</zorder>
+    <zorder>plainTextEdit_17</zorder>
+    <zorder>plainTextEdit_18</zorder>
    </widget>
   </widget>
  </widget>
