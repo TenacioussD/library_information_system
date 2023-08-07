@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         adminlogin.h adminlogin.cpp adminlogin.ui
         adminhome.h adminhome.cpp adminhome.ui
         catalogue.h catalogue.cpp catalogue.ui
+        memberlogin.h memberlogin.cpp memberlogin.ui
+        memberhome.h memberhome.cpp memberhome.ui
 
     )
 # Define target properties for Android with Qt 6 as:

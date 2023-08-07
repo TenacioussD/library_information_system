@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "adminlogin.h"
+#include "memberlogin.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Login; }
@@ -20,9 +21,12 @@ public:
 private slots:
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::Login *ui;
     AdminLogin *adminlogin;          // points to admin login page
+    memberLogin *memberlogin;        // points to member login page
 
 };
 
