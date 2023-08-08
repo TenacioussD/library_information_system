@@ -1,6 +1,6 @@
 #include "adminlogin.h"
 #include "ui_adminlogin.h"
-#include "adminhome.h"
+
 #include <QMessageBox>
 
 AdminLogin::AdminLogin(QWidget *parent) :
@@ -15,24 +15,24 @@ AdminLogin::~AdminLogin()
     delete ui;
 }
 
-void AdminLogin::on_pushButton_login_clicked()             // Login button
+void AdminLogin::on_pushButton_password_clicked()         // Forgot password button
 {
-    QString username = ui->lineEdit_username->text();
-    QString password = ui->lineEdit_password->text();
-
-    if(username == "admin" && password == "admin") {       // When login button clicked either display next page or error message
-        hide();
-        adminhome =new adminHome (this);                   // Opens admin dashboard
-        adminhome->show();
-    }
-    else {
-        QMessageBox::warning(this, "Login", "Incorrect username and password");
-    }
+     QMessageBox::information(this, "Change Password", "Please contact another administrator to change your password", QMessageBox::Ok);
 }
 
 
-void AdminLogin::on_pushButton_admin_clicked()             // Password button clicked
+void AdminLogin::on_pushButton_login_clicked()            // Login button clicked
 {
-    QMessageBox::information(this, "Change Password", "Please contact another administrator to change your password", QMessageBox::Ok);
+     QString username = ui->lineEdit_username->text();
+     QString password = ui->lineEdit_password->text();
+
+     if(username == "admin" && password == "admin") {       // When login button clicked either display next page or error message
+         hide();
+         adminhome =new AdminHome (this);                   // Opens admin dashboard
+         adminhome->show();
+     }
+     else {
+         QMessageBox::warning(this, "Login", "Incorrect username and password");
+     }
 }
 

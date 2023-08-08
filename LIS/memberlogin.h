@@ -5,26 +5,25 @@
 #include "memberhome.h"
 
 namespace Ui {
-class memberLogin;
+class MemberLogin;
 }
 
-class memberLogin : public QMainWindow
+class MemberLogin : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit memberLogin(QWidget *parent = nullptr);
-    ~memberLogin();
+    explicit MemberLogin(QWidget *parent = nullptr);
+    ~MemberLogin();
 
 private slots:
-
     void on_pushButton_password_clicked();
 
     void on_pushButton_login_clicked();
 
 private:
-    Ui::memberLogin *ui;
-    memberHome *memberhome;                 // pointer to the member home page
+    Ui::MemberLogin *ui;
+    MemberHome *memberhome;
 };
 
 #endif // MEMBERLOGIN_H

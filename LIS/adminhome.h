@@ -1,28 +1,22 @@
 #ifndef ADMINHOME_H
 #define ADMINHOME_H
 
-#include <QDialog>
-#include "catalogue.h"
+#include <QMainWindow>
 
 namespace Ui {
-class adminHome;
+class AdminHome;
 }
 
-class adminHome : public QDialog
+class AdminHome : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit adminHome(QWidget *parent = nullptr);
-    ~adminHome();
-
-
-private slots:
-    void on_catalogue_clicked();
+    explicit AdminHome(QWidget *parent = nullptr);
+    ~AdminHome();
 
 private:
-    Ui::adminHome *ui;
-    catalogue *cataloguE;                 // pointer to the catalogue page
+    Ui::AdminHome *ui;
 };
 
 #endif // ADMINHOME_H

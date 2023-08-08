@@ -17,13 +17,13 @@ public:
     ~AdminLogin();
 
 private slots:
-    void on_pushButton_login_clicked();
+    void on_pushButton_password_clicked();
 
-    void on_pushButton_admin_clicked();
+    void on_pushButton_login_clicked();
 
 private:
     Ui::AdminLogin *ui;
-    adminHome *adminhome;                 // pointer to the admin home page
+    AdminHome *adminhome;
 };
 
 #endif // ADMINLOGIN_H

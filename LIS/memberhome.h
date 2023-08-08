@@ -4,19 +4,19 @@
 #include <QMainWindow>
 
 namespace Ui {
-class memberHome;
+class MemberHome;
 }
 
-class memberHome : public QMainWindow
+class MemberHome : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit memberHome(QWidget *parent = nullptr);
-    ~memberHome();
+    explicit MemberHome(QWidget *parent = nullptr);
+    ~MemberHome();
 
 private:
-    Ui::memberHome *ui;
+    Ui::MemberHome *ui;
 };
 
 #endif // MEMBERHOME_H
