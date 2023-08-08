@@ -2,6 +2,7 @@
 #include "adminlogin.h"
 #include "adminhome.h"
 #include "memberhome.h"
+#include "admincatalogue.h"
 
 #include <QMessageBox>
 
