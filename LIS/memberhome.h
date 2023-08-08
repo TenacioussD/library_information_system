@@ -16,6 +16,9 @@ public:
     explicit MemberHome(QWidget *parent = nullptr);
     ~MemberHome();
 
+private slots:
+    void on_logout_clicked();
+
 private:
     Ui::MemberHome *ui;
 };
