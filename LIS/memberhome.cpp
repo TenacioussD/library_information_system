@@ -1,14 +1,14 @@
 #include "memberhome.h"
 #include "ui_memberhome.h"
 
-memberHome::memberHome(QWidget *parent) :
+MemberHome::MemberHome(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::memberHome)
+    ui(new Ui::MemberHome)
 {
     ui->setupUi(this);
 }
 
-memberHome::~memberHome()
+MemberHome::~MemberHome()
 {
     delete ui;
 }

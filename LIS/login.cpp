@@ -1,9 +1,7 @@
 #include "login.h"
+#include "ui_login.h"
 #include "adminlogin.h"
-#include "memberlogin.h"
-#include "./ui_login.h"
-#include <QDebug>
-#include <QMessageBox>
+//#include "memberlogin.h"
 
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
@@ -18,26 +16,18 @@ Login::~Login()
 }
 
 
-/*void Login::on_pushButton_clicked()
-{
-    qDebug() << "User clicked on a button";
-    QMessageBox::information(this, "Message", "You clicked on the button", QMessageBox::Ok);
-}*/
-
-
-
-void Login::on_pushButton_2_clicked()  // to show the admin login page (modaless approach) opens in new window
+void Login::on_pushButton_2_clicked()       // Admin login
 {
     hide();
-    adminlogin =new AdminLogin (this);  // open admin login page
+    adminlogin =new AdminLogin (this);      // Opens admin login page
     adminlogin->show();
 }
 
 
-void Login::on_pushButton_3_clicked()   // To show member login page
+void Login::on_pushButton_3_clicked()
 {
     hide();
-    memberlogin =new memberLogin (this);  // open member login page
+    memberlogin =new MemberLogin (this);      // Opens member login page
     memberlogin->show();
 }
 

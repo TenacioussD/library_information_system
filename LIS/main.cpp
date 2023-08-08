@@ -1,8 +1,9 @@
 #include "login.h"
 #include "adminlogin.h"
 #include "adminhome.h"
-#include "catalogue.h"
-#include <Qfile>
+#include "memberhome.h"
+
+#include <QMessageBox>
 
 #include <QApplication>
 

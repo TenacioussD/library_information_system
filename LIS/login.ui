@@ -6,15 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
-    <height>675</height>
+    <width>1037</width>
+    <height>683</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Login</string>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="background">
@@ -22,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1121</width>
+      <width>1041</width>
       <height>681</height>
      </rect>
     </property>
@@ -41,8 +38,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>160</y>
+       <x>210</x>
+       <y>150</y>
        <width>601</width>
        <height>351</height>
       </rect>

@@ -17,7 +17,6 @@ public:
     Login(QWidget *parent = nullptr);
     ~Login();
 
-
 private slots:
     void on_pushButton_2_clicked();
 
@@ -26,8 +25,8 @@ private slots:
 private:
     Ui::Login *ui;
     AdminLogin *adminlogin;          // points to admin login page
-    memberLogin *memberlogin;        // points to member login page
-
+    MemberLogin *memberlogin;        // points to member login page
 };
+
 
 #endif // LOGIN_H
