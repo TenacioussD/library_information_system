@@ -210,6 +210,9 @@ border-width: 5px;
 border-radius: 5px;
 background: rgb(229, 229, 229);</string>
        </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
       </widget>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
