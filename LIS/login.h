@@ -2,6 +2,7 @@
 #define LOGIN_H
 
 #include <QMainWindow>
+#include <QObject>
 #include "adminlogin.h"
 #include "memberlogin.h"
 
