@@ -26,3 +26,11 @@ void AdminHome::on_pushButton_clicked()      // Confirmation of logout
     }
 }
 
+
+void AdminHome::on_catalogue_clicked()
+{
+    hide();
+    admincatalogue =new AdminCatalogue (this);                   // Opens admin catalogue
+    admincatalogue->show();
+}
+

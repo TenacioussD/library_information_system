@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include "admincatalogue.h"
 
 namespace Ui {
 class AdminHome;
@@ -19,8 +20,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_catalogue_clicked();
+
 private:
     Ui::AdminHome *ui;
+    AdminCatalogue *admincatalogue;
 };
 
 #endif // ADMINHOME_H
