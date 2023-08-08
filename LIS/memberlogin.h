@@ -2,6 +2,7 @@
 #define MEMBERLOGIN_H
 
 #include <QMainWindow>
+#include <QObject>
 #include "memberhome.h"
 
 namespace Ui {

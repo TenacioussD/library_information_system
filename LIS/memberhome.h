@@ -2,6 +2,7 @@
 #define MEMBERHOME_H
 
 #include <QMainWindow>
+#include <QObject>
 
 namespace Ui {
 class MemberHome;

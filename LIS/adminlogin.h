@@ -2,6 +2,7 @@
 #define ADMINLOGIN_H
 
 #include <QMainWindow>
+#include <QObject>
 #include "adminhome.h"
 
 namespace Ui {
