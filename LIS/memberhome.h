@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include "membercatalogue.h"
 
 namespace Ui {
 class MemberHome;
@@ -19,8 +20,11 @@ public:
 private slots:
     void on_logout_clicked();
 
+    void on_catalogue_clicked();
+
 private:
     Ui::MemberHome *ui;
+    MemberCatalogue *membercatalogue;
 };
 
 #endif // MEMBERHOME_H

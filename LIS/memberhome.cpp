@@ -24,3 +24,11 @@ void MemberHome::on_logout_clicked()              // Confirmation of logout
     }
 }
 
+
+void MemberHome::on_catalogue_clicked()
+{
+    hide();
+    membercatalogue =new MemberCatalogue (this);                   // Opens admin catalogue
+    membercatalogue->show();
+}
+

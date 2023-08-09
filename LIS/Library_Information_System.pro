@@ -14,6 +14,7 @@ SOURCES += \
     adminlogin.cpp \
     main.cpp \
     login.cpp \
+    membercatalogue.cpp \
     memberhome.cpp \
     memberlogin.cpp
 
@@ -22,6 +23,7 @@ HEADERS += \
     adminhome.h \
     adminlogin.h \
     login.h \
+    membercatalogue.h \
     memberhome.h \
     memberlogin.h
 
@@ -30,6 +32,7 @@ FORMS += \
     adminhome.ui \
     adminlogin.ui \
     login.ui \
+    membercatalogue.ui \
     memberhome.ui \
     memberlogin.ui
 
@@ -39,6 +42,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    images/Icons/back.png \
     images/library.jpg \
     images/logo - Copy.png \
     images/logo - Copy.png \

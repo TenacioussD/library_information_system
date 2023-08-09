@@ -66,11 +66,27 @@
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>610</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
      <widget class="QFrame" name="menu">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>180</y>
+        <y>170</y>
         <width>221</width>
         <height>381</height>
        </rect>
@@ -132,12 +148,13 @@ font-size: 15px;
         <rect>
          <x>40</x>
          <y>70</y>
-         <width>161</width>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background: white;</string>
+        <string notr="true">background: white;
+border-radius: 5px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -148,7 +165,7 @@ font-size: 15px;
        <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -167,7 +184,7 @@ font-size: 15px;
        <widget class="QPushButton" name="catalogue">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
           <width>71</width>
           <height>31</height>
@@ -175,7 +192,7 @@ font-size: 15px;
         </property>
         <property name="styleSheet">
          <string notr="true">font-family: Baloo 2;
-background: white;
+background: transparent;
 font-size: 15px;
 border: none;</string>
         </property>
@@ -192,7 +209,7 @@ border: none;</string>
         <rect>
          <x>40</x>
          <y>130</y>
-         <width>161</width>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -208,7 +225,7 @@ border: none;</string>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -227,8 +244,8 @@ border: none;</string>
        <widget class="QPushButton" name="manageBooks">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>9</y>
+          <x>50</x>
+          <y>10</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -249,7 +266,7 @@ border: none;</string>
         <rect>
          <x>40</x>
          <y>190</y>
-         <width>161</width>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -265,8 +282,8 @@ border: none;</string>
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
-          <x>-2</x>
-          <y>9</y>
+          <x>10</x>
+          <y>10</y>
           <width>31</width>
           <height>31</height>
          </rect>
@@ -284,7 +301,7 @@ border: none;</string>
        <widget class="QPushButton" name="status">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
           <width>81</width>
           <height>31</height>
@@ -306,7 +323,7 @@ border: none;</string>
         <rect>
          <x>40</x>
          <y>250</y>
-         <width>161</width>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -322,7 +339,7 @@ border: none;</string>
        <widget class="QLabel" name="label_8">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -341,7 +358,7 @@ border: none;</string>
        <widget class="QPushButton" name="membership">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
           <width>81</width>
           <height>31</height>
@@ -358,22 +375,6 @@ border: none;</string>
         </property>
        </widget>
       </widget>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>610</y>
-        <width>75</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Logout</string>
-      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="heading">

@@ -28,5 +28,6 @@
         <file>images/book-covers/book15.png</file>
         <file>images/book-covers/book16.png</file>
         <file>images/book-covers/reader.png</file>
+        <file>images/Icons/back.png</file>
     </qresource>
 </RCC>

@@ -15,6 +15,9 @@ public:
     explicit AdminCatalogue(QWidget *parent = nullptr);
     ~AdminCatalogue();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::AdminCatalogue *ui;
 };
