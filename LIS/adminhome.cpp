@@ -33,4 +33,3 @@ void AdminHome::on_catalogue_clicked()
     admincatalogue =new AdminCatalogue (this);                   // Opens admin catalogue
     admincatalogue->show();
 }
-
