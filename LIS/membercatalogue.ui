@@ -245,10 +245,16 @@ border: none;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font-family: Baloo 2;
-background: white;
+           <string notr="true">QPushButton {
+font-family: Baloo 2;
+background: transparent;
 font-size: 15px;
-border: none;</string>
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
           </property>
           <property name="text">
            <string>Overdue</string>
@@ -302,10 +308,16 @@ border: none;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font-family: Baloo 2;
-background: white;
+           <string notr="true">QPushButton {
+font-family: Baloo 2;
+background: transparent;
 font-size: 15px;
-border: none;</string>
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
           </property>
           <property name="text">
            <string>Pre-Booked</string>
@@ -359,10 +371,16 @@ border: none;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font-family: Baloo 2;
-background: white;
+           <string notr="true">QPushButton {
+font-family: Baloo 2;
+background: transparent;
 font-size: 15px;
-border: none;</string>
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
           </property>
           <property name="text">
            <string>Membership</string>
