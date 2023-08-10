@@ -3,6 +3,8 @@
 #include "adminhome.h"
 #include "memberhome.h"
 #include "admincatalogue.h"
+#include "membercatalogue.h"
+#include "adminmanagebooks.h"
 
 #include <QMessageBox>
 

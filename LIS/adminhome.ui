@@ -66,12 +66,30 @@
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>610</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
      <widget class="QFrame" name="menu">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>20</x>
         <y>180</y>
-        <width>221</width>
+        <width>191</width>
         <height>381</height>
        </rect>
       </property>
@@ -84,10 +102,10 @@
       <widget class="QListWidget" name="listWidget_2">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>0</x>
          <y>10</y>
          <width>191</width>
-         <height>351</height>
+         <height>341</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -101,8 +119,8 @@ border-radius: 5px;</string>
       <widget class="QPlainTextEdit" name="plainTextEdit_6">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>20</y>
+         <x>50</x>
+         <y>30</y>
          <width>101</width>
          <height>31</height>
         </rect>
@@ -130,14 +148,15 @@ font-size: 15px;
       <widget class="QFrame" name="catalogue_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>70</y>
-         <width>161</width>
+         <x>20</x>
+         <y>80</y>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background: white;</string>
+        <string notr="true">background: white;
+border-radius: 5px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -148,7 +167,7 @@ font-size: 15px;
        <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -167,17 +186,22 @@ font-size: 15px;
        <widget class="QPushButton" name="catalogue">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
           <width>71</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-background: white;
-font-size: 15px;
-border: none;</string>
+         <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
         </property>
         <property name="text">
          <string>Catalogue</string>
@@ -190,9 +214,9 @@ border: none;</string>
       <widget class="QFrame" name="manageBooks_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>130</y>
-         <width>161</width>
+         <x>20</x>
+         <y>140</y>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -208,7 +232,7 @@ border: none;</string>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -227,17 +251,22 @@ border: none;</string>
        <widget class="QPushButton" name="manageBooks">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>9</y>
-          <width>101</width>
+          <x>50</x>
+          <y>10</y>
+          <width>91</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-background: white;
-font-size: 15px;
-border: none;</string>
+         <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
         </property>
         <property name="text">
          <string>Manage Books</string>
@@ -247,9 +276,9 @@ border: none;</string>
       <widget class="QFrame" name="status_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>190</y>
-         <width>161</width>
+         <x>20</x>
+         <y>200</y>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -265,8 +294,8 @@ border: none;</string>
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
-          <x>-2</x>
-          <y>9</y>
+          <x>10</x>
+          <y>10</y>
           <width>31</width>
           <height>31</height>
          </rect>
@@ -284,17 +313,22 @@ border: none;</string>
        <widget class="QPushButton" name="status">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
-          <width>81</width>
+          <width>71</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-background: white;
-font-size: 15px;
-border: none;</string>
+         <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
         </property>
         <property name="text">
          <string>View Status</string>
@@ -304,9 +338,9 @@ border: none;</string>
       <widget class="QFrame" name="membership_1">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>250</y>
-         <width>161</width>
+         <x>20</x>
+         <y>260</y>
+         <width>151</width>
          <height>51</height>
         </rect>
        </property>
@@ -322,7 +356,7 @@ border: none;</string>
        <widget class="QLabel" name="label_8">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>31</width>
           <height>31</height>
@@ -341,39 +375,28 @@ border: none;</string>
        <widget class="QPushButton" name="membership">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>10</y>
           <width>81</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-background: white;
-font-size: 15px;
-border: none;</string>
+         <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
         </property>
         <property name="text">
          <string>Membership</string>
         </property>
        </widget>
       </widget>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>610</y>
-        <width>75</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Logout</string>
-      </property>
      </widget>
     </widget>
     <widget class="QFrame" name="heading">
