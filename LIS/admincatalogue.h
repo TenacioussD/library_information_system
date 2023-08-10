@@ -2,6 +2,8 @@
 #define ADMINCATALOGUE_H
 
 #include <QMainWindow>
+#include "adminhome.h"
+class AdminHome;
 
 namespace Ui {
 class AdminCatalogue;
@@ -16,10 +18,14 @@ public:
     ~AdminCatalogue();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_back_clicked();
+
+    void on_logout_clicked();
 
 private:
     Ui::AdminCatalogue *ui;
+    AdminHome *adminhome;
 };
 
 #endif // ADMINCATALOGUE_H

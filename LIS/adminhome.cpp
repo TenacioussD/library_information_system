@@ -1,5 +1,10 @@
 #include "adminhome.h"
 #include "ui_adminhome.h"
+#include "admincatalogue.h"
+#include "adminmanagebooks.h"
+
+//#include "adminstatus.h"
+//#include "adminmembership.h"
 
 #include <QMessageBox>
 
@@ -15,8 +20,6 @@ AdminHome::~AdminHome()
     delete ui;
 }
 
-
-
 void AdminHome::on_pushButton_clicked()      // Confirmation of logout
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
@@ -26,10 +29,18 @@ void AdminHome::on_pushButton_clicked()      // Confirmation of logout
     }
 }
 
-
 void AdminHome::on_catalogue_clicked()
 {
     hide();
-    admincatalogue =new AdminCatalogue (this);                   // Opens admin catalogue
+    admincatalogue =new class AdminCatalogue;                       // Opens admin catalogue
     admincatalogue->show();
 }
+
+
+void AdminHome::on_manageBooks_clicked()
+{
+    hide();
+    adminmanagebooks =new class AdminManageBooks;                   // Opens book management page using pointer in header file
+    adminmanagebooks->show();
+}
+

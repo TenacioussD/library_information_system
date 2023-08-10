@@ -63,9 +63,9 @@
        <widget class="QFrame" name="menu">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>20</x>
           <y>180</y>
-          <width>221</width>
+          <width>191</width>
           <height>381</height>
          </rect>
         </property>
@@ -78,10 +78,10 @@
         <widget class="QListWidget" name="listWidget_2">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>0</x>
            <y>10</y>
            <width>191</width>
-           <height>351</height>
+           <height>341</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -95,8 +95,8 @@ border-radius: 5px;</string>
         <widget class="QPlainTextEdit" name="plainTextEdit_6">
          <property name="geometry">
           <rect>
-           <x>70</x>
-           <y>20</y>
+           <x>50</x>
+           <y>30</y>
            <width>101</width>
            <height>31</height>
           </rect>
@@ -124,8 +124,8 @@ font-size: 15px;
         <widget class="QFrame" name="catalogue_1">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>70</y>
+           <x>20</x>
+           <y>80</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -169,9 +169,8 @@ border-radius: 5px;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font-family: Baloo 2;
-background: transparent;
-font-size: 15px;
+           <string notr="true">background: transparent;
+font-size: 14px;
 border: none;</string>
           </property>
           <property name="text">
@@ -185,8 +184,8 @@ border: none;</string>
         <widget class="QFrame" name="manageBooks_1">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>130</y>
+           <x>20</x>
+           <y>140</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -224,15 +223,14 @@ border: none;</string>
            <rect>
             <x>50</x>
             <y>10</y>
-            <width>101</width>
+            <width>91</width>
             <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -248,8 +246,8 @@ QPushButton:hover {
         <widget class="QFrame" name="status_1">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>190</y>
+           <x>20</x>
+           <y>200</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -287,15 +285,14 @@ QPushButton:hover {
            <rect>
             <x>50</x>
             <y>10</y>
-            <width>81</width>
+            <width>71</width>
             <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -311,8 +308,8 @@ QPushButton:hover {
         <widget class="QFrame" name="membership_1">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>250</y>
+           <x>20</x>
+           <y>260</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -356,9 +353,8 @@ QPushButton:hover {
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -372,20 +368,48 @@ QPushButton:hover {
          </widget>
         </widget>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="logout">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>30</x>
           <y>610</y>
-          <width>75</width>
+          <width>71</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
         </property>
         <property name="text">
          <string>Logout</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="back">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>610</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+background: white;
+}*/
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-previous">
+          <normaloff>.</normaloff>.</iconset>
         </property>
        </widget>
       </widget>
