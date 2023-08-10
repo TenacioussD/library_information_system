@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>681</height>
+    <width>1019</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -90,35 +90,6 @@ border-radius: 5px;</string>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
-         </property>
-        </widget>
-        <widget class="QPlainTextEdit" name="plainTextEdit_6">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>30</y>
-           <width>101</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font-family: Baloo 2;
-font-weight: bold;
-background: white;
-font-size: 15px;
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="plainText">
-          <string>Admin Menu</string>
-         </property>
-         <property name="backgroundVisible">
-          <bool>false</bool>
          </property>
         </widget>
         <widget class="QFrame" name="catalogue_1">
@@ -367,12 +338,37 @@ QPushButton:hover {
           </property>
          </widget>
         </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;
+background: white;
+font-size: 15px;
+</string>
+         </property>
+         <property name="text">
+          <string>Admin Menu</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
        </widget>
        <widget class="QPushButton" name="logout">
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>
@@ -390,7 +386,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>

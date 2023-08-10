@@ -16,10 +16,10 @@ Login::~Login()
 }
 
 
-void Login::on_pushButton_2_clicked()       // Admin login
+void Login::on_pushButton_2_clicked()         // Admin login
 {
     hide();
-    adminlogin =new AdminLogin (this);      // Opens admin login page
+    adminlogin =new AdminLogin (this);        // Opens admin login page
     adminlogin->show();
 }
 

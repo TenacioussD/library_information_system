@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>980</width>
-    <height>688</height>
+    <width>1019</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,165 +26,6 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QFrame" name="heading">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>10</y>
-         <width>641</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QPlainTextEdit" name="plainTextEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>20</y>
-          <width>641</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: rgb(235, 235, 235);
-border-radius: 10px;</string>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <property name="plainText">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_3">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>40</y>
-          <width>231</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-font-weight: bold;
-font-size: 23px;
-background: transparent;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>Book Management</string>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_4">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>70</y>
-          <width>411</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-family: Baloo 2;
-font-size: 13px;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>Please choose an option below</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QFrame" name="frame_2">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>190</y>
-         <width>281</width>
-         <height>191</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: rgb(220, 245, 255);
-border-radius: 10px;
-border-color: black;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Box</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="newBook">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>70</y>
-          <width>171</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-font-weight: bold;
-font-size: 23px;
-background: transparent;</string>
-        </property>
-        <property name="text">
-         <string>Add New Book</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QFrame" name="frame_3">
-       <property name="geometry">
-        <rect>
-         <x>620</x>
-         <y>190</y>
-         <width>291</width>
-         <height>191</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background: rgb(235, 235, 235);
-border-radius: 10px;
-border-color: black;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::Box</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QPushButton" name="updateBook">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>70</y>
-          <width>151</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font-family: Baloo 2;
-font-weight: bold;
-font-size: 23px;
-background: transparent;</string>
-        </property>
-        <property name="text">
-         <string>Update Book</string>
-        </property>
-       </widget>
-      </widget>
       <widget class="QGroupBox" name="menuPanel">
        <property name="geometry">
         <rect>
@@ -328,9 +169,15 @@ border-radius: 5px;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">background: transparent;
+           <string notr="true">QPushButton {
+background: transparent;
 font-size: 14px;
-border: none;</string>
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
           </property>
           <property name="text">
            <string>Catalogue</string>
@@ -531,7 +378,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>
@@ -549,7 +396,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>
@@ -570,6 +417,449 @@ QPushButton:hover {
          <iconset theme="go-previous">
           <normaloff>.</normaloff>.</iconset>
         </property>
+       </widget>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>19</y>
+         <width>641</width>
+         <height>581</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page_2">
+        <widget class="QFrame" name="heading_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>641</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPlainTextEdit" name="plainTextEdit_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>20</y>
+            <width>641</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="plainText">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPlainTextEdit" name="plainTextEdit_10">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+font-size: 23px;
+background: transparent;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="plainText">
+           <string>Add New Book</string>
+          </property>
+         </widget>
+         <widget class="QPlainTextEdit" name="plainTextEdit_11">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>70</y>
+            <width>411</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: transparent;
+font-family: Baloo 2;
+font-size: 13px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="plainText">
+           <string>Please enter the book's information below</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frame_9">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>180</y>
+           <width>531</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLineEdit" name="lineEdit_title">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>50</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(229, 229, 229);</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>20</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-family: Baloo 2;
+font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>Book Title</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>110</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-family: Baloo 2;
+font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>Book Author</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_author">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>140</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(229, 229, 229);</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="image">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>210</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color:rgb(220, 245, 255);
+font-size: 14px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Upload Image</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="confirm">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>210</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color:rgb(220, 245, 255);
+font-size: 14px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>Confirm Book Details</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_1">
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>641</width>
+           <height>381</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QFrame" name="heading_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>-10</y>
+            <width>641</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPlainTextEdit" name="plainTextEdit_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>641</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="plainText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_7">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>40</y>
+             <width>231</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+font-size: 23px;
+background: transparent;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string>Book Management</string>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_8">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>70</y>
+             <width>411</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;
+font-family: Baloo 2;
+font-size: 13px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string>Please choose an option below</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>180</y>
+            <width>291</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(220, 245, 255);
+border-radius: 10px;
+border-color: black;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QFrame" name="frame_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>60</y>
+             <width>291</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="add_Book">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>291</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border: none;
+font-weight: bold;
+font-size: 23px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Add New Book</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_6">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>180</y>
+            <width>291</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;
+border-color: black;
+
+QFrame::Raised</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QFrame" name="frame_8">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>60</y>
+             <width>291</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="add_Book_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>291</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border: none;
+font-weight: bold;
+font-size: 23px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Edit A Book</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
        </widget>
       </widget>
      </widget>
