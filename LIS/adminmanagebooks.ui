@@ -378,7 +378,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>
@@ -396,7 +396,7 @@ QPushButton:hover {
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>610</y>
+          <y>600</y>
           <width>71</width>
           <height>31</height>
          </rect>
@@ -429,7 +429,7 @@ QPushButton:hover {
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="page_2">
         <widget class="QFrame" name="heading_3">
