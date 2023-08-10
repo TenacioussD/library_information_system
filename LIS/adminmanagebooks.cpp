@@ -23,4 +23,3 @@ void AdminManageBooks::on_pushButton_clicked()     // Logout button clicked
         QApplication::quit();
     }
 }
-

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1020</width>
-    <height>671</height>
+    <width>1019</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -360,44 +360,37 @@ QPushButton:hover {
           </property>
          </widget>
         </widget>
-        <widget class="QPlainTextEdit" name="plainTextEdit_6">
+        <widget class="QLabel" name="label">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>0</x>
            <y>30</y>
-           <width>111</width>
-           <height>31</height>
+           <width>191</width>
+           <height>20</height>
           </rect>
          </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="styleSheet">
-          <string notr="true">font-family: Baloo 2;
-font-weight: bold;
+          <string notr="true">font-weight: bold;
 background: white;
 font-size: 15px;
 </string>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="verticalScrollBarPolicy">
-          <enum>Qt::ScrollBarAlwaysOff</enum>
-         </property>
-         <property name="plainText">
+         <property name="text">
           <string>Member Menu</string>
          </property>
-         <property name="backgroundVisible">
-          <bool>false</bool>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <zorder>listWidget_2</zorder>
         <zorder>overdue_1</zorder>
-        <zorder>plainTextEdit_6</zorder>
         <zorder>membership_1</zorder>
         <zorder>catalogue_1</zorder>
         <zorder>status_1</zorder>
+        <zorder>label</zorder>
        </widget>
       </widget>
       <widget class="QFrame" name="heading">
