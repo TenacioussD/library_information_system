@@ -1,5 +1,6 @@
 #include "membercatalogue.h"
 #include "ui_membercatalogue.h"
+#include "memberhome.h"
 
 #include <QMessageBox>
 
@@ -15,11 +16,19 @@ MemberCatalogue::~MemberCatalogue()
     delete ui;
 }
 
-void MemberCatalogue::on_pushButton_clicked()     // Logout button clicked
+
+void MemberCatalogue::on_back_clicked()
+{
+    hide();
+    memberhome =new class MemberHome;                            // Opens admin home
+    memberhome->show();
+}
+
+void MemberCatalogue::on_logout_clicked()                  // Login button pressed
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {         // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                    // If "Yes" application will quit
         QApplication::quit();
     }
 }

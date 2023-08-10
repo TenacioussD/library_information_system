@@ -2,6 +2,7 @@
 #define MEMBERCATALOGUE_H
 
 #include <QMainWindow>
+class MemberHome;
 
 namespace Ui {
 class MemberCatalogue;
@@ -16,10 +17,14 @@ public:
     ~MemberCatalogue();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_back_clicked();
+
+    void on_logout_clicked();
 
 private:
     Ui::MemberCatalogue *ui;
+    MemberHome *memberhome;
 };
 
 #endif // MEMBERCATALOGUE_H

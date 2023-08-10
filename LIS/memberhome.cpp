@@ -1,6 +1,6 @@
 #include "memberhome.h"
 #include "ui_memberhome.h"
-
+#include "membercatalogue.h"
 #include <QMessageBox>
 
 MemberHome::MemberHome(QWidget *parent) :
@@ -25,10 +25,10 @@ void MemberHome::on_logout_clicked()              // Confirmation of logout
 }
 
 
-void MemberHome::on_catalogue_clicked()
+void MemberHome::on_catalogue_2_clicked()
 {
     hide();
-    membercatalogue =new MemberCatalogue (this);                   // Opens admin catalogue
+    membercatalogue =new class MemberCatalogue;                   // Opens catalogue page using pointer in header file
     membercatalogue->show();
 }
 

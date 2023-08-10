@@ -60,22 +60,6 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>610</y>
-          <width>75</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>Logout</string>
-        </property>
-       </widget>
        <widget class="QFrame" name="menu">
         <property name="geometry">
          <rect>
@@ -112,8 +96,8 @@ border-radius: 5px;</string>
          <property name="geometry">
           <rect>
            <x>60</x>
-           <y>20</y>
-           <width>121</width>
+           <y>30</y>
+           <width>111</width>
            <height>31</height>
           </rect>
          </property>
@@ -130,6 +114,9 @@ font-size: 15px;
          <property name="frameShadow">
           <enum>QFrame::Plain</enum>
          </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
          <property name="plainText">
           <string>Member Menu</string>
          </property>
@@ -141,7 +128,7 @@ font-size: 15px;
          <property name="geometry">
           <rect>
            <x>40</x>
-           <y>70</y>
+           <y>80</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -185,10 +172,15 @@ border-radius: 5px;</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font-family: Baloo 2;
+           <string notr="true">QPushButton {
 background: transparent;
-font-size: 15px;
-border: none;</string>
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
           </property>
           <property name="text">
            <string>Catalogue</string>
@@ -202,7 +194,7 @@ border: none;</string>
          <property name="geometry">
           <rect>
            <x>40</x>
-           <y>130</y>
+           <y>140</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -246,9 +238,8 @@ border: none;</string>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -265,7 +256,7 @@ QPushButton:hover {
          <property name="geometry">
           <rect>
            <x>40</x>
-           <y>190</y>
+           <y>200</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -309,9 +300,8 @@ QPushButton:hover {
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -328,7 +318,7 @@ QPushButton:hover {
          <property name="geometry">
           <rect>
            <x>40</x>
-           <y>250</y>
+           <y>260</y>
            <width>151</width>
            <height>51</height>
           </rect>
@@ -372,9 +362,8 @@ QPushButton:hover {
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-font-family: Baloo 2;
 background: transparent;
-font-size: 15px;
+font-size: 14px;
 border: none;
 }
 
@@ -387,6 +376,50 @@ QPushButton:hover {
           </property>
          </widget>
         </widget>
+       </widget>
+       <widget class="QPushButton" name="back">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>610</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+background: white;
+}*/
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-previous">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="logout">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>610</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Logout</string>
+        </property>
        </widget>
       </widget>
       <widget class="QFrame" name="heading">
