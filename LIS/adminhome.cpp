@@ -36,7 +36,6 @@ void AdminHome::on_catalogue_clicked()
     admincatalogue->show();
 }
 
-
 void AdminHome::on_manageBooks_clicked()
 {
     hide();
