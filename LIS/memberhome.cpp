@@ -24,7 +24,6 @@ void MemberHome::on_logout_clicked()              // Confirmation of logout
     }
 }
 
-
 void MemberHome::on_catalogue_2_clicked()
 {
     hide();

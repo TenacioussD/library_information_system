@@ -1,7 +1,9 @@
 #include "adminmanagebooks.h"
 #include "ui_adminmanagebooks.h"
+#include "adminaddbook.h"
 
 #include <QMessageBox>
+
 
 AdminManageBooks::AdminManageBooks(QWidget *parent) :
     QMainWindow(parent),
@@ -26,6 +28,8 @@ void AdminManageBooks::on_pushButton_clicked()     // Logout button clicked
 
 void AdminManageBooks::on_add_Book_clicked()
 {
-
+    hide();
+    adminaddbook =new class AdminAddBook;                       // Opens admin catalogue
+    adminaddbook->show();
 }
 

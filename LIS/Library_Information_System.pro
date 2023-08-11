@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     addnewbook.cpp \
+    adminaddbook.cpp \
     admincatalogue.cpp \
     adminhome.cpp \
     adminlogin.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     addnewbook.h \
+    adminaddbook.h \
     admincatalogue.h \
     adminhome.h \
     adminlogin.h \
@@ -33,6 +35,7 @@ HEADERS += \
 
 FORMS += \
     addnewbook.ui \
+    adminaddbook.ui \
     admincatalogue.ui \
     adminhome.ui \
     adminlogin.ui \
