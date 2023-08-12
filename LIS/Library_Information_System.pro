@@ -9,9 +9,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    addbookconfirmation.cpp \
-    addnewbook.cpp \
     adminaddbook.cpp \
+    adminbookconfirmation.cpp \
     admincatalogue.cpp \
     adminhome.cpp \
     adminlogin.cpp \
@@ -23,9 +22,8 @@ SOURCES += \
     memberlogin.cpp
 
 HEADERS += \
-    addbookconfirmation.h \
-    addnewbook.h \
     adminaddbook.h \
+    adminbookconfirmation.h \
     admincatalogue.h \
     adminhome.h \
     adminlogin.h \
@@ -36,9 +34,8 @@ HEADERS += \
     memberlogin.h
 
 FORMS += \
-    addbookconfirmation.ui \
-    addnewbook.ui \
     adminaddbook.ui \
+    adminbookconfirmation.ui \
     admincatalogue.ui \
     adminhome.ui \
     adminlogin.ui \

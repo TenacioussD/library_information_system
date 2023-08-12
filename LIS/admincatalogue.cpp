@@ -1,6 +1,7 @@
 #include "admincatalogue.h"
 #include "ui_admincatalogue.h"
 #include "adminhome.h"
+#include "adminmanagebooks.h"
 
 #include <QMessageBox>
 
@@ -17,10 +18,10 @@ AdminCatalogue::~AdminCatalogue()
 }
 
 
-void AdminCatalogue::on_back_clicked()                          // Back to home
+void AdminCatalogue::on_back_clicked()                        // Back to home clicked
 {
     hide();
-    adminhome =new class AdminHome;                            // Opens admin home
+    adminhome =new class AdminHome;                           // Opens admin home
     adminhome->show();
 }
 
@@ -29,8 +30,16 @@ void AdminCatalogue::on_logout_clicked()                      // Logout button
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {                    // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                          // If "Yes" application will quit
         QApplication::quit();
     }
+}
+
+
+void AdminCatalogue::on_manageBooks_clicked()                 // Manage books button pressed
+{
+    hide();
+    adminmanagebooks =new class AdminManageBooks;             // Opens admin manage books page
+    adminmanagebooks->show();
 }
 

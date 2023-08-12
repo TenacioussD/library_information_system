@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "adminhome.h"
 class AdminHome;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminCatalogue;
@@ -23,9 +24,12 @@ private slots:
 
     void on_logout_clicked();
 
+    void on_manageBooks_clicked();
+
 private:
     Ui::AdminCatalogue *ui;
     AdminHome *adminhome;
+    AdminManageBooks *adminmanagebooks;
 };
 
 #endif // ADMINCATALOGUE_H
