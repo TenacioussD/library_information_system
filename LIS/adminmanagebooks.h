@@ -5,6 +5,7 @@
 class AdminAddBook;
 class AdminHome;
 class AdminCatalogue;
+class AdminUpdateBook;
 
 namespace Ui {
 class AdminManageBooks;
@@ -27,6 +28,8 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_catalogue_clicked();
+
+    void on_add_Book_3_clicked();
 
 private:
     Ui::AdminManageBooks *ui;
