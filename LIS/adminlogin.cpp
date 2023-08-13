@@ -2,10 +2,12 @@
 #include "ui_adminlogin.h"
 
 #include <QMessageBox>
+#include "adminhome.h"
 
 AdminLogin::AdminLogin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AdminLogin)
+
 {
     ui->setupUi(this);
 }
@@ -28,7 +30,7 @@ void AdminLogin::on_pushButton_login_clicked()            // Login button clicke
 
      if(username == "admin" && password == "admin") {       // When login button clicked either display next page or error message
          hide();
-         adminhome =new AdminHome (this);                   // Opens admin dashboard
+         AdminHome *adminhome =new AdminHome (this);                   // Opens admin dashboard
          adminhome->show();
      }
      else {

@@ -27,7 +27,7 @@ void MemberHome::on_logout_clicked()              // Confirmation of logout
 void MemberHome::on_catalogue_2_clicked()
 {
     hide();
-    membercatalogue =new class MemberCatalogue;                   // Opens catalogue page using pointer in header file
+    MemberCatalogue *membercatalogue =new MemberCatalogue;                   // Opens catalogue page using pointer in header file
     membercatalogue->show();
 }
 

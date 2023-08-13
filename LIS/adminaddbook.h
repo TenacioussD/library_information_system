@@ -2,11 +2,11 @@
 #define ADMINADDBOOK_H
 
 #include <QMainWindow>
-#include <QString>
+#include <QObject>
 
 class AdminHome;
 class AdminCatalogue;
-
+class AdminBookConfirmation;
 
 namespace Ui {
 class AdminAddBook;
@@ -19,24 +19,20 @@ class AdminAddBook : public QMainWindow
 public:
     explicit AdminAddBook(QWidget *parent = nullptr);
     ~AdminAddBook();
-    QDebug *bookTitle;
 
-private slots:
+private slots:                                    // Member functions of the classSlots
     void on_back_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_catalogue_clicked();
 
-
-public slots:
     void on_confirm_clicked();
 
 private:
     Ui::AdminAddBook *ui;
-    AdminHome *adminhome;
-    AdminCatalogue *admincatalogue;
-
+    AdminHome *adminhome;                         // AdminHome pointer variable
+    AdminCatalogue *admincatalogue;               // AdminCatalogue pointer variable
 };
 
 #endif // ADMINADDBOOK_H

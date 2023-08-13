@@ -23,21 +23,21 @@ AdminManageBooks::~AdminManageBooks()
 void AdminManageBooks::on_add_Book_clicked()
 {
     hide();
-    adminaddbook =new class AdminAddBook;                       // Opens admin add new book page
+    AdminAddBook *adminaddbook =new AdminAddBook (this);                       // Opens admin add new book page
     adminaddbook->show();
 }
 
 void AdminManageBooks::on_catalogue_clicked()
 {
     hide();
-    admincatalogue =new class AdminCatalogue;                   // Opens catalogue page
+    AdminCatalogue *admincatalogue =new AdminCatalogue (this);                   // Opens catalogue page
     admincatalogue->show();
 }
 
 void AdminManageBooks::on_back_clicked()
 {
     hide();
-    adminhome =new class AdminHome;                           // Opens admin home
+    AdminHome *adminhome =new AdminHome (this);                           // Opens admin home
     adminhome->show();
 }
 

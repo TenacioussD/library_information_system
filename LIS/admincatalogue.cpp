@@ -8,6 +8,7 @@
 AdminCatalogue::AdminCatalogue(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AdminCatalogue)
+
 {
     ui->setupUi(this);
 }
@@ -21,7 +22,7 @@ AdminCatalogue::~AdminCatalogue()
 void AdminCatalogue::on_back_clicked()                        // Back to home clicked
 {
     hide();
-    adminhome =new class AdminHome;                           // Opens admin home
+    AdminHome *adminhome =new AdminHome;                           // Opens admin home
     adminhome->show();
 }
 
@@ -39,7 +40,7 @@ void AdminCatalogue::on_logout_clicked()                      // Logout button
 void AdminCatalogue::on_manageBooks_clicked()                 // Manage books button pressed
 {
     hide();
-    adminmanagebooks =new class AdminManageBooks;             // Opens admin manage books page
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks;             // Opens admin manage books page
     adminmanagebooks->show();
 }
 

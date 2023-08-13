@@ -507,9 +507,9 @@ font-size: 13px;</string>
       <widget class="QFrame" name="frame_10">
        <property name="geometry">
         <rect>
-         <x>350</x>
+         <x>340</x>
          <y>200</y>
-         <width>531</width>
+         <width>541</width>
          <height>401</height>
         </rect>
        </property>
@@ -519,7 +519,7 @@ font-size: 13px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QPushButton" name="confirm_2">
+       <widget class="QPushButton" name="confirmDetails">
         <property name="geometry">
          <rect>
           <x>260</x>
@@ -549,7 +549,7 @@ QPushButton:hover {
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>0</x>
           <y>20</y>
           <width>221</width>
           <height>301</height>
@@ -570,7 +570,7 @@ QPushButton:hover {
          <rect>
           <x>260</x>
           <y>20</y>
-          <width>231</width>
+          <width>241</width>
           <height>231</height>
          </rect>
         </property>
@@ -585,12 +585,13 @@ QPushButton:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>71</width>
+           <width>91</width>
            <height>16</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">font-family: Baloo 2;
+font-size: 17px;
 font-weight: bold;</string>
          </property>
          <property name="text">
@@ -601,17 +602,55 @@ font-weight: bold;</string>
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>120</y>
-           <width>71</width>
+           <y>100</y>
+           <width>121</width>
            <height>16</height>
           </rect>
          </property>
          <property name="styleSheet">
           <string notr="true">font-family: Baloo 2;
+font-size: 17px;
 font-weight: bold;</string>
          </property>
          <property name="text">
           <string>Book Author</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEditOutputTitle">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>231</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Baloo 2;
+font-size: 17px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEditOutputAuthor">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>130</y>
+           <width>231</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Baloo 2;
+font-size: 17px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
          </property>
         </widget>
        </widget>

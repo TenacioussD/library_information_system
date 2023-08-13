@@ -30,9 +30,9 @@ private slots:
 
 private:
     Ui::AdminManageBooks *ui;
-    AdminAddBook *adminaddbook;
-    AdminHome *adminhome;
-    AdminCatalogue *admincatalogue;
+    //AdminAddBook *adminaddbook;
+    //AdminHome *adminhome;
+    //AdminCatalogue *admincatalogue;
 };
 
 #endif // ADMINMANAGEBOOKS_H

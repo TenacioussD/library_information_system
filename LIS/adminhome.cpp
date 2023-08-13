@@ -2,6 +2,7 @@
 #include "ui_adminhome.h"
 #include "admincatalogue.h"
 #include "adminmanagebooks.h"
+#include "adminhome.h"
 
 //#include "adminstatus.h"
 //#include "adminmembership.h"
@@ -11,6 +12,7 @@
 AdminHome::AdminHome(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AdminHome)
+
 {
     ui->setupUi(this);
 }
@@ -31,15 +33,17 @@ void AdminHome::on_pushButton_clicked()      // Confirmation of logout
 
 void AdminHome::on_catalogue_clicked()
 {
+
     hide();
-    admincatalogue =new class AdminCatalogue;                       // Opens admin catalogue
+    AdminCatalogue *admincatalogue = new AdminCatalogue (this);          // Opens admin catalogue
     admincatalogue->show();
+
 }
 
 void AdminHome::on_manageBooks_clicked()
 {
     hide();
-    adminmanagebooks =new class AdminManageBooks;                   // Opens book management page using pointer in header file
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks (this);                   // Opens book management page using pointer in header file
     adminmanagebooks->show();
 }
 

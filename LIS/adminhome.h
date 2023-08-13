@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+
 class AdminCatalogue;
 class AdminManageBooks;
 
@@ -31,8 +32,8 @@ private slots:
 
 private:
     Ui::AdminHome *ui;
-    AdminCatalogue *admincatalogue;
-    AdminManageBooks *adminmanagebooks;
+    //AdminCatalogue *admincatalogue;
+   // AdminManageBooks *adminmanagebooks;
     //AdminStatus *adminstatus;
     //AdminMembership *adminmembership;
 };

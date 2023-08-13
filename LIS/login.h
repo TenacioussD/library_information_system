@@ -3,8 +3,9 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include "adminlogin.h"
-#include "memberlogin.h"
+
+class AdminLogin;
+class MemberLogin;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Login; }
@@ -25,8 +26,8 @@ private slots:
 
 private:
     Ui::Login *ui;
-    AdminLogin *adminlogin;          // points to admin login page
-    MemberLogin *memberlogin;        // points to member login page
+   //AdminLogin *adminlogin;          // points to admin login page
+    //MemberLogin *memberlogin;        // points to member login page
 };
 
 

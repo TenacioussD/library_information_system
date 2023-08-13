@@ -2,7 +2,8 @@
 #define ADMINCATALOGUE_H
 
 #include <QMainWindow>
-#include "adminhome.h"
+
+
 class AdminHome;
 class AdminManageBooks;
 
@@ -28,8 +29,8 @@ private slots:
 
 private:
     Ui::AdminCatalogue *ui;
-    AdminHome *adminhome;
-    AdminManageBooks *adminmanagebooks;
+   // AdminHome *adminhome;
+    //AdminManageBooks *adminmanagebooks;
 };
 
 #endif // ADMINCATALOGUE_H
