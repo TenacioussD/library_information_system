@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include "adminhome.h"
+
+class AdminHome;
 
 namespace Ui {
 class AdminLogin;
@@ -24,7 +25,7 @@ private slots:
 
 private:
     Ui::AdminLogin *ui;
-    AdminHome *adminhome;
+   //AdminHome *adminhome;
 };
 
 #endif // ADMINLOGIN_H

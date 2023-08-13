@@ -28,7 +28,7 @@ void MemberLogin::on_pushButton_login_clicked()
 
     if(username == "member" && password == "member") {          // When login button clicked either display next page or error message
         hide();
-        memberhome =new MemberHome (this);                    // Opens member dashboard
+        MemberHome *memberhome =new MemberHome (this);                    // Opens member dashboard
         memberhome->show();
     }
     else {

@@ -16,11 +16,10 @@ MemberCatalogue::~MemberCatalogue()
     delete ui;
 }
 
-
 void MemberCatalogue::on_back_clicked()
 {
     hide();
-    memberhome =new class MemberHome;                            // Opens admin home
+    MemberHome *memberhome =new MemberHome;                // Opens member home
     memberhome->show();
 }
 
