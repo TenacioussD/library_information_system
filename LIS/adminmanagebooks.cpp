@@ -3,6 +3,7 @@
 #include "adminaddbook.h"
 #include "adminhome.h"
 #include "admincatalogue.h"
+#include "adminupdatebook.h"
 
 #include <QMessageBox>
 
@@ -41,7 +42,6 @@ void AdminManageBooks::on_back_clicked()
     adminhome->show();
 }
 
-
 void AdminManageBooks::on_pushButton_2_clicked()             // Logout button clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
@@ -50,3 +50,11 @@ void AdminManageBooks::on_pushButton_2_clicked()             // Logout button cl
         QApplication::quit();
     }
 }
+
+void AdminManageBooks::on_add_Book_3_clicked()
+{
+    hide();
+    AdminUpdateBook *adminupdatebook =new AdminUpdateBook (this);                       // Opens admin add new book page
+    adminupdatebook->show();
+}
+
