@@ -15,12 +15,14 @@ SOURCES += \
     adminhome.cpp \
     adminlogin.cpp \
     adminmanagebooks.cpp \
-    adminupdatebook.cpp \
     main.cpp \
     login.cpp \
     membercatalogue.cpp \
     memberhome.cpp \
-    memberlogin.cpp
+    memberlogin.cpp \
+    membermembership.cpp \
+    memberoverdue.cpp \
+    memberpreordered.cpp
 
 HEADERS += \
     adminaddbook.h \
@@ -29,11 +31,13 @@ HEADERS += \
     adminhome.h \
     adminlogin.h \
     adminmanagebooks.h \
-    adminupdatebook.h \
     login.h \
     membercatalogue.h \
     memberhome.h \
-    memberlogin.h
+    memberlogin.h \
+    membermembership.h \
+    memberoverdue.h \
+    memberpreordered.h
 
 FORMS += \
     adminaddbook.ui \
@@ -42,11 +46,13 @@ FORMS += \
     adminhome.ui \
     adminlogin.ui \
     adminmanagebooks.ui \
-    adminupdatebook.ui \
     login.ui \
     membercatalogue.ui \
     memberhome.ui \
-    memberlogin.ui
+    memberlogin.ui \
+    membermembership.ui \
+    memberoverdue.ui \
+    memberpreordered.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
