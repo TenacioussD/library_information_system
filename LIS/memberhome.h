@@ -1,9 +1,12 @@
 #ifndef MEMBERHOME_H
 #define MEMBERHOME_H
 
+
 #include <QMainWindow>
 #include <QObject>
 #include "membercatalogue.h"
+#include "memberoverdue.h"
+
 class MemberCatalogue;
 class MemberHome;
 
@@ -31,6 +34,7 @@ private:
     Ui::MemberHome *ui;
     MemberCatalogue *membercatalogue;          // class pointer to object membercatalogue
     MemberHome *memberhome;                    // class pointer to object memberhome
+    MemberOverdue *memberOverdue;              // class pointer to object MemberOverdue
 };
 
 #endif // MEMBERHOME_H
