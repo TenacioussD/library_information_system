@@ -2,7 +2,7 @@
 #include "ui_memberoverdue.h"
 
 MemberOverdue::MemberOverdue(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::MemberOverdue)
 {
     ui->setupUi(this);

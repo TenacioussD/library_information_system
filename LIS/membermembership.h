@@ -15,6 +15,9 @@ public:
     explicit MemberMembership(QWidget *parent = nullptr);
     ~MemberMembership();
 
+private slots:
+    void on_request_button_clicked();
+
 private:
     Ui::MemberMembership *ui;
 };

@@ -29,7 +29,7 @@ void AdminBookConfirmation::on_confirmDetails_clicked()
     if (ok == QMessageBox::Ok) {                           // When Ok button clicked it will redirect the user back to the home page with the use of an if statement
 
         hide();
-        AdminHome *adminhome =new AdminHome(this);
+        adminhome =new AdminHome(this);
         adminhome->show();                            // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
 
     }

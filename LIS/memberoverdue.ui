@@ -108,8 +108,7 @@ border-radius: 5px;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background: rgb(240, 240, 240);
-border-radius: 5px;</string>
+        <string notr="true">background: white;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -174,7 +173,8 @@ QPushButton:hover {
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background: white;</string>
+        <string notr="true">background: rgb(240, 240, 240);
+border-radius: 5px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>

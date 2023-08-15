@@ -25,6 +25,8 @@ private slots:
 
     void on_catalogue_2_clicked();
 
+    void on_overdue_clicked();
+
 private:
     Ui::MemberHome *ui;
     MemberCatalogue *membercatalogue;          // class pointer to object membercatalogue

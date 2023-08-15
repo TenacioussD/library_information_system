@@ -20,10 +20,7 @@ public:
 
 
 private slots:
-    void on_confirm_2_clicked();
-
     void on_confirmDetails_clicked();
-
 
     void on_back_2_clicked();
 

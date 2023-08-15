@@ -1,6 +1,8 @@
 #include "memberhome.h"
 #include "ui_memberhome.h"
 #include "membercatalogue.h"
+#include "memberoverdue.h"
+
 #include <QMessageBox>
 
 MemberHome::MemberHome(QWidget *parent) :
@@ -29,5 +31,13 @@ void MemberHome::on_catalogue_2_clicked()
     hide();
     MemberCatalogue *membercatalogue =new MemberCatalogue;                   // Opens catalogue page using pointer in header file
     membercatalogue->show();
+}
+
+//when clicked on overdue books, display memberoverdue.ui
+void MemberHome::on_overdue_clicked()
+{
+    MemberOverdue memberOverdue;
+    memberOverdue.setModal (true);
+    memberOverdue.exec();
 }
 

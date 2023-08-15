@@ -1,13 +1,13 @@
 #ifndef MEMBEROVERDUE_H
 #define MEMBEROVERDUE_H
-
-#include <QMainWindow>
+//I wan to show 'MemberOverdue' as a modal dialog, but it's created as a mainWindow, so I'll include QDialog
+#include <QDialog>
 
 namespace Ui {
 class MemberOverdue;
 }
 
-class MemberOverdue : public QMainWindow
+class MemberOverdue : public QDialog
 {
     Q_OBJECT
 
