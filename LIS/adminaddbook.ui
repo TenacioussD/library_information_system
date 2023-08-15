@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>AdminAddBook</class>
@@ -671,3 +672,678 @@ QPushButton:hover {
   </connection>
  </connections>
 </ui>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminAddBook</class>
+ <widget class="QMainWindow" name="AdminAddBook">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1019</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background: white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="menuPanel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>231</width>
+         <height>671</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(220, 245, 255);</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="logo">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>131</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="Resources.qrc">:/images/logo.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="menu">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>191</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QListWidget" name="listWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>341</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;
+border-radius: 5px;</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="plainTextEdit_6">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+background: white;
+font-size: 15px;
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="plainText">
+          <string>Admin Menu</string>
+         </property>
+         <property name="backgroundVisible">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QFrame" name="catalogue_1">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;
+border-radius: 5px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/books.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="catalogue">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Catalogue</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="manageBooks_1">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: rgb(240, 240, 240);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/book.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="manageBooks">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Manage Books</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="status_1">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>200</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/status.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="status">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>View Status</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="membership_1">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>260</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/user.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="membership">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Membership</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>600</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Logout</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="back">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>600</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+background: white;
+}*/
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-previous">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="heading_3">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>30</y>
+         <width>641</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPlainTextEdit" name="plainTextEdit_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>641</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="plainText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_10">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>231</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+font-size: 23px;
+background: transparent;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="plainText">
+         <string>Add New Book</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_11">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>411</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+font-family: Baloo 2;
+font-size: 13px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="plainText">
+         <string>Please enter the book's information below</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_9">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>200</y>
+         <width>531</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="lineEdit_title">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>50</y>
+          <width>531</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(235, 235, 235);</string>
+        </property>
+        <property name="placeholderText">
+         <string>Enter title</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: Baloo 2;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Book Title</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>120</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: Baloo 2;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Book Author</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_author">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>150</y>
+          <width>531</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(235, 235, 235);</string>
+        </property>
+        <property name="placeholderText">
+         <string>Enter author</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="image">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>230</y>
+          <width>231</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+font-size: 14px;
+border-radius: 10px;
+background: rgb(220, 245, 255);
+font-family: open sans;
+color: black;
+font-weight: bold;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Upload Image</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="confirm">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>230</y>
+          <width>231</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+font-size: 14px;
+border-radius: 10px;
+background: black;
+font-family: open sans;
+color: white;
+font-weight: bold;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Confirm Book Details</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>lineEdit_title</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>confirm</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>453</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
+>>>>>>> origin/master
