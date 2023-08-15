@@ -27,10 +27,10 @@ private slots:
 
     void on_manageBooks_clicked();
 
+
 private:
     Ui::AdminCatalogue *ui;
-   // AdminHome *adminhome;
-    //AdminManageBooks *adminmanagebooks;
+
 };
 
 #endif // ADMINCATALOGUE_H

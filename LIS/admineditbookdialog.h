@@ -2,8 +2,12 @@
 #define ADMINEDITBOOKDIALOG_H
 
 #include <QDialog>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+
 class AdminHome;
 class AdminEnterBookUpdate; // Forward declaration
+class AdminCatalogue;
 
 namespace Ui {
 class AdminEditBookDialog;
@@ -25,6 +29,7 @@ private slots:
 private:
     Ui::AdminEditBookDialog *ui;
     AdminEnterBookUpdate *enterBookUpdate;
+    AdminCatalogue *adminCatalogue;
 };
 
 #endif // ADMINEDITBOOKDIALOG_H

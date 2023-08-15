@@ -18,14 +18,12 @@ AdminCatalogue::~AdminCatalogue()
     delete ui;
 }
 
-
 void AdminCatalogue::on_back_clicked()                        // Back to home clicked
 {
     hide();
     AdminHome *adminhome =new AdminHome;                           // Opens admin home
     adminhome->show();
 }
-
 
 void AdminCatalogue::on_logout_clicked()                      // Logout button
 {
@@ -35,7 +33,6 @@ void AdminCatalogue::on_logout_clicked()                      // Logout button
         QApplication::quit();
     }
 }
-
 
 void AdminCatalogue::on_manageBooks_clicked()                 // Manage books button pressed
 {

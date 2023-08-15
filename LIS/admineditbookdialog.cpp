@@ -7,10 +7,11 @@
 #include <QMessageBox>
 #include <QString>
 
+
 AdminEditBookDialog::AdminEditBookDialog(const QString &title, const QString &author, AdminEnterBookUpdate *enterBookUpdate, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AdminEditBookDialog),
-    enterBookUpdate(enterBookUpdate)              // Initialise the variable enterBookUpdate
+    enterBookUpdate(enterBookUpdate)
 
 {
     ui->setupUi(this);
@@ -31,13 +32,12 @@ void AdminEditBookDialog::on_pushButton_clicked()       // Thank you pop-up when
         hide();
         AdminHome *adminhome =new AdminHome(this);
         adminhome->show();                              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
+    }
 
-        if(enterBookUpdate) {                           // Will close the previous window - AdminEnterBookUpdate
-            enterBookUpdate->close();
-        }
+    if(enterBookUpdate) {                           // Will close the previous window - AdminEnterBookUpdate
+        enterBookUpdate->close();
     }
 }
-
 
 void AdminEditBookDialog::on_cancelButton_clicked()     // Cancel button clicked
 {
