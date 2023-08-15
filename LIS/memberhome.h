@@ -34,7 +34,7 @@ private:
     Ui::MemberHome *ui;
     MemberCatalogue *membercatalogue;          // class pointer to object membercatalogue
     MemberHome *memberhome;                    // class pointer to object memberhome
-    MemberOverdue *memberOverdue;              // class pointer to object MemberOverdue
+    MemberOverdue *memberOverdue;              // class pointer to object MemberOverdue    
 };
 
 #endif // MEMBERHOME_H

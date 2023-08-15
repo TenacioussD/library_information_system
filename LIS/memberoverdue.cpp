@@ -12,3 +12,9 @@ MemberOverdue::~MemberOverdue()
 {
     delete ui;
 }
+
+void MemberOverdue::on_back_clicked()
+{
+
+}
+
