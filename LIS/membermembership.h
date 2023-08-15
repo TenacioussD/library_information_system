@@ -1,22 +1,19 @@
 #ifndef MEMBERMEMBERSHIP_H
 #define MEMBERMEMBERSHIP_H
 
-#include <QMainWindow>
+#include <QDialog>
 
 namespace Ui {
 class MemberMembership;
 }
 
-class MemberMembership : public QMainWindow
+class MemberMembership : public QDialog
 {
     Q_OBJECT
 
 public:
     explicit MemberMembership(QWidget *parent = nullptr);
     ~MemberMembership();
-
-private slots:
-    void on_request_button_clicked();
 
 private:
     Ui::MemberMembership *ui;
