@@ -32,7 +32,7 @@ private:
     Ui::AdminManageBooks *ui;
     //AdminAddBook *adminaddbook;
     //AdminHome *adminhome;
-    //AdminCatalogue *admincatalogue;
+    AdminCatalogue *admincatalogue;
 };
 
 #endif // ADMINMANAGEBOOKS_H

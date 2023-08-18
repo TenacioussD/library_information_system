@@ -6,6 +6,7 @@
 
 class AdminHome;
 class AdminManageBooks;
+class AdminMembership;
 
 namespace Ui {
 class AdminCatalogue;
@@ -31,6 +32,7 @@ private:
     Ui::AdminCatalogue *ui;
    // AdminHome *adminhome;
     //AdminManageBooks *adminmanagebooks;
+    AdminMembership *adminMembership;
 };
 
 #endif // ADMINCATALOGUE_H
