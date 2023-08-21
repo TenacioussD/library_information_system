@@ -96,26 +96,3 @@ QString AdminAddMember::generateAccountNumber()
     return accountNumber;
 }
 
-//void AdminAddMember::setupUI()
-//{
-//    QVBoxLayout *layout = new QVBoxLayout(this);
-
-//    firstNameLineEdit = new QLineEdit(this);
-//    lastNameLineEdit = new QLineEdit(this);
-//    contactNumLineEdit = new QLineEdit(this);
-//    QPushButton *addMemberButton = new QPushButton("Add Member", this);
-
-//    layout->addWidget(new QLabel("First Name:"));
-//    layout->addWidget(firstNameLineEdit);
-//    layout->addWidget(new QLabel("Last Name:"));
-//    layout->addWidget(lastNameLineEdit);
-//    layout->addWidget(new QLabel("Contact Number:"));
-//    layout->addWidget(contactNumLineEdit);
-//    layout->addWidget(addMemberButton);
-
-//    connect(addMemberButton, &QPushButton::clicked, this, &AdminAddMember::on_addMemberBut_clicked);
-
-//    setLayout(layout); //Set the layout for the current QDialog
-
-//}
-
