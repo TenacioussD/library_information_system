@@ -14,6 +14,7 @@ SOURCES += \
     adminbookconfirmation.cpp \
     admincatalogue.cpp \
     admineditmember.cpp \
+    admineditmemberdetails.cpp \
     adminhome.cpp \
     adminlogin.cpp \
     adminmanagebooks.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     adminbookconfirmation.h \
     admincatalogue.h \
     admineditmember.h \
+    admineditmemberdetails.h \
     adminhome.h \
     adminlogin.h \
     adminmanagebooks.h \
@@ -51,6 +53,7 @@ FORMS += \
     adminbookconfirmation.ui \
     admincatalogue.ui \
     admineditmember.ui \
+    admineditmemberdetails.ui \
     adminhome.ui \
     adminlogin.ui \
     adminmanagebooks.ui \
