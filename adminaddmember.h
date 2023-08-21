@@ -39,8 +39,6 @@ private slots:
 
     void on_addMemberBut_clicked();
 
-    void addMemberBut();
-
 private:
     Ui::AdminAddMember *ui;
     AdminMembership *adminMembership;
@@ -51,7 +49,7 @@ private:
 
     QString generateAccountNumber();
 
-    void setupUI();
+   // void setupUI();
 
     QLineEdit *firstNameLineEdit;
     QLineEdit *lastNameLineEdit;

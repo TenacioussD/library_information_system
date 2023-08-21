@@ -18,7 +18,7 @@ firstNameLineEdit = new QLineEdit(this);
 lastNameLineEdit = new QLineEdit(this);
 contactNumLineEdit = new QLineEdit(this);
 
-setupUI();// Call the setupUI function to set up the layout and connections
+//setupUI();// Call the setupUI function to set up the layout and connections
 
 }
 
@@ -33,7 +33,6 @@ void AdminAddMember::on_back_clicked()
     adminMembership = new AdminMembership(this);
     adminMembership->show();
 }
-
 
 void AdminAddMember::on_catalogue_clicked()
 {
@@ -97,26 +96,26 @@ QString AdminAddMember::generateAccountNumber()
     return accountNumber;
 }
 
-void AdminAddMember::setupUI()
-{
-    QVBoxLayout *layout = new QVBoxLayout(this);
+//void AdminAddMember::setupUI()
+//{
+//    QVBoxLayout *layout = new QVBoxLayout(this);
 
-    firstNameLineEdit = new QLineEdit(this);
-    lastNameLineEdit = new QLineEdit(this);
-    contactNumLineEdit = new QLineEdit(this);
-    QPushButton *addMemberButton = new QPushButton("Add Member", this);
+//    firstNameLineEdit = new QLineEdit(this);
+//    lastNameLineEdit = new QLineEdit(this);
+//    contactNumLineEdit = new QLineEdit(this);
+//    QPushButton *addMemberButton = new QPushButton("Add Member", this);
 
-    layout->addWidget(new QLabel("First Name:"));
-    layout->addWidget(firstNameLineEdit);
-    layout->addWidget(new QLabel("Last Name:"));
-    layout->addWidget(lastNameLineEdit);
-    layout->addWidget(new QLabel("Contact Number:"));
-    layout->addWidget(contactNumLineEdit);
-    layout->addWidget(addMemberButton);
+//    layout->addWidget(new QLabel("First Name:"));
+//    layout->addWidget(firstNameLineEdit);
+//    layout->addWidget(new QLabel("Last Name:"));
+//    layout->addWidget(lastNameLineEdit);
+//    layout->addWidget(new QLabel("Contact Number:"));
+//    layout->addWidget(contactNumLineEdit);
+//    layout->addWidget(addMemberButton);
 
-    connect(addMemberButton, &QPushButton::clicked, this, &AdminAddMember::addMemberBut);
+//    connect(addMemberButton, &QPushButton::clicked, this, &AdminAddMember::on_addMemberBut_clicked);
 
-    setLayout(layout); //Set the layout for the current QDialog
+//    setLayout(layout); //Set the layout for the current QDialog
 
-}
+//}
 
