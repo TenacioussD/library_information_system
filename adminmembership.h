@@ -7,6 +7,7 @@ class AdminHome;
 class AdminCatalogue;
 class AdminManageBooks;
 class AdminAddMember;
+class AdminEditMember;
 
 namespace Ui {
 class AdminMembership;
@@ -31,12 +32,15 @@ private slots:
 
     void on_back_clicked();
 
+    void on_add_Book_3_clicked();
+
 private:
     Ui::AdminMembership *ui;
     AdminHome *adminHome;
     AdminCatalogue *adminCatalogue;
     AdminManageBooks *adminManageBooks;
     AdminAddMember *adminAddMember;
+    AdminEditMember *adminEditMember;
 };
 
 #endif // ADMINMEMBERSHIP_H

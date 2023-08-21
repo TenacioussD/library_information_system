@@ -627,7 +627,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="contactNum">
+    <widget class="QLineEdit" name="lisNum">
      <property name="geometry">
       <rect>
        <x>0</x>

@@ -28,6 +28,8 @@ private slots:
 
     void on_back_clicked();
 
+    void on_addMemberBut_clicked();
+
 private:
     Ui::AdminEditMember *ui;
     AdminCatalogue *adminCatalogue;
