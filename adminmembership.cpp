@@ -3,6 +3,7 @@
 #include "adminhome.h"
 #include "admincatalogue.h"
 #include "adminmanagebooks.h"
+#include "adminaddmember.h"
 
 AdminMembership::AdminMembership(QWidget *parent) :
     QDialog(parent),
@@ -37,5 +38,21 @@ void AdminMembership::on_manageBooks_clicked()
     hide();
     adminManageBooks = new AdminManageBooks(this);
     adminManageBooks->show();
+}
+
+
+void AdminMembership::on_add_Book_clicked()
+{
+    hide();
+    adminAddMember = new AdminAddMember(this);
+    adminAddMember->show();
+}
+
+
+void AdminMembership::on_back_clicked()
+{
+    hide();
+    AdminHome *adminhome =new AdminHome (this);                           // Opens admin home
+    adminhome->show();
 }
 

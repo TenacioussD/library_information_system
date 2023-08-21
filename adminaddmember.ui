@@ -518,7 +518,7 @@ font-size: 13px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="lineEdit_title">
+    <widget class="QLineEdit" name="firstName">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -573,7 +573,7 @@ font-weight: bold;</string>
       <string>Surname</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_author">
+    <widget class="QLineEdit" name="lastName">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -594,7 +594,7 @@ background: rgb(235, 235, 235);</string>
       <string>Enter author</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="image">
+    <widget class="QPushButton" name="addMemberBut">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -627,7 +627,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_author_2">
+    <widget class="QLineEdit" name="contactNum">
      <property name="geometry">
       <rect>
        <x>0</x>
