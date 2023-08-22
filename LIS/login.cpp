@@ -1,6 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
-#include "adminlogin.h"
+
+#include "adminlogin.h"                   // Include hheader files
 #include "memberlogin.h"
 
 Login::Login(QWidget *parent)
@@ -16,18 +17,18 @@ Login::~Login()
 }
 
 
-void Login::on_pushButton_2_clicked()         // Admin login
+void Login::on_pushButton_2_clicked()                     // Admin login
 {
     hide();
-    AdminLogin *adminlogin =new AdminLogin(this);        // Opens admin login page
+    AdminLogin *adminlogin =new AdminLogin(this);         // Opens admin login page
     adminlogin->show();
 }
 
 
-void Login::on_pushButton_3_clicked()
+void Login::on_pushButton_3_clicked()                     // Member Login
 {
     hide();
-    MemberLogin *memberlogin = new MemberLogin(this);      // Opens member login page
+    MemberLogin *memberlogin = new MemberLogin(this);     // Opens member login page
     memberlogin->show();
 }
 

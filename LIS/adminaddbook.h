@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 
-class AdminHome;
+class AdminHome;                               // Forward declarations
 class AdminCatalogue;
 class AdminBookConfirmation;
 

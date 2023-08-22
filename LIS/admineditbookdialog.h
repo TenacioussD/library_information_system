@@ -6,8 +6,9 @@
 #include <QSqlQuery>
 
 class AdminHome;
-class AdminEnterBookUpdate; // Forward declaration
+class AdminEnterBookUpdate;                 // Forward declarations
 class AdminCatalogue;
+class DatabaseManager;
 
 namespace Ui {
 class AdminEditBookDialog;

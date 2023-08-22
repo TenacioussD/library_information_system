@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 
-class AdminLogin;
+class AdminLogin;                    // Forward declarations
 class MemberLogin;
 
 QT_BEGIN_NAMESPACE

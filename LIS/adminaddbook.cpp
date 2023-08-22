@@ -23,7 +23,7 @@ AdminAddBook::~AdminAddBook()
 void AdminAddBook::on_back_clicked()                         // Back button clicked
 {
     hide();                                                  // Hides previous window/page
-    AdminHome *adminhome =new AdminHome (this);                        // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
+    AdminHome *adminhome =new AdminHome (this);              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
     adminhome->show();                                       // Using the show() method will display the AdminHome page
 }
 
@@ -39,7 +39,7 @@ void AdminAddBook::on_pushButton_2_clicked()                 // Logout button pr
 void AdminAddBook::on_catalogue_clicked()                    // When catalogue is clicked
 {
     hide();
-    AdminCatalogue *admincatalogue =new AdminCatalogue (this);                // Opens catalogue
+    AdminCatalogue *admincatalogue =new AdminCatalogue (this);   // Opens catalogue
     admincatalogue->show();
 
 }

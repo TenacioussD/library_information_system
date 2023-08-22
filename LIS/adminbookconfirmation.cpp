@@ -1,7 +1,7 @@
 #include "adminbookconfirmation.h"
 #include "ui_adminbookconfirmation.h"
 
-#include "adminhome.h"
+#include "adminhome.h"                                        // Declaring header files
 #include "adminaddbook.h"
 
 #include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use its files
@@ -30,7 +30,7 @@ void AdminBookConfirmation::on_confirmDetails_clicked()
 
         hide();
         AdminHome *adminhome =new AdminHome(this);
-        adminhome->show();                            // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
+        adminhome->show();                                // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
 
     }
 }

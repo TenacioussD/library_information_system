@@ -1,7 +1,9 @@
 #include "memberlogin.h"
-#include "memberhome.h"
+
 #include "ui_memberlogin.h"
 #include <QMessageBox>
+
+#include "memberhome.h"
 
 MemberLogin::MemberLogin(QWidget *parent) :
     QMainWindow(parent),

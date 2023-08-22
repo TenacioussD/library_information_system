@@ -4,7 +4,7 @@
 #include "adminmanagebooks.h"
 #include "adminhome.h"
 
-//#include "adminstatus.h"
+//#include "adminstatus.h"                   // Include necessary header files
 //#include "adminmembership.h"
 
 #include <QMessageBox>
@@ -35,7 +35,7 @@ void AdminHome::on_catalogue_clicked()
 {
 
     hide();
-    AdminCatalogue *admincatalogue = new AdminCatalogue (this);          // Opens admin catalogue
+    AdminCatalogue *admincatalogue = new AdminCatalogue (this);          // Opens admin catalogue using pointer
     admincatalogue->show();
 
 }
@@ -43,7 +43,7 @@ void AdminHome::on_catalogue_clicked()
 void AdminHome::on_manageBooks_clicked()
 {
     hide();
-    AdminManageBooks *adminmanagebooks =new AdminManageBooks (this);                   // Opens book management page using pointer in header file
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks (this);                   // Opens book management page using pointer
     adminmanagebooks->show();
 }
 

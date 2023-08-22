@@ -1,11 +1,13 @@
 #include "admineditbookdialog.h"
 #include "ui_admineditbookdialog.h"
 
-#include "adminhome.h"
+#include "adminhome.h"                             // Declaring relevant header files that are to be use in this class
 #include "adminenterbookupdate.h"
+#include "databasemanager.h"
 
 #include <QMessageBox>
 #include <QString>
+#include <QLineEdit>
 
 
 AdminEditBookDialog::AdminEditBookDialog(const QString &title, const QString &author, AdminEnterBookUpdate *enterBookUpdate, QWidget *parent) :
@@ -15,8 +17,8 @@ AdminEditBookDialog::AdminEditBookDialog(const QString &title, const QString &au
 
 {
     ui->setupUi(this);
-    ui->listWidget->addItem(title);               // Display the text in listWidget for title
-    ui->listWidget_1->addItem(author);            // Display the text in listWidget_1 for author
+    ui->lineEditTitle->setText(title);               // Display the text in lineEditTitle for title
+    ui->lineEditAuthor->setText(author);             // Display the text in lineEditAuthor for author
 }
 
 AdminEditBookDialog::~AdminEditBookDialog()
@@ -26,6 +28,11 @@ AdminEditBookDialog::~AdminEditBookDialog()
 
 void AdminEditBookDialog::on_pushButton_clicked()       // Thank you pop-up when confirm button clicked
 {
+    QString newTitle = ui->lineEditTitle->text();        // Takes the text for liineEdit and stores it in the variable newTitle
+    QString newAuthor = ui->lineEditAuthor->text();
+
+   // bool success = DatabaseManager::updateBook(originalTitle, newTitle, newAuthor);
+
     QMessageBox::StandardButton ok = QMessageBox::information(this, "Thank you", "Thank you, the book has edited and added to the catalogue.", QMessageBox::Ok);
 
     if (ok == QMessageBox::Ok) {                        // When Ok button clicked it will redirect the user back to the home page with the use of an if statement
@@ -34,13 +41,14 @@ void AdminEditBookDialog::on_pushButton_clicked()       // Thank you pop-up when
         adminhome->show();                              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
     }
 
-    if(enterBookUpdate) {                           // Will close the previous window - AdminEnterBookUpdate
+    if(enterBookUpdate) {                               // Will close the previous window - AdminEnterBookUpdate
         enterBookUpdate->close();
     }
+    accept();
 }
 
 void AdminEditBookDialog::on_cancelButton_clicked()     // Cancel button clicked
 {
-    hide();                                             // Hides the AdminEditBookDialog
+    reject();                                           // Hides the AdminEditBookDialog
 }
 

@@ -4,8 +4,11 @@
 #include "admincatalogue.h"
 #include "adminhome.h"
 #include "adminenterbookupdate.h"
+#include "databasemanager.h"
 
 #include <QMessageBox>
+#include <QString>
+#include <QPixmap>
 
 AdminUpdateBook::AdminUpdateBook(QWidget *parent) :
     QMainWindow(parent),
@@ -44,10 +47,23 @@ void AdminUpdateBook::on_pushButton_3_clicked()                     // When logo
     }
 }
 
-void AdminUpdateBook::on_greatLakes_clicked()                       // Opens enterbookupdate page when title of book is clicked
+/*void AdminUpdateBook::on_greatLakes_clicked()                       // Opens enterbookupdate page when title of book is clicked
 {
     hide();
     AdminEnterBookUpdate *adminenterupdate =new AdminEnterBookUpdate (this);
     adminenterupdate->show();
+}*/
+
+
+void AdminUpdateBook::on_edit1_clicked()
+{
+    QString title = "Great Lakes";           // Get the actual title
+    QString author = "Peter Jackson";          // Get the actual author
+    QPixmap image(":/images/book-covers/book14.png");       // Load the actual image
+    emit editBookClicked(title, author, image);
+
+    hide();
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
+    adminenterbookupdate->show();
 }
 

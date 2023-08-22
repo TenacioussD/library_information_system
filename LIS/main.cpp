@@ -9,6 +9,7 @@
 #include "adminbookconfirmation.h"
 #include "adminenterbookupdate.h"
 #include "admineditbookdialog.h"
+#include "databasemanager.h"
 
 // Member header pages
 #include "memberlogin.h"
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
     Login w;
     w.show();
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    /*QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("books.db");                              // Books database
 
     if (!db.open()) {
@@ -35,11 +36,7 @@ int main(int argc, char *argv[])
         return 1; // Return an error code
     }
 
-    // Rest of your application code
-    // ...
-
-    // Close the database connection when done
-    db.close();
+    db.close();*/
 
     return a.exec();
 }

@@ -1,5 +1,6 @@
 #include "membercatalogue.h"
 #include "ui_membercatalogue.h"
+
 #include "memberhome.h"
 
 #include <QMessageBox>
@@ -27,7 +28,7 @@ void MemberCatalogue::on_logout_clicked()                  // Login button press
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {                    // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                      // If "Yes" application will quit
         QApplication::quit();
     }
 }

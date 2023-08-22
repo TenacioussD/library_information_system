@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QObject>
 
-class AdminCatalogue;
+class AdminCatalogue;                       // Forward Declarations
 class AdminManageBooks;
 
 // class AdminStatus;
@@ -32,10 +32,6 @@ private slots:
 
 private:
     Ui::AdminHome *ui;
-    //AdminCatalogue *admincatalogue;
-   // AdminManageBooks *adminmanagebooks;
-    //AdminStatus *adminstatus;
-    //AdminMembership *adminmembership;
 };
 
 #endif // ADMINHOME_H

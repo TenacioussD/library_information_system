@@ -516,7 +516,7 @@ font-size: 13px;</string>
        <widget class="QFrame" name="frame_2">
         <property name="geometry">
          <rect>
-          <x>230</x>
+          <x>220</x>
           <y>0</y>
           <width>411</width>
           <height>271</height>
@@ -578,7 +578,7 @@ font-weight: bold;</string>
           <string>Book Title</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_author_2">
+        <widget class="QLineEdit" name="lineEditAuthor">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -613,7 +613,7 @@ font-weight: bold;</string>
           <string>Book Author</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_title">
+        <widget class="QLineEdit" name="lineEditTitle">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -664,8 +664,8 @@ QPushButton:hover {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>171</width>
-          <height>321</height>
+          <width>211</width>
+          <height>341</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -674,7 +674,7 @@ QPushButton:hover {
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="label_42">
+        <widget class="QLabel" name="imageLabel">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -686,9 +686,6 @@ QPushButton:hover {
          <property name="text">
           <string/>
          </property>
-         <property name="pixmap">
-          <pixmap resource="Resources.qrc">:/images/book-covers/book14.png</pixmap>
-         </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
@@ -697,7 +694,7 @@ QPushButton:hover {
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>230</y>
+           <y>240</y>
            <width>171</width>
            <height>71</height>
           </rect>
@@ -708,62 +705,41 @@ QPushButton:hover {
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPlainTextEdit" name="plainTextEdit_79">
+         <widget class="QLabel" name="titleLabel">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>10</y>
-            <width>101</width>
-            <height>21</height>
+            <y>0</y>
+            <width>171</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">font-weight: bold;
 font-family: Baloo 2;
 background: white;
-font-size: 14px;</string>
+font-size: 15px;</string>
           </property>
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="verticalScrollBarPolicy">
-           <enum>Qt::ScrollBarAlwaysOff</enum>
-          </property>
-          <property name="tabChangesFocus">
-           <bool>false</bool>
-          </property>
-          <property name="lineWrapMode">
-           <enum>QPlainTextEdit::WidgetWidth</enum>
-          </property>
-          <property name="plainText">
-           <string>Great Lakes</string>
-          </property>
-          <property name="textInteractionFlags">
-           <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+          <property name="text">
+           <string/>
           </property>
          </widget>
-         <widget class="QPlainTextEdit" name="plainTextEdit_80">
+         <widget class="QLabel" name="authorLabel">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>30</y>
-            <width>91</width>
+            <width>171</width>
             <height>21</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">font-family: Baloo 2;
 background: white;
-font-size: 13px;</string>
+font-size: 12px;</string>
           </property>
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="verticalScrollBarPolicy">
-           <enum>Qt::ScrollBarAlwaysOff</enum>
-          </property>
-          <property name="plainText">
-           <string>Peter Jackson</string>
+          <property name="text">
+           <string/>
           </property>
          </widget>
         </widget>

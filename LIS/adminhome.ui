@@ -879,6 +879,9 @@ background: rgb(220, 245, 255);
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
         <property name="plainText">
          <string>Different Winter  |  Mia Jackson</string>
         </property>
@@ -905,6 +908,9 @@ background: rgb(220, 245, 255);
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
         <property name="plainText">
          <string>Different Winter  |  Mia Jackson</string>
