@@ -32,6 +32,8 @@ private slots:
 
     void displayMember();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::AdminEditMemberDetails *ui;
     AdminCatalogue *adminCatalogue;
