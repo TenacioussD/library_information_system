@@ -32,6 +32,12 @@ private slots:
 
     void on_edit1_clicked();
 
+    void on_edit2_clicked();
+
+    void on_edit3_clicked();
+
+    void on_edit4_clicked();
+
 private:
     Ui::AdminUpdateBook *ui;
 };

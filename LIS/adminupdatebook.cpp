@@ -47,20 +47,56 @@ void AdminUpdateBook::on_pushButton_3_clicked()                     // When logo
     }
 }
 
-/*void AdminUpdateBook::on_greatLakes_clicked()                       // Opens enterbookupdate page when title of book is clicked
-{
-    hide();
-    AdminEnterBookUpdate *adminenterupdate =new AdminEnterBookUpdate (this);
-    adminenterupdate->show();
-}*/
-
 
 void AdminUpdateBook::on_edit1_clicked()
 {
-    QString title = "Great Lakes";           // Get the actual title
-    QString author = "Peter Jackson";          // Get the actual author
-    QPixmap image(":/images/book-covers/book14.png");       // Load the actual image
-    emit editBookClicked(title, author, image);
+    QString title = "Great Lakes";                          // Sets the title for book1
+    QString author = "Peter Jackson";                       // Sets the author for book1
+    QPixmap image(":/images/book-covers/book14.png");       // Loads the image from the path specificed in resources
+
+    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
+
+    hide();
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
+    adminenterbookupdate->show();
+}
+
+
+void AdminUpdateBook::on_edit2_clicked()
+{
+    QString title = "A Love Story";                         // Sets the title for book1
+    QString author = "Franklin Sierra";                     // Sets the author for book1
+    QPixmap image(":/images/book-covers/book11.png");       // Loads the image from the path specificed in resources
+
+    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
+
+    hide();
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
+    adminenterbookupdate->show();
+}
+
+
+void AdminUpdateBook::on_edit3_clicked()
+{
+    QString title = "Embrace The Wild";                     // Sets the title for book1
+    QString author = "Kylan Gentry";                        // Sets the author for book1
+    QPixmap image(":/images/book-covers/book12.png");       // Loads the image from the path specificed in resources
+
+    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
+
+    hide();
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
+    adminenterbookupdate->show();
+}
+
+
+void AdminUpdateBook::on_edit4_clicked()
+{
+    QString title = "Atomic Love";                          // Sets the title for book1
+    QString author = "Bowen Higgins";                       // Sets the author for book1
+    QPixmap image(":/images/book-covers/book9.png");        // Loads the image from the path specificed in resources
+
+    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
 
     hide();
     AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);

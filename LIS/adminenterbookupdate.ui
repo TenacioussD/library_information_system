@@ -532,7 +532,7 @@ font-size: 13px;</string>
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>210</y>
+           <y>220</y>
            <width>171</width>
            <height>31</height>
           </rect>
@@ -635,7 +635,7 @@ background: rgb(235, 235, 235);</string>
          <property name="geometry">
           <rect>
            <x>240</x>
-           <y>210</y>
+           <y>220</y>
            <width>171</width>
            <height>31</height>
           </rect>
@@ -679,8 +679,8 @@ QPushButton:hover {
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>171</width>
-           <height>231</height>
+           <width>151</width>
+           <height>211</height>
           </rect>
          </property>
          <property name="text">
@@ -694,7 +694,7 @@ QPushButton:hover {
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>240</y>
+           <y>230</y>
            <width>171</width>
            <height>71</height>
           </rect>
@@ -705,30 +705,11 @@ QPushButton:hover {
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="titleLabel">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>171</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-weight: bold;
-font-family: Baloo 2;
-background: white;
-font-size: 15px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
          <widget class="QLabel" name="authorLabel">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>30</y>
+            <y>20</y>
             <width>171</width>
             <height>21</height>
            </rect>
@@ -737,6 +718,31 @@ font-size: 15px;</string>
            <string notr="true">font-family: Baloo 2;
 background: white;
 font-size: 12px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="titleLabel">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>171</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;
+font-size: 13px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
           <property name="text">
            <string/>
