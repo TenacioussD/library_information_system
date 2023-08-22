@@ -6,6 +6,7 @@
 class AdminCatalogue;
 class AdminManageBooks;
 class AdminMembership;
+class AdminEditMemberDetails;
 
 namespace Ui {
 class AdminEditMember;
@@ -35,6 +36,7 @@ private:
     AdminCatalogue *adminCatalogue;
     AdminManageBooks *adminManageBooks;
     AdminMembership *adminMembership;
+     AdminEditMemberDetails *adminEditMemberDetails;
 };
 
 #endif // ADMINEDITMEMBER_H

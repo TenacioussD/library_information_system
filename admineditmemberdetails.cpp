@@ -5,6 +5,8 @@
 #include "adminaddmember.h"
 
 #include <QMessageBox>
+#include <QString>
+#include <QFile>
 
 AdminEditMemberDetails::AdminEditMemberDetails(QWidget *parent) :
     QDialog(parent),
@@ -51,9 +53,54 @@ void AdminEditMemberDetails::on_back_clicked()
     adminAddMember->show();
 }
 
-
-void AdminEditMemberDetails::on_pushButton_clicked() //edit info button
+void AdminEditMemberDetails::displayMember()
 {
+    layout = new QVBoxLayout(this);
 
+    QString lisNum;
+    QString firstName = ui->firstName->text();
+    QString lastName = ui->lastName->text();
+    QString contactNum = ui->contactNum->text();
+
+    QString accNum, memberFirstName, memberLastName, phoneNum;
+
+    //open and read from member file
+
+    QFile file("memberships.txt");
+    if (!file.open(QFile::ReadOnly | QFile::Text))
+    {
+        QMessageBox::warning(this, "Filing Problem", "File is not open");
+        return;
+    }
+
+    QTextStream in(&file);
+
+    //Search for the member's information and store it in variables
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList parts = line.split(" ");
+        if (parts.size() >= 4)
+        {
+            accNum = parts[0];
+            memberFirstName = parts[1];
+            memberLastName = parts[2];
+            phoneNum = parts[3];
+
+            // Create labels to display member information
+            QLabel *accNumLabel = new QLabel("LIS Access Number: " + accNum);
+            QLabel *firstNameLabel = new QLabel("First Name: " + memberFirstName);
+            QLabel *lastNameLabel = new QLabel("Last Name: " + memberLastName);
+            QLabel *phoneNumLabel = new QLabel("Contact Number: " + phoneNum);
+
+            // Add labels to the layout
+            layout->addWidget(accNumLabel);
+            layout->addWidget(firstNameLabel);
+            layout->addWidget(lastNameLabel);
+            layout->addWidget(phoneNumLabel);
+        }
+    }
+
+    //close file
+    file.close();
 }
-

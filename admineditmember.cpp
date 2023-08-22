@@ -3,6 +3,7 @@
 #include "admincatalogue.h"
 #include "adminmanagebooks.h"
 #include "adminmembership.h"
+#include "admineditmemberdetails.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -75,10 +76,9 @@ void AdminEditMember::on_addMemberBut_clicked()
         ui->firstName->setText(firstName);
         ui->lastName->setText(lastName);
 
-        file.close();
-
-        //show pop-up message if member is added
-        QMessageBox::information(this, "Success", "Member added successfully.");
-    }
+        hide();
+        adminEditMemberDetails = new AdminEditMemberDetails(this);
+        adminEditMemberDetails->show();
+        }
 }
 

@@ -1,11 +1,13 @@
 #ifndef ADMINEDITMEMBERDETAILS_H
 #define ADMINEDITMEMBERDETAILS_H
 
+#include "qboxlayout.h"
 #include <QDialog>
 
 class AdminCatalogue;
 class AdminManageBooks;
 class AdminAddMember;
+class QVBoxLayout;
 
 namespace Ui {
 class AdminEditMemberDetails;
@@ -28,13 +30,14 @@ private slots:
 
     void on_back_clicked();
 
-    void on_pushButton_clicked();
+    void displayMember();
 
 private:
     Ui::AdminEditMemberDetails *ui;
     AdminCatalogue *adminCatalogue;
     AdminManageBooks *adminManageBooks;
     AdminAddMember *adminAddMember;
+    QVBoxLayout *layout;
 };
 
 #endif // ADMINEDITMEMBERDETAILS_H
