@@ -13,6 +13,9 @@ AdminEditMemberDetails::AdminEditMemberDetails(QWidget *parent) :
     ui(new Ui::AdminEditMemberDetails)
 {
     ui->setupUi(this);
+
+    //call the displayMember function to populate and display member information
+    displayMember();
 }
 
 AdminEditMemberDetails::~AdminEditMemberDetails()
@@ -100,6 +103,11 @@ void AdminEditMemberDetails::displayMember()
             layout->addWidget(phoneNumLabel);
         }
     }
+
+    //Add vertical spacing between labels
+    layout->addSpacing(5);
+    layout->setAlignment(Qt::AlignTop); //Align the layout to center
+    layout->setContentsMargins(365, 200, 0, 0);
 
     //close file
     file.close();
