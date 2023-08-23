@@ -53,11 +53,11 @@ void AdminBookConfirmation::on_catalogue_3_clicked()
 }
 
 
-void AdminBookConfirmation::on_pushButton_3_clicked()  // Logout confirmation
+void AdminBookConfirmation::on_pushButton_3_clicked()     // Logout confirmation
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {         // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                      // If "Yes" application will quit
         QApplication::quit();
     }
 }

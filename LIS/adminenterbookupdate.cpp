@@ -66,12 +66,11 @@ void AdminEnterBookUpdate::on_back_clicked()
     adminhome->show();                                       // Using the show() method will display the AdminHome page
 }
 
-
 void AdminEnterBookUpdate::on_pushButton_2_clicked()         // When logout clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {         // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                         // If "Yes" application will quit
         QApplication::quit();
     }
 }

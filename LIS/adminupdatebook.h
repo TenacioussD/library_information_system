@@ -34,9 +34,9 @@ private slots:
 
     void on_edit2_clicked();
 
-   // void on_edit3_clicked();
+    void on_edit3_clicked();
 
-   // void on_edit4_clicked();
+    void on_edit4_clicked();
 
     void updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor);
 
