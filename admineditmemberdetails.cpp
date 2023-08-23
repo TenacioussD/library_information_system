@@ -3,6 +3,7 @@
 #include "admincatalogue.h"
 #include "adminmanagebooks.h"
 #include "adminaddmember.h"
+#include "adminmembership.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -52,19 +53,13 @@ void AdminEditMemberDetails::on_pushButton_2_clicked()
 void AdminEditMemberDetails::on_back_clicked()
 {
     hide();
-    adminAddMember = new AdminAddMember(this);
-    adminAddMember->show();
+    adminMembership = new AdminMembership(this);
+    adminMembership->show();
 }
 
 void AdminEditMemberDetails::displayMember()
 {
-    // Clear the existing layout content
-    QLayoutItem* item;
-    while ((item = layout->takeAt(0)) != nullptr)
-    {
-        delete item->widget();
-        delete item;
-    }
+    layout = new QVBoxLayout(this);
 
     QString accNum, memberFirstName, memberLastName, phoneNum;
 
@@ -150,7 +145,7 @@ void AdminEditMemberDetails::on_pushButton_clicked()
 
     //open file again to write the updated information
 
-    if (!file.open(QFile::WriteOnly | QFile::Text))
+    if (!file.open(QFile::WriteOnly | QFile::Text | QFile::Truncate))
     {
         QMessageBox::warning(this, "File Problem", "Unable to open the file for writing");
         return;
@@ -164,6 +159,13 @@ void AdminEditMemberDetails::on_pushButton_clicked()
 
         file.close();
         //reload displayMember function to update the information
+        // Clear the existing layout before adding new labels
+        QLayoutItem* child;
+        while ((child = layout->takeAt(0)) != nullptr)
+        {
+            delete child->widget();
+            delete child;
+        }
         displayMember();
     }
 

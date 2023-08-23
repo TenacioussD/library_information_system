@@ -18,8 +18,6 @@ firstNameLineEdit = new QLineEdit(this);
 lastNameLineEdit = new QLineEdit(this);
 contactNumLineEdit = new QLineEdit(this);
 
-//setupUI();// Call the setupUI function to set up the layout and connections
-
 }
 
 AdminAddMember::~AdminAddMember()
@@ -67,16 +65,16 @@ void AdminAddMember::on_addMemberBut_clicked()
     {
         QFile file("memberships.txt");
 
-        if (!file.open(QFile::WriteOnly | QFile::Text))
+        if (!file.open(QFile::Append | QFile::Text))
         {
             QMessageBox::warning(this, "Filing Problem", "File is not open");
+            return; //return if file open fails
         }
             QTextStream out(&file);
 
             QString accountNumber = generateAccountNumber();
             out << accountNumber << " " << firstName << " " << lastName << " " << contactNum << Qt::endl;
-            file.flush();
-            file.close();
+
 
             //Clear the input fields after adding member
             firstNameLineEdit->clear();
@@ -91,8 +89,26 @@ void AdminAddMember::on_addMemberBut_clicked()
 
 QString AdminAddMember::generateAccountNumber()
 {
-    memberCounter++;
-    QString accountNumber = QString("LIS%1").arg(memberCounter, 4, 10, QLatin1Char('0'));
+    QFile file("memberships.txt");
+    int memberCount = 0;
+
+    if (file.open(QFile::ReadOnly | QFile::Text))
+    {
+            QTextStream in(&file);
+
+            while (!in.atEnd())
+            {
+            in.readLine(); // Read each line, but don't process it
+            memberCount++;
+            }
+
+            file.close();
+    }
+
+    memberCount++; // Increment the count for the new member
+    QString accountNumber = QString("LIS%1").arg(memberCount, 4, 10, QLatin1Char('0'));
     return accountNumber;
 }
+
+
 

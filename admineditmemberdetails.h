@@ -8,6 +8,7 @@ class AdminCatalogue;
 class AdminManageBooks;
 class AdminAddMember;
 class QVBoxLayout;
+class AdminMembership;
 
 namespace Ui {
 class AdminEditMemberDetails;
@@ -40,6 +41,7 @@ private:
     AdminManageBooks *adminManageBooks;
     AdminAddMember *adminAddMember;
     QVBoxLayout *layout;
+    AdminMembership *adminMembership;
 };
 
 #endif // ADMINEDITMEMBERDETAILS_H
