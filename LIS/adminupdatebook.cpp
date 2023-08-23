@@ -27,10 +27,9 @@ void AdminUpdateBook::on_catalogue_3_clicked()                      // When cata
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
-        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
     }
-    GlobalInstances::adminCatalogueInstance->show();
-
+    GlobalInstances::adminCatalogueInstance->show();                // Shows adminCatalogue page
 }
 
 
@@ -59,38 +58,39 @@ void AdminUpdateBook::on_edit1_clicked()
     QString author = "Peter Jackson";                       // Sets the author for book1
     QPixmap image(":/images/book-covers/book14.png");       // Loads the image from the path specificed in resources
 
-    emit editBookClicked(title, author, image, bookIndex);       // Emits the signal and takes the four arguments that were previously specified
+    emit editBookClicked(title, author, image, bookIndex);  // Emits the signal and takes the four arguments that were previously specified
 
-    hide();
-    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);
-    connect(adminenterbookupdate, &AdminEnterBookUpdate::bookDetailsUpdated, this, &AdminUpdateBook::updateCatalogue);
-
-    adminenterbookupdate->show();
+    hide();                                                 // Hides the adminUpdateBookPage
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);     // Creates a  new instance of adminEnterBookUpdate and passes the info specified in the constructor
+    connect(adminenterbookupdate, &AdminEnterBookUpdate::bookDetailsUpdated, GlobalInstances::adminCatalogueInstance, &AdminCatalogue::updateBookDetails);  // The connection that is established between bookDetailsUpdated signal and the updateBookDetails slot
+    adminenterbookupdate->show();                           // Opens adminEnterBookUpdate page
 }
 
 
 void AdminUpdateBook::updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor)
 {
-    if (GlobalInstances::adminCatalogueInstance)
+    if (GlobalInstances::adminCatalogueInstance)       // Checks if adminCatalogue is not nullptr
     {
-        GlobalInstances::adminCatalogueInstance->updateBookDetails(index, updatedTitle, updatedAuthor);
+        GlobalInstances::adminCatalogueInstance->updateBookDetails(index, updatedTitle, updatedAuthor);   // If condition is true, this calls the updateBookDetails function in catalogue and passes the three arguments to it
     }
 }
 
-/*void AdminUpdateBook::on_edit2_clicked()
+void AdminUpdateBook::on_edit2_clicked()
 {
-    QString title = "A Love Story";                         // Sets the title for book1
-    QString author = "Franklin Sierra";                     // Sets the author for book1
+    int bookIndex = 1;
+    QString title = "A Love Story";                         // Sets the title for book2
+    QString author = "Franklin Sierra";                     // Sets the author for book2
     QPixmap image(":/images/book-covers/book11.png");       // Loads the image from the path specificed in resources
 
-    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
+    emit editBookClicked(title, author, image, bookIndex);  // Emits the signal and takes the four arguments that were previously specified
 
-    hide();
-    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
-    adminenterbookupdate->show();
+    hide();                                                 // Hides the adminUpdateBookPage
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);     // Creates a  new instance of adminEnterBookUpdate and passes the info specified in the constructor
+    connect(adminenterbookupdate, &AdminEnterBookUpdate::bookDetailsUpdated, GlobalInstances::adminCatalogueInstance, &AdminCatalogue::updateBookDetails);  // The connection that is established between bookDetailsUpdated signal and the updateBookDetails slot
+    adminenterbookupdate->show();                           // Opens adminEnterBookUpdate page
 }
 
-
+/*
 void AdminUpdateBook::on_edit3_clicked()
 {
     QString title = "Embrace The Wild";                     // Sets the title for book1

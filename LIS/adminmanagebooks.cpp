@@ -26,7 +26,7 @@ AdminManageBooks::~AdminManageBooks()
 void AdminManageBooks::on_add_Book_clicked()
 {
     hide();
-    AdminAddBook *adminaddbook =new AdminAddBook (this);                       // Opens admin add new book page
+    AdminAddBook *adminaddbook =new AdminAddBook (this);                // Opens admin add new book page
     adminaddbook->show();
 }
 
@@ -34,15 +34,15 @@ void AdminManageBooks::on_catalogue_clicked()
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
-        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
     }
-    GlobalInstances::adminCatalogueInstance->show();
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue page
 }
 
 void AdminManageBooks::on_back_clicked()
 {
     hide();
-    AdminHome *adminhome =new AdminHome (this);                           // Opens admin home
+    AdminHome *adminhome =new AdminHome (this);            // Opens admin home
     adminhome->show();
 }
 
@@ -58,7 +58,7 @@ void AdminManageBooks::on_pushButton_2_clicked()             // Logout button cl
 void AdminManageBooks::on_add_Book_3_clicked()
 {
     hide();
-    AdminUpdateBook *adminupdatebook =new AdminUpdateBook (this);                       // Opens admin add new book page
+    AdminUpdateBook *adminupdatebook =new AdminUpdateBook (this);    // Opens admin add new book page
     adminupdatebook->show();
 }
 

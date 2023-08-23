@@ -7,6 +7,7 @@
 #include <QLabel>
 
 class AdminEditBookDialog;          // Forward declaration
+class AdminHome;
 
 namespace Ui {
 class AdminEnterBookUpdate;
@@ -34,6 +35,10 @@ private slots:
     void on_confirm_2_clicked();
 
     void on_catalogue_clicked();
+
+    void on_back_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::AdminEnterBookUpdate *ui;

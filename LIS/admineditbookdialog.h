@@ -8,7 +8,6 @@
 class AdminHome;
 class AdminEnterBookUpdate;                 // Forward declarations
 class AdminCatalogue;
-class DatabaseManager;
 
 namespace Ui {
 class AdminEditBookDialog;
@@ -37,7 +36,6 @@ private slots:
 private:
     Ui::AdminEditBookDialog *ui;
     AdminEnterBookUpdate *enterBookUpdate;
-    //int bookIndex;           // Member variable to store the index
 };
 
 #endif // ADMINEDITBOOKDIALOG_H

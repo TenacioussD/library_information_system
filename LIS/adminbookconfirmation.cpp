@@ -5,7 +5,7 @@
 #include "adminaddbook.h"
 #include "globalinstances.h"
 
-#include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use its files
+#include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use it
 
 AdminBookConfirmation::AdminBookConfirmation(const QString &title, const QString &author, QWidget *parent) :       // Constructor with parameters for QString title and author
     QMainWindow(parent),
@@ -31,15 +31,14 @@ void AdminBookConfirmation::on_confirmDetails_clicked()
 
         hide();
         AdminHome *adminhome =new AdminHome(this);
-        adminhome->show();                                // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
-
+        adminhome->show();                                 // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
     }
 }
 
-void AdminBookConfirmation::on_back_2_clicked()
+void AdminBookConfirmation::on_back_2_clicked()            // When back button clicked
 {
     hide();
-    AdminAddBook *adminaddbook = new AdminAddBook (this);
+    AdminAddBook *adminaddbook = new AdminAddBook (this);  // Goes to previous page
     adminaddbook->show();
 }
 
@@ -48,8 +47,18 @@ void AdminBookConfirmation::on_catalogue_3_clicked()
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
-        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
     }
-    GlobalInstances::adminCatalogueInstance->show();
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens the adminCatalogue page
+}
+
+
+void AdminBookConfirmation::on_pushButton_3_clicked()  // Logout confirmation
+{
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes) {         // If "Yes" application will quit
+        QApplication::quit();
+    }
 }
 

@@ -28,6 +28,8 @@ private slots:
 
     void on_catalogue_3_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::AdminBookConfirmation *ui;
     AdminHome *adminhome;

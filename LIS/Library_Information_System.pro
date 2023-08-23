@@ -19,7 +19,6 @@ SOURCES += \
     adminlogin.cpp \
     adminmanagebooks.cpp \
     adminupdatebook.cpp \
-    databasemanager.cpp \
     globalinstances.cpp \
     main.cpp \
     login.cpp \
@@ -37,7 +36,6 @@ HEADERS += \
     adminlogin.h \
     adminmanagebooks.h \
     adminupdatebook.h \
-    databasemanager.h \
     globalinstances.h \
     login.h \
     membercatalogue.h \

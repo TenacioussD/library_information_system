@@ -23,18 +23,21 @@ void AdminLogin::on_pushButton_password_clicked()         // Forgot password but
 }
 
 
-void AdminLogin::on_pushButton_login_clicked()            // Login button clicked
+void AdminLogin::on_pushButton_login_clicked()            // Login button clicked, when login button clicked either display next page or error message
 {
-     QString username = ui->lineEdit_username->text();
-     QString password = ui->lineEdit_password->text();
+     QString username = ui->lineEdit_username->text();    // Assigning variable username to match the text user input
+     QString password = ui->lineEdit_password->text();    // Assigning variable password to match the text user input
 
-     if(username == "admin" && password == "admin") {       // When login button clicked either display next page or error message
+     if(username == "admin" && password == "admin")       // if statement that checks whether the username and password match
+     {
          hide();
-         AdminHome *adminhome =new AdminHome (this);                   // Opens admin dashboard
+         AdminHome *adminhome =new AdminHome (this);      // Opens admin dashboard if username and password match
          adminhome->show();
      }
-     else {
-         QMessageBox::warning(this, "Login", "Incorrect username and password");
+
+     else
+     {
+         QMessageBox::warning(this, "Login", "Incorrect username and password");      // Incorrect username or password warning if entered incorrectly
      }
 }
 

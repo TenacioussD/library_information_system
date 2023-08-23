@@ -36,19 +36,17 @@ void AdminHome::on_pushButton_clicked()      // Confirmation of logout
 
 void AdminHome::on_catalogue_clicked()
 {
-
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
-        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
     }
-    GlobalInstances::adminCatalogueInstance->show();
-
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
 void AdminHome::on_manageBooks_clicked()
 {
     hide();
-    AdminManageBooks *adminmanagebooks =new AdminManageBooks(this);                   // Opens book management page using pointer
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks(this);         // Opens book management page using new instance
     adminmanagebooks->show();
 }
 

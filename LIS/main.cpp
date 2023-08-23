@@ -9,7 +9,6 @@
 #include "adminbookconfirmation.h"
 #include "adminenterbookupdate.h"
 #include "admineditbookdialog.h"
-#include "databasemanager.h"
 #include "globalinstances.h"
 
 // Member header pages
@@ -19,9 +18,7 @@
 
 // Other header delarations
 #include <QApplication>
-#include <QSqlDatabase>              // Headers for SQL database
-#include <QSqlQuery>
-#include <QSqlError>
+
 
 int main(int argc, char *argv[])
 {
@@ -29,15 +26,7 @@ int main(int argc, char *argv[])
     Login w;
     w.show();
 
-    /*QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("books.db");                              // Books database
-
-    if (!db.open()) {
-        qDebug() << "Error opening database:" << db.lastError().text();
-        return 1; // Return an error code
-    }
-
-    db.close();*/
+    GlobalInstances::initializeGlobalInstances();
 
     return a.exec();
 }

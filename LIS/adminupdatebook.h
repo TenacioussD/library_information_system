@@ -32,7 +32,7 @@ private slots:
 
     void on_edit1_clicked();
 
-   // void on_edit2_clicked();
+    void on_edit2_clicked();
 
    // void on_edit3_clicked();
 
@@ -42,8 +42,6 @@ private slots:
 
 private:
     Ui::AdminUpdateBook *ui;
-    //AdminCatalogue *adminCatalogueInstance;   // Store pointer to adminCatalogue
-    //AdminEditBookDialog *adminEditBookDialog;
 };
 
 #endif // ADMINUPDATEBOOK_H

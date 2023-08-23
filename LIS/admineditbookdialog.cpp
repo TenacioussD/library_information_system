@@ -15,7 +15,6 @@
 AdminEditBookDialog::AdminEditBookDialog(const QString &title, const QString &author, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AdminEditBookDialog)
-    //bookIndex(index)
 
 {
     ui->setupUi(this);
@@ -28,15 +27,9 @@ AdminEditBookDialog::~AdminEditBookDialog()
     delete ui;
 }
 
-void AdminEditBookDialog::on_pushButton_clicked()            // Thank you pop-up when confirm button clicked
+void AdminEditBookDialog::on_pushButton_clicked()        // Thank you pop-up when confirm button clicked
 {
-    /*QString updatedTitle = ui->lineEditTitle->text();        // Takes the text for liineEdit and stores it in the variable newTitle
-    QString updatedAuthor = ui->lineEditAuthor->text();
 
-    emit globalAdminEditBookDialog->bookDetailsUpdated(bookIndex, updatedTitle, updatedAuthor);      // Signal emitted for the update book information, uses the globaladmineditbook and passes the index, title and author
-
-    qDebug() << "emitting: " << bookIndex << ", " << updatedTitle << " and " << updatedAuthor;       // qDebug message to ensure the emit signal emits the correct details
-*/
     QMessageBox* messageBox = new QMessageBox(this);
     messageBox->setWindowTitle("Thank you");
     messageBox->setText("Thank you, the book has been edited and added to the catalogue.");
@@ -44,16 +37,7 @@ void AdminEditBookDialog::on_pushButton_clicked()            // Thank you pop-up
     connect(messageBox, &QMessageBox::finished, this, &AdminEditBookDialog::handleMessageBoxFinished);
     messageBox->exec();
 
-
-    //QMessageBox::information(this, "Thank you", "Thank you, the book has edited and added to the catalogue.", QMessageBox::Ok);
-
-
-   //accept();
-    //emit bookEditCompleted();
-
-   // close();
-
-   // AdminHome *adminhome =new AdminHome(this);
+    //AdminHome *adminhome =new AdminHome(this);
     //adminhome->show();                              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
 
 }
@@ -67,6 +51,6 @@ void AdminEditBookDialog::handleMessageBoxFinished(int result)  // This had to b
 {
     if (result == QMessageBox::Ok)
     {
-        hide();                                               // Closes the dialog after the user clicks "OK" in the message box
+        hide();                                                 // Closes the dialog after the user clicks "OK" in the message box
     }
 }

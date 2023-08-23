@@ -26,38 +26,46 @@ AdminCatalogue::~AdminCatalogue()
 }
 
 
-void AdminCatalogue::on_back_clicked()                        // Back to home clicked
+void AdminCatalogue::on_back_clicked()                         // Back to home clicked
 {
     hide();
-    AdminHome *adminhome =new AdminHome;                      // Opens admin home
+    AdminHome *adminhome =new AdminHome;                       // Opens admin home
     adminhome->show();
 }
 
-void AdminCatalogue::on_logout_clicked()                      // Logout button clicked
+void AdminCatalogue::on_logout_clicked()                       // Logout button clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {                          // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                           // If "Yes" application will quit
         QApplication::quit();
     }
 }
 
-void AdminCatalogue::on_manageBooks_clicked()                 // Manage books button pressed
+void AdminCatalogue::on_manageBooks_clicked()                   // Manage books button pressed
 {
     hide();
-    AdminManageBooks *adminmanagebooks =new AdminManageBooks;      // Opens admin manage books page
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks;   // Opens admin manage books page
     adminmanagebooks->show();
 }
 
 void AdminCatalogue::updateBookDetails(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor)   // Updates the catologue for book1
 {
-    qDebug() << "Receiving book details";
+    qDebug() << "Receiving book details";              // Had to include this statement to ensure the signal was correctly connecting to this function
 
-    if (bookIndex == 0)                                // if statement checks the index of the book being edited
+    if (bookIndex == 0)                                // if statement checks the index of the book being edited, if = to 0
     {
         qDebug() << "Entering book index 0";
 
         ui->title1->setPlainText(updatedTitle);        // Updates the UI elements for title and author
         ui->author1->setPlainText(updatedAuthor);
+    }
+
+    if (bookIndex == 1)                                // if statement checks the index of the book being edited, if = to 1
+    {
+        qDebug() << "Entering book index 0";
+
+        ui->title2->setPlainText(updatedTitle);        // Updates the UI elements for title and author
+        ui->author2->setPlainText(updatedAuthor);
     }
 }
