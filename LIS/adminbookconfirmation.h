@@ -26,6 +26,8 @@ private slots:
 
     void on_back_2_clicked();
 
+    void on_catalogue_3_clicked();
+
 private:
     Ui::AdminBookConfirmation *ui;
     AdminHome *adminhome;

@@ -3,6 +3,7 @@
 
 #include "adminhome.h"                                        // Declaring header files
 #include "adminaddbook.h"
+#include "globalinstances.h"
 
 #include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use its files
 
@@ -40,5 +41,14 @@ void AdminBookConfirmation::on_back_2_clicked()
     hide();
     AdminAddBook *adminaddbook = new AdminAddBook (this);
     adminaddbook->show();
+}
+
+
+void AdminBookConfirmation::on_catalogue_3_clicked()
+{
+    hide();
+    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
+    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
+
 }
 

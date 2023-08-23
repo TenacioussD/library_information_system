@@ -4,6 +4,7 @@
 #include "adminhome.h"                                      // Declaration of headers used in this file
 #include "admincatalogue.h"
 #include "adminbookconfirmation.h"
+#include "globalinstances.h"
 
 #include <QString>                                          // Declaring the use of QString functions in this file
 #include <QMessageBox>
@@ -39,8 +40,8 @@ void AdminAddBook::on_pushButton_2_clicked()                 // Logout button pr
 void AdminAddBook::on_catalogue_clicked()                    // When catalogue is clicked
 {
     hide();
-    AdminCatalogue *admincatalogue =new AdminCatalogue (this);   // Opens catalogue
-    admincatalogue->show();
+    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
+    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
 
 }
 

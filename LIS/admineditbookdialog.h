@@ -19,18 +19,25 @@ class AdminEditBookDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AdminEditBookDialog(const QString &title, const QString &author, AdminEnterBookUpdate *enterBookUpdate, QWidget *parent = nullptr);
+    explicit AdminEditBookDialog(int index, const QString &title, const QString &author, QWidget *parent = nullptr);
     ~AdminEditBookDialog();
+
+signals:
+    void bookDetailsUpdated(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);     // Signal to pass the updated book details when user selects confirm
+
+    void bookEditCompleted();   // to close the adminupdatebookdetails page
 
 private slots:
     void on_pushButton_clicked();
 
     void on_cancelButton_clicked();
 
+    void handleMessageBoxFinished(int result);
+
 private:
     Ui::AdminEditBookDialog *ui;
     AdminEnterBookUpdate *enterBookUpdate;
-    AdminCatalogue *adminCatalogue;
+    int bookIndex;           // Member variable to store the index
 };
 
 #endif // ADMINEDITBOOKDIALOG_H

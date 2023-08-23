@@ -6,6 +6,7 @@
 
 class AdminHome;                                      // Forward declarations
 class AdminManageBooks;
+class AdminEditBookDialog;
 
 namespace Ui {
 class AdminCatalogue;
@@ -18,6 +19,10 @@ class AdminCatalogue : public QMainWindow
 public:
     explicit AdminCatalogue(QWidget *parent = nullptr);
     ~AdminCatalogue();
+
+    void updateBookDetails(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);
+
+    void setupConnections();  // Function to set connections to admincatalogue
 
 private slots:
 

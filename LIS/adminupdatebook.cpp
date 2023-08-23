@@ -4,7 +4,8 @@
 #include "admincatalogue.h"
 #include "adminhome.h"
 #include "adminenterbookupdate.h"
-#include "databasemanager.h"
+#include "admineditbookdialog.h"
+#include "globalinstances.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -15,6 +16,7 @@ AdminUpdateBook::AdminUpdateBook(QWidget *parent) :
     ui(new Ui::AdminUpdateBook)
 {
     ui->setupUi(this);
+    connect(globalAdminEditBookDialog, &AdminEditBookDialog::bookDetailsUpdated, this, &AdminUpdateBook::updateCatalogue); // Connection to retreive the updated books and sne dto catalogue
 }
 
 AdminUpdateBook::~AdminUpdateBook()
@@ -25,8 +27,8 @@ AdminUpdateBook::~AdminUpdateBook()
 void AdminUpdateBook::on_catalogue_3_clicked()                      // When catalogue is clicked from the menu section
 {
     hide();
-    AdminCatalogue *admincatalogue =new AdminCatalogue (this);      // Opens catalogue page
-    admincatalogue->show();
+    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
+    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
 }
 
 
@@ -50,19 +52,28 @@ void AdminUpdateBook::on_pushButton_3_clicked()                     // When logo
 
 void AdminUpdateBook::on_edit1_clicked()
 {
+    int bookIndex = 0;
     QString title = "Great Lakes";                          // Sets the title for book1
     QString author = "Peter Jackson";                       // Sets the author for book1
     QPixmap image(":/images/book-covers/book14.png");       // Loads the image from the path specificed in resources
 
-    emit editBookClicked(title, author, image);             // Emits the signal and takes the three arguments that were previously specified
+    emit editBookClicked(title, author, image, bookIndex);       // Emits the signal and takes the four arguments that were previously specified
 
     hide();
-    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
+    AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);
     adminenterbookupdate->show();
 }
 
 
-void AdminUpdateBook::on_edit2_clicked()
+void AdminUpdateBook::updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor)
+{
+    if (globalAdminCatalogue)
+    {
+        globalAdminCatalogue->updateBookDetails(index, updatedTitle, updatedAuthor);
+    }
+}
+
+/*void AdminUpdateBook::on_edit2_clicked()
 {
     QString title = "A Love Story";                         // Sets the title for book1
     QString author = "Franklin Sierra";                     // Sets the author for book1
@@ -101,5 +112,4 @@ void AdminUpdateBook::on_edit4_clicked()
     hide();
     AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, this);
     adminenterbookupdate->show();
-}
-
+}*/

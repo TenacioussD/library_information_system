@@ -1,10 +1,12 @@
 #include "adminhome.h"
 #include "ui_adminhome.h"
-#include "admincatalogue.h"
+
+#include "admincatalogue.h"               // Including the necessary header files
 #include "adminmanagebooks.h"
 #include "adminhome.h"
+#include "globalinstances.h"
 
-//#include "adminstatus.h"                   // Include necessary header files
+//#include "adminstatus.h"
 //#include "adminmembership.h"
 
 #include <QMessageBox>
@@ -15,6 +17,8 @@ AdminHome::AdminHome(QWidget *parent) :
 
 {
     ui->setupUi(this);
+
+    initializeGlobalInstances();
 }
 
 AdminHome::~AdminHome()
@@ -35,8 +39,8 @@ void AdminHome::on_catalogue_clicked()
 {
 
     hide();
-    AdminCatalogue *admincatalogue = new AdminCatalogue (this);          // Opens admin catalogue using pointer
-    admincatalogue->show();
+    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
+    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
 
 }
 

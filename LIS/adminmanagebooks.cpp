@@ -1,9 +1,11 @@
 #include "adminmanagebooks.h"
 #include "ui_adminmanagebooks.h"
+
 #include "adminaddbook.h"
 #include "adminhome.h"
 #include "admincatalogue.h"
 #include "adminupdatebook.h"
+#include "globalinstances.h"
 
 #include <QMessageBox>
 
@@ -31,8 +33,9 @@ void AdminManageBooks::on_add_Book_clicked()
 void AdminManageBooks::on_catalogue_clicked()
 {
     hide();
-    AdminCatalogue *admincatalogue =new AdminCatalogue (this);                   // Opens catalogue page
-    admincatalogue->show();
+    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
+    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
+
 }
 
 void AdminManageBooks::on_back_clicked()
