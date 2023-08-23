@@ -1,10 +1,18 @@
 #include "globalinstances.h"
 
-AdminEditBookDialog* globalAdminEditBookDialog = nullptr;
-AdminCatalogue* globalAdminCatalogue = nullptr;
+#include "admincatalogue.h"
+#include "adminenterbookupdate.h"
 
- void initializeGlobalInstances() {
+AdminCatalogue *GlobalInstances::adminCatalogueInstance = nullptr;
+AdminEnterBookUpdate *GlobalInstances::enterBookUpdateInstance = nullptr;
 
-    globalAdminEditBookDialog = new AdminEditBookDialog(-1, "", "", nullptr);       // Creates an instance of AdminEditBookDialog and assign it to the global pointer
 
- }
+void GlobalInstances::initializeGlobalInstances()
+{
+    // Initialize AdminCatalogue instance
+    //AdminCatalogue *globalAdminCatalogue = new AdminCatalogue;
+    adminCatalogueInstance = new AdminCatalogue;
+    // Initialize AdminEnterBookUpdate instance and establish connection
+    enterBookUpdateInstance = new AdminEnterBookUpdate("", "", QPixmap(), -1);
+
+}

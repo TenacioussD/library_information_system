@@ -19,9 +19,12 @@ class AdminEnterBookUpdate : public QMainWindow
 signals:
     void editBookClicked(int index, const QString &title, const QString &author, const QPixmap &image);         // signal that is emitted to pass the title, author and pixmap image to the enterBookUpdate page/class
 
+    void bookDetailsUpdated(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);     // Signal to pass the updated book details when user selects confirm
+
 public:
     explicit AdminEnterBookUpdate(const QString &title, const QString &author, const QPixmap &image, int bookIndex, QWidget *parent = nullptr);
     ~AdminEnterBookUpdate();
+
 
 public slots:
 

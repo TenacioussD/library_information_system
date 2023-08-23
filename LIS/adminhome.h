@@ -6,6 +6,7 @@
 
 class AdminCatalogue;                       // Forward Declarations
 class AdminManageBooks;
+class AdminEnterBookUpdate;
 
 // class AdminStatus;
 // class AdminMembership;

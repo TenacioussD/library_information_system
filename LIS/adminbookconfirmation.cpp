@@ -47,8 +47,9 @@ void AdminBookConfirmation::on_back_2_clicked()
 void AdminBookConfirmation::on_catalogue_3_clicked()
 {
     hide();
-    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
-    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
-
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();
 }
 

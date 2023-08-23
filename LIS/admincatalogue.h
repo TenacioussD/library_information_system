@@ -22,8 +22,6 @@ public:
 
     void updateBookDetails(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);
 
-    void setupConnections();  // Function to set connections to admincatalogue
-
 private slots:
 
     void on_back_clicked();

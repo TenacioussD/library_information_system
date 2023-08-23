@@ -33,9 +33,10 @@ void AdminManageBooks::on_add_Book_clicked()
 void AdminManageBooks::on_catalogue_clicked()
 {
     hide();
-    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
-    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
-
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();
 }
 
 void AdminManageBooks::on_back_clicked()

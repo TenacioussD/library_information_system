@@ -16,7 +16,6 @@ AdminUpdateBook::AdminUpdateBook(QWidget *parent) :
     ui(new Ui::AdminUpdateBook)
 {
     ui->setupUi(this);
-    connect(globalAdminEditBookDialog, &AdminEditBookDialog::bookDetailsUpdated, this, &AdminUpdateBook::updateCatalogue); // Connection to retreive the updated books and sne dto catalogue
 }
 
 AdminUpdateBook::~AdminUpdateBook()
@@ -27,8 +26,11 @@ AdminUpdateBook::~AdminUpdateBook()
 void AdminUpdateBook::on_catalogue_3_clicked()                      // When catalogue is clicked from the menu section
 {
     hide();
-    AdminCatalogue *admincatalogue = new AdminCatalogue(this);
-    globalAdminCatalogue = admincatalogue;                     // Assigns the globalAdminCatalogue pointer to the instance
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Assigns the globalAdminCatalogue pointer to the instance if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();
+
 }
 
 
@@ -61,15 +63,17 @@ void AdminUpdateBook::on_edit1_clicked()
 
     hide();
     AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);
+    connect(adminenterbookupdate, &AdminEnterBookUpdate::bookDetailsUpdated, this, &AdminUpdateBook::updateCatalogue);
+
     adminenterbookupdate->show();
 }
 
 
 void AdminUpdateBook::updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor)
 {
-    if (globalAdminCatalogue)
+    if (GlobalInstances::adminCatalogueInstance)
     {
-        globalAdminCatalogue->updateBookDetails(index, updatedTitle, updatedAuthor);
+        GlobalInstances::adminCatalogueInstance->updateBookDetails(index, updatedTitle, updatedAuthor);
     }
 }
 

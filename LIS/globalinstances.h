@@ -3,16 +3,17 @@
 
 #include "admineditbookdialog.h"
 #include "admincatalogue.h"
-
-extern AdminEditBookDialog* globalAdminEditBookDialog;
-extern AdminCatalogue* globalAdminCatalogue;
+#include "adminenterbookupdate.h"
 
 
-void initializeGlobalInstances();
-/*class GlobalInstances
-{
+class GlobalInstances {
 public:
-    GlobalInstances();
-};*/
+
+    static AdminCatalogue *adminCatalogueInstance;            // Declaring the instance
+
+    static AdminEnterBookUpdate *enterBookUpdateInstance;
+
+    static void initializeGlobalInstances();
+};
 
 #endif // GLOBALINSTANCES_H

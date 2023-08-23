@@ -17,8 +17,7 @@ AdminCatalogue::AdminCatalogue(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setupConnections();
-    show();
+    connect(GlobalInstances::enterBookUpdateInstance, &AdminEnterBookUpdate::bookDetailsUpdated, this, &AdminCatalogue::updateBookDetails);
 }
 
 AdminCatalogue::~AdminCatalogue()
@@ -26,10 +25,6 @@ AdminCatalogue::~AdminCatalogue()
     delete ui;
 }
 
-void AdminCatalogue::setupConnections()
-{
-    connect(globalAdminEditBookDialog, &AdminEditBookDialog::bookDetailsUpdated, this, &AdminCatalogue::updateBookDetails);
-}
 
 void AdminCatalogue::on_back_clicked()                        // Back to home clicked
 {

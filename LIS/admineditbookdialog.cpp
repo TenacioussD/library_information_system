@@ -12,10 +12,10 @@
 #include <QDebug>
 
 
-AdminEditBookDialog::AdminEditBookDialog(int index, const QString &title, const QString &author, QWidget *parent) :
+AdminEditBookDialog::AdminEditBookDialog(const QString &title, const QString &author, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AdminEditBookDialog),
-    bookIndex(index)
+    ui(new Ui::AdminEditBookDialog)
+    //bookIndex(index)
 
 {
     ui->setupUi(this);
@@ -30,13 +30,13 @@ AdminEditBookDialog::~AdminEditBookDialog()
 
 void AdminEditBookDialog::on_pushButton_clicked()            // Thank you pop-up when confirm button clicked
 {
-    QString updatedTitle = ui->lineEditTitle->text();        // Takes the text for liineEdit and stores it in the variable newTitle
+    /*QString updatedTitle = ui->lineEditTitle->text();        // Takes the text for liineEdit and stores it in the variable newTitle
     QString updatedAuthor = ui->lineEditAuthor->text();
 
     emit globalAdminEditBookDialog->bookDetailsUpdated(bookIndex, updatedTitle, updatedAuthor);      // Signal emitted for the update book information, uses the globaladmineditbook and passes the index, title and author
 
     qDebug() << "emitting: " << bookIndex << ", " << updatedTitle << " and " << updatedAuthor;       // qDebug message to ensure the emit signal emits the correct details
-
+*/
     QMessageBox* messageBox = new QMessageBox(this);
     messageBox->setWindowTitle("Thank you");
     messageBox->setText("Thank you, the book has been edited and added to the catalogue.");
@@ -67,6 +67,6 @@ void AdminEditBookDialog::handleMessageBoxFinished(int result)  // This had to b
 {
     if (result == QMessageBox::Ok)
     {
-        accept();                                               // Closes the dialog after the user clicks "OK" in the message box
+        hide();                                               // Closes the dialog after the user clicks "OK" in the message box
     }
 }

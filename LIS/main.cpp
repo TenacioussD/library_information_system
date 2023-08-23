@@ -10,6 +10,7 @@
 #include "adminenterbookupdate.h"
 #include "admineditbookdialog.h"
 #include "databasemanager.h"
+#include "globalinstances.h"
 
 // Member header pages
 #include "memberlogin.h"
