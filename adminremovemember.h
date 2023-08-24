@@ -6,6 +6,7 @@
 class AdminCatalogue;
 class AdminManageBooks;
 class AdminMembership;
+class AdminRemoveMemConfirm;
 
 namespace Ui {
 class AdminRemoveMember;
@@ -28,11 +29,14 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::AdminRemoveMember *ui;
     AdminCatalogue *adminCatalogue;
     AdminManageBooks *adminManageBooks;
     AdminMembership *adminMembership;
+    AdminRemoveMemConfirm *adminRemoveMemConfirm;
 };
 
 #endif // ADMINREMOVEMEMBER_H
