@@ -19,7 +19,7 @@ class AdminEditMemberDetails : public QDialog
     Q_OBJECT
 
 public:
-    explicit AdminEditMemberDetails(QWidget *parent = nullptr);
+    explicit AdminEditMemberDetails(const QString &firstName, const QString &lastName, const QString &contactNum, const QString &lisNum, QWidget *parent = nullptr);
     ~AdminEditMemberDetails();
 
 private slots:
@@ -42,6 +42,7 @@ private:
     AdminAddMember *adminAddMember;
     QVBoxLayout *layout;
     AdminMembership *adminMembership;
+    QString lisNum; //Add a member to store the LIS Access Number
 };
 
 #endif // ADMINEDITMEMBERDETAILS_H

@@ -55,6 +55,7 @@ void AdminEditMember::on_back_clicked()
 
 void AdminEditMember::on_addMemberBut_clicked()
 {
+    //fetching input values from UI
     QString firstName = ui->firstName->text();
     QString lastName = ui->lastName->text();
     QString lisNum = ui->lisNum->text();
@@ -77,7 +78,7 @@ void AdminEditMember::on_addMemberBut_clicked()
         ui->lastName->setText(lastName);
 
         hide();
-        adminEditMemberDetails = new AdminEditMemberDetails(this);
+        adminEditMemberDetails = new AdminEditMemberDetails(firstName, lastName, contactNum, lisNum);
         adminEditMemberDetails->show();
         }
 }

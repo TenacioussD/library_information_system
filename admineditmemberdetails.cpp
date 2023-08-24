@@ -9,14 +9,20 @@
 #include <QString>
 #include <QFile>
 
-AdminEditMemberDetails::AdminEditMemberDetails(QWidget *parent) :
+AdminEditMemberDetails::AdminEditMemberDetails(const QString &firstName, const QString &lastName, const QString &contactNum, const QString &lisNum, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AdminEditMemberDetails)
+    ui(new Ui::AdminEditMemberDetails),
+    lisNum(lisNum) //Initializing LIS Access Number member
 {
     ui->setupUi(this);
 
     //call the displayMember function to populate and display member information
     displayMember();
+
+    //Populate UI fields with provided data
+    ui->firstName->setText(firstName);
+    ui->lastName->setText(lastName);
+    ui->contactNum->setText(contactNum);
 }
 
 AdminEditMemberDetails::~AdminEditMemberDetails()
@@ -79,7 +85,7 @@ void AdminEditMemberDetails::displayMember()
     {
         QString line = in.readLine();
         QStringList parts = line.split(" ");
-        if (parts.size() >= 4)
+        if (parts.size() >= 4 && parts[0] == lisNum) //Check for mathing LIS Access Number
         {
             accNum = parts[0];
             memberFirstName = parts[1];
@@ -97,6 +103,8 @@ void AdminEditMemberDetails::displayMember()
             layout->addWidget(firstNameLabel);
             layout->addWidget(lastNameLabel);
             layout->addWidget(phoneNumLabel);
+
+            break;
         }
     }
 
@@ -136,8 +144,15 @@ void AdminEditMemberDetails::on_pushButton_clicked()
         if (parts.size() >= 4)
         {
             QString lisNUM = parts[0];
-            QString updatedLine = lisNUM + " " + newFirstName + " " + newLastName + " " + newContactNum + "\n" + parts[4];
+            if (lisNUM == lisNum) //Check if the access Number matches current member
+            {
+            QString updatedLine = lisNUM + " " + newFirstName + " " + newLastName + " " + newContactNum;
             lines.append(updatedLine);
+            }
+            else
+            {
+            lines.append(line);
+            }
         }
     }
 
@@ -167,5 +182,5 @@ void AdminEditMemberDetails::on_pushButton_clicked()
             delete child;
         }
         displayMember();
-    }
+}
 
