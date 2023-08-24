@@ -1,13 +1,13 @@
 #include "adminviewstatus.h"
 #include "ui_adminviewstatus.h"
 
-#include "admincatalogue.h"         // Including the necessary header files
-#include "adminmanagebooks.h"
-#include "adminmembership.h"
-#include "adminhome.h"
+//#include "admincatalogue.h"         // Including the necessary header files
+//#include "adminmanagebooks.h"
+//#include "adminmembership.h"
+//#include "adminhome.h"
 #include "adminoverdue.h"
 #include "adminpreorderedbooks.h"
-#include "adminviewreturn.h"
+#include "adminviewstatusreturn.h"
 #include <QMessageBox>
 
 
@@ -23,29 +23,27 @@ AdminViewStatus::~AdminViewStatus()
     delete ui;
 }
 
-void AdminViewStatus::on_catalogue_clicked()
+/*void AdminViewStatus::on_catalogue_clicked()
 {
     hide();                                                  // Hide the current AdminViewStatus window
 
                                                              // Create a new instance of AdminCatalogue window
     AdminCatalogue *adminCatalogue = new AdminCatalogue;
     adminCatalogue->show();                                  // Show the AdminViewStatus window
-}
+}*/
 
 
-void AdminViewStatus::on_manageBooks_clicked()
+/*void AdminViewStatus::on_manageBooks_clicked()
 {                                                             // Hide the current AdminViewStatus window
     hide();
 
                                                                // Create and show the ManageBooks window
     AdminManageBooks *adminManageBooks = new AdminManageBooks;
     adminManageBooks->show();
-}
+}*/
 
 
-
-
-void AdminViewStatus::on_membership_clicked()
+/*void AdminViewStatus::on_membership_clicked()
 {
                                                                     // Hide the current AdminViewStatus window
     hide();
@@ -53,7 +51,7 @@ void AdminViewStatus::on_membership_clicked()
                                                                    // Create and show the Membership window
     AdminMembership *adminMembership = new AdminMembership;
     adminMembership->show();
-}
+}*/
 
 
 void AdminViewStatus::on_logout_clicked()                          // Logout button pressed
@@ -65,12 +63,12 @@ void AdminViewStatus::on_logout_clicked()                          // Logout but
 }
 
 
-void AdminViewStatus::on_back_clicked()                           // back button pressed
+/*void AdminViewStatus::on_back_clicked()                           // back button pressed
 {
     hide();                                                       // Hides the current AdminViewStatus page
     AdminHome *adminHomeInstance = new AdminHome;                 // Opens AdminHome
     adminHomeInstance->show();                                    // Show the AdminHome window
-}
+}*/
 
 
 void AdminViewStatus::on_adminoverdue_clicked()
@@ -88,7 +86,7 @@ void AdminViewStatus::on_adminpreorderedbooks_clicked()
                                                                    // Hide the current AdminViewStatus Window
     hide();
                                                                    // Create and show the AdminPreOrderedBooks Window
-    AdminPreOrderedBooks * adminPreOrderedBooks = newAdminPreOrderedBooks;
+    AdminPreOrderedBooks * adminPreOrderedBooks = new AdminPreOrderedBooks;
     adminPreOrderedBooks->show();
 
 }
@@ -99,7 +97,8 @@ void AdminViewStatus::on_adminreturn_clicked()
                                                                     // Hide the current AdminViewStatus window
     hide();
                                                                     //Create and show the AdminReturn Window
-    AdminViewReturn *adminViewReturn = new AdminViewReturn;
-    adminViewReturn->show();
+   AdminViewStatusReturn *adminViewStatusReturn = new AdminViewStatusReturn;
+   adminViewStatusReturn->show();
 }
+
 

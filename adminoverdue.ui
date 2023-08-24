@@ -60,7 +60,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../qt test/images/logo.png</pixmap>
+       <pixmap>../images/logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -129,7 +129,7 @@ border-radius: 5px;</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../qt test/images/Icons/user.png</pixmap>
+         <pixmap>../images/Icons/user.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -216,7 +216,7 @@ font-size: 15px;
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../qt test/images/Icons/status.png</pixmap>
+         <pixmap>../images/Icons/status.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -278,7 +278,7 @@ QPushButton:hover {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../qt test/images/Icons/book.png</pixmap>
+         <pixmap>../images/Icons/book.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -340,7 +340,7 @@ QPushButton:hover {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../qt test/images/Icons/books.png</pixmap>
+         <pixmap>../images/Icons/books.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -506,7 +506,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book8.png</pixmap>
+      <pixmap>../images/book-covers/book8.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -525,7 +525,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book5.png</pixmap>
+      <pixmap>../images/book-covers/book5.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -544,7 +544,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book6.png</pixmap>
+      <pixmap>../images/book-covers/book6.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -563,7 +563,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book4.png</pixmap>
+      <pixmap>../images/book-covers/book4.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -582,7 +582,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book2.png</pixmap>
+      <pixmap>../images/book-covers/book2.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -601,7 +601,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book10.png</pixmap>
+      <pixmap>../images/book-covers/book10.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -620,7 +620,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book16.png</pixmap>
+      <pixmap>../images/book-covers/book16.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -639,7 +639,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book11.png</pixmap>
+      <pixmap>../images/book-covers/book11.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -658,7 +658,7 @@ font-size: 13px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../qt test/images/book-covers/book15.png</pixmap>
+      <pixmap>../images/book-covers/book15.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

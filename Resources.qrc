@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../images/library.jpg</file>
+        <file>../images/library1.jpg</file>
+        <file>../images/logo - Copy.png</file>
+        <file>../images/logo.png</file>
+        <file>../images/book-covers/book2.png</file>
+        <file>../images/book-covers/book3.png</file>
+        <file>../images/book-covers/book4.png</file>
+        <file>../images/book-covers/book5.png</file>
+        <file>../images/book-covers/book6.png</file>
+        <file>../images/book-covers/book7.png</file>
+        <file>../images/book-covers/book8.png</file>
+        <file>../images/book-covers/book9.png</file>
+        <file>../images/book-covers/book14.png</file>
+        <file>../images/book-covers/book15.png</file>
+        <file>../images/book-covers/book16.png</file>
+        <file>../images/book-covers/reader.png</file>
+        <file>../images/book-covers/book.png</file>
+        <file>../images/book-covers/book10.png</file>
+        <file>../images/book-covers/book11.png</file>
+        <file>../images/book-covers/book12.png</file>
+        <file>../images/book-covers/book13.png</file>
+        <file>../images/Icons/back.png</file>
+        <file>../images/Icons/book.png</file>
+        <file>../images/Icons/book1.png</file>
+        <file>../images/Icons/books.png</file>
+        <file>../images/Icons/overdue.png</file>
+        <file>../images/Icons/status.png</file>
+        <file>../images/Icons/user.png</file>
+        <file>../images/Icons/users.png</file>
+        <file>../images/Icons/warning.png</file>
+    </qresource>
+</RCC>

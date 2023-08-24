@@ -32,3 +32,6 @@ FORMS += \
     adminpreorderedbooks.ui \
     adminviewstatus.ui \
     adminviewstatusreturn.ui
+
+RESOURCES += \
+    Resources.qrc

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class AdminViesStatus;
+
 namespace Ui {
 class AdminPreOrderedBooks;
 }
@@ -16,13 +18,13 @@ public:
     ~AdminPreOrderedBooks();
 
 private slots:
-    void on_catalogueButton_clicked();
+    //void on_catalogueButton_clicked();
 
-    void on_manageBooksButton_clicked();
+    //void on_manageBooksButton_clicked();
 
     void on_status_clicked();
 
-    void on_membershipButton_clicked();
+    //void on_membershipButton_clicked();
 
 private:
     Ui::AdminPreOrderedBooks *ui;

@@ -16,17 +16,17 @@ public:
     ~AdminOverdue();
 
 private slots:
-    void on_catalogueButton_clicked();
+   // void on_catalogueButton_clicked();
 
-    void on_manageBooksButton_clicked();
+    //void on_manageBooksButton_clicked();
 
     void on_adminviewstatus_clicked();
 
-    void on_membershipButton_clicked();
+   // void on_membershipButton_clicked();
 
     void on_logout_clicked();
 
-    void on_back_clicked();
+    //void on_back_clicked();
 
 private:
     Ui::AdminOverdue *ui;
