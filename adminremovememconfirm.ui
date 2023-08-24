@@ -523,7 +523,7 @@ border-color: black;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -576,16 +576,24 @@ This cannot be undone</string>
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="styleSheet">
-         <string notr="true">/*QPushButton {
-background: white;
-}*/
+         <string notr="true">QPushButton
+{
+background: rgb(235, 235, 235);
+border-radius: 10px;
+font-size: 14px;
+font-family: open sans;
+color: black;
+font-weight: bold;
+}
 
-QPushButton:hover {
+
+QPushButton:hover 
+{
 	color: rgb(106, 146, 255);
 }</string>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Confirm Removal</string>
         </property>
        </widget>
       </item>
