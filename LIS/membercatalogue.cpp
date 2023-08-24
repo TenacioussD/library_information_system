@@ -17,7 +17,7 @@ MemberCatalogue::~MemberCatalogue()
     delete ui;
 }
 
-void MemberCatalogue::on_back_clicked()
+void MemberCatalogue::on_back_clicked()                    // When back button is clicked
 {
     hide();
     MemberHome *memberhome =new MemberHome;                // Opens member home
@@ -28,7 +28,7 @@ void MemberCatalogue::on_logout_clicked()                  // Login button press
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {                      // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                       // If "Yes" application will quit
         QApplication::quit();
     }
 }

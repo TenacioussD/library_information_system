@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
-#include "membercatalogue.h"
+
 class MemberCatalogue;
 class MemberHome;
 

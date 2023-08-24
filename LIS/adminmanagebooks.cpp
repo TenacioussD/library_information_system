@@ -22,7 +22,6 @@ AdminManageBooks::~AdminManageBooks()
     delete ui;
 }
 
-
 void AdminManageBooks::on_add_Book_clicked()
 {
     hide();
