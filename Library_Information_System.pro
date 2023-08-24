@@ -19,6 +19,7 @@ SOURCES += \
     adminlogin.cpp \
     adminmanagebooks.cpp \
     adminmembership.cpp \
+    adminremovemember.cpp \
     main.cpp \
     login.cpp \
     membercatalogue.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     adminlogin.h \
     adminmanagebooks.h \
     adminmembership.h \
+    adminremovemember.h \
     login.h \
     membercatalogue.h \
     memberhome.h \
@@ -58,6 +60,7 @@ FORMS += \
     adminlogin.ui \
     adminmanagebooks.ui \
     adminmembership.ui \
+    adminremovemember.ui \
     login.ui \
     membercatalogue.ui \
     memberhome.ui \
