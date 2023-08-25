@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminUpdateBook</class>
+ <widget class="QMainWindow" name="AdminUpdateBook">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1019</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">background: white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="menuPanel_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>231</width>
+         <height>671</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(220, 245, 255);</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="logo_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>131</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="Resources.qrc">:/images/logo.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="menu_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>191</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QListWidget" name="listWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>341</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;
+border-radius: 5px;</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="plainTextEdit_7">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+background: white;
+font-size: 15px;
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="plainText">
+          <string>Admin Menu</string>
+         </property>
+         <property name="backgroundVisible">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QFrame" name="catalogue_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;
+border-radius: 5px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/books.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="catalogue_3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Catalogue</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="manageBooks_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: rgb(240, 240, 240);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/book.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="manageBooks_3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Manage Books</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="status_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>200</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/status.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="status_3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>View Status</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="membership_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>260</y>
+           <width>151</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: white;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>31</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/images/Icons/user.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="membership_3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>10</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: transparent;
+font-size: 14px;
+border: none;
+}
+
+QPushButton:hover {
+	color: rgb(124, 204, 241);
+}</string>
+          </property>
+          <property name="text">
+           <string>Membership</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>600</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Logout</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="back_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>600</y>
+          <width>71</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*QPushButton {
+background: white;
+}*/
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-previous">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="heading_4">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>30</y>
+         <width>641</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPlainTextEdit" name="plainTextEdit_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>641</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="plainText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_13">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>371</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+font-size: 23px;
+background: transparent;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="plainText">
+         <string>Update Book Details</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_14">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>571</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+font-family: Baloo 2;
+font-size: 13px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="plainText">
+         <string>Please select a book to change its details</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>180</y>
+         <width>651</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* VERTICAL SCROLL*/
+
+QScrollBar::handle:vertical {
+border: none;
+border-radius: 5px;
+background: rgb(215, 242, 255);
+margin: 15px 0 15px 0;
+width: 14px;
+}
+
+/* SCROLL BUTTON - TOP*/
+
+QScrollBar::sub-line:vertical {
+border:none;
+background: rgb(215, 242, 255);
+height: 15px;
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+subcontrol-position: top;
+subcontrol-origin: margin; 
+}
+
+
+/* SCROLL BUTTON - BOTTOM*/
+
+QScrollBar::add-line:vertical {
+border:none;
+background: rgb(215, 242, 255);
+height: 15px;
+border-bottom-left-radius: 7px;
+border-bottom-right-radius: 7px;
+subcontrol-position: bottom;
+subcontrol-origin: margin; 
+}
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>634</width>
+          <height>678</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-style: none;</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QFrame" name="frame_3">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>660</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: white;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QFrame" name="frame_4">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-10</y>
+              <width>641</width>
+              <height>651</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <widget class="QFrame" name="book3">
+             <property name="geometry">
+              <rect>
+               <x>309</x>
+               <y>9</y>
+               <width>131</width>
+               <height>231</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_36">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book12.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_60">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>140</y>
+                <width>121</width>
+                <height>81</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="title3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>111</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Embrace The Wild</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="author3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>30</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Kylan Gentry</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="edit3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>60</y>
+                 <width>51</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+background: transparent;
+font-size: 11px;
+border: 0.5px solid;
+border-color: rgb(146, 184, 212);
+border-radius: 5px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Edit</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_61">
+             <property name="geometry">
+              <rect>
+               <x>160</x>
+               <y>460</y>
+               <width>141</width>
+               <height>210</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_37">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book15.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_62">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_69">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Learn &amp; Play</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_70">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>John Glover</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_63">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>250</y>
+               <width>144</width>
+               <height>211</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_24">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book2.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_64">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_43">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>The Bike Guy</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_44">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Mia Gas</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_65">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>460</y>
+               <width>131</width>
+               <height>210</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_38">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book7.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_66">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_71">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>How To Skip</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_72">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Tatiana McGregor</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_67">
+             <property name="geometry">
+              <rect>
+               <x>160</x>
+               <y>250</y>
+               <width>141</width>
+               <height>211</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_39">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book13.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_68">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_73">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>111</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>We Are Business</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_74">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Julies Maldover</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_69">
+             <property name="geometry">
+              <rect>
+               <x>460</x>
+               <y>460</y>
+               <width>131</width>
+               <height>210</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_40">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_70">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_75">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>The Orange Book</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_76">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Marceline Avila</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="book4">
+             <property name="geometry">
+              <rect>
+               <x>458</x>
+               <y>9</y>
+               <width>131</width>
+               <height>231</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_41">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book9.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_72">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>121</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="title4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Atomic Love</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="author4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Bowen Higgins</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="edit4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>50</y>
+                 <width>51</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+background: transparent;
+font-size: 11px;
+border: 0.5px solid;
+border-color: rgb(146, 184, 212);
+border-radius: 5px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Edit</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="book1">
+             <property name="geometry">
+              <rect>
+               <x>2</x>
+               <y>9</y>
+               <width>131</width>
+               <height>231</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="image1">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book14.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_74">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>140</y>
+                <width>111</width>
+                <height>81</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="author1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>30</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;
+text-align: center;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Peter Jackson</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="edit1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>60</y>
+                 <width>51</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+background: transparent;
+font-size: 11px;
+border: 0.5px solid;
+border-color: rgb(146, 184, 212);
+border-radius: 5px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Edit</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="title1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Great Lakes</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_75">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>460</y>
+               <width>144</width>
+               <height>210</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_43">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book16.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_76">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_81">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Comic Book</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_82">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Kane Dyer</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="book2">
+             <property name="geometry">
+              <rect>
+               <x>159</x>
+               <y>9</y>
+               <width>131</width>
+               <height>231</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_25">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book11.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_35">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>140</y>
+                <width>111</width>
+                <height>81</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="title2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>10</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>A Love Story</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="author2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>30</y>
+                 <width>101</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Franklin Sierra</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="edit2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>60</y>
+                 <width>51</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+background: transparent;
+font-size: 11px;
+border: 0.5px solid;
+border-color: rgb(146, 184, 212);
+border-radius: 5px;
+}
+
+QPushButton:hover {
+	color: rgb(106, 146, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Edit</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_77">
+             <property name="geometry">
+              <rect>
+               <x>460</x>
+               <y>250</y>
+               <width>131</width>
+               <height>211</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_44">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book6.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_78">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_83">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>91</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Cheesecakes</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_84">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Tim Smith</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="frame_79">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>250</y>
+               <width>131</width>
+               <height>211</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="label_45">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>111</width>
+                <height>141</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="Resources.qrc">:/images/book-covers/book10.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_80">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>150</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QPlainTextEdit" name="plainTextEdit_85">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>111</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-weight: bold;
+font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="tabChangesFocus">
+                <bool>false</bool>
+               </property>
+               <property name="lineWrapMode">
+                <enum>QPlainTextEdit::WidgetWidth</enum>
+               </property>
+               <property name="plainText">
+                <string>Snow At Sunset</string>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+              <widget class="QPlainTextEdit" name="plainTextEdit_86">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>20</y>
+                 <width>104</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+background: white;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="plainText">
+                <string>Samantha Dee</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
