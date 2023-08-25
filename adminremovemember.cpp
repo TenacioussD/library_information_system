@@ -56,7 +56,7 @@ void AdminRemoveMember::on_pushButton_clicked() //Remove Member Push Button
     //fetching input values from UI
     QString firstName = ui->firstName->text();
     QString lastName = ui->lastName->text();
-    QString lisNum = ui->lisNum->text();
+    lisNum = ui->lisNum->text();
     QString contactNum;
 
     if (!firstName.isEmpty() && !lastName.isEmpty() && !lisNum.isEmpty())
@@ -81,3 +81,7 @@ void AdminRemoveMember::on_pushButton_clicked() //Remove Member Push Button
     }
 }
 
+QString AdminRemoveMember::getLisNum() const
+{
+    return lisNum; // Assuming 'lisNum' is a member variable of AdminRemoveMember
+}

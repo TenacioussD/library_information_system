@@ -20,6 +20,8 @@ public:
     explicit AdminRemoveMember(QWidget *parent = nullptr);
     ~AdminRemoveMember();
 
+     QString getLisNum() const; //this will return the LIS number of the user that needs to be deleted
+
 private slots:
     void on_catalogue_clicked();
 
@@ -37,6 +39,7 @@ private:
     AdminManageBooks *adminManageBooks;
     AdminMembership *adminMembership;
     AdminRemoveMemConfirm *adminRemoveMemConfirm;
+    QString lisNum;
 };
 
 #endif // ADMINREMOVEMEMBER_H

@@ -53,6 +53,8 @@ void AdminRemoveMemConfirm::on_back_clicked()
 
 void AdminRemoveMemConfirm::displayMember()
 {
+    lisNum = adminRemoveMem->getLisNum(); // Replace this with the appropriate function to get lisNum from AdminRemoveMember
+
     layout = new QVBoxLayout(this);
 
     QString accNum, memberFirstName, memberLastName, phoneNum;
@@ -107,7 +109,7 @@ void AdminRemoveMemConfirm::displayMember()
 
 
 void AdminRemoveMemConfirm::on_pushButton_clicked() //confirm removal
-{
+{   
     //open the membership file for reading and writing
     QFile file("memberships.txt");
     if(!file.open(QFile::ReadWrite | QFile::Text))
