@@ -60,7 +60,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../images/logo.png</pixmap>
+       <pixmap resource="Resources.qrc">:/images/logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -129,7 +129,7 @@ border-radius: 5px;</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../images/Icons/user.png</pixmap>
+         <pixmap resource="Resources.qrc">:/images/Icons/user.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -216,7 +216,7 @@ font-size: 15px;
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../images/Icons/status.png</pixmap>
+         <pixmap resource="Resources.qrc">:/images/Icons/status.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -278,7 +278,7 @@ QPushButton:hover {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../images/Icons/book.png</pixmap>
+         <pixmap resource="Resources.qrc">:/images/Icons/book.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -340,7 +340,7 @@ QPushButton:hover {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../images/Icons/books.png</pixmap>
+         <pixmap resource="Resources.qrc">:/images/Icons/books.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -654,6 +654,8 @@ QPushButton:hover {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
