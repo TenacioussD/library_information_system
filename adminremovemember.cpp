@@ -28,7 +28,6 @@ void AdminRemoveMember::on_catalogue_clicked()
     adminCatalogue->show();
 }
 
-
 void AdminRemoveMember::on_manageBooks_clicked()
 {
     hide();
@@ -36,14 +35,12 @@ void AdminRemoveMember::on_manageBooks_clicked()
     adminManageBooks->show();
 }
 
-
 void AdminRemoveMember::on_back_clicked()
 {
     hide();
     adminMembership = new AdminMembership(this);
     adminMembership->show();
 }
-
 
 void AdminRemoveMember::on_pushButton_2_clicked() //Logout button
 {
@@ -53,7 +50,6 @@ void AdminRemoveMember::on_pushButton_2_clicked() //Logout button
         QApplication::quit();
     }
 }
-
 
 void AdminRemoveMember::on_pushButton_clicked() //Remove Member Push Button
 {
