@@ -24,7 +24,10 @@ SOURCES += \
     login.cpp \
     membercatalogue.cpp \
     memberhome.cpp \
-    memberlogin.cpp
+    memberlogin.cpp \
+    membermembership.cpp \
+    memberoverdue.cpp \
+    memberpreorder.cpp
 
 HEADERS += \
     adminaddbook.h \
@@ -40,7 +43,10 @@ HEADERS += \
     login.h \
     membercatalogue.h \
     memberhome.h \
-    memberlogin.h
+    memberlogin.h \
+    membermembership.h \
+    memberoverdue.h \
+    memberpreorder.h
 
 FORMS += \
     adminaddbook.ui \
@@ -55,7 +61,10 @@ FORMS += \
     login.ui \
     membercatalogue.ui \
     memberhome.ui \
-    memberlogin.ui
+    memberlogin.ui \
+    membermembership.ui \
+    memberoverdue.ui \
+    memberpreorder.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

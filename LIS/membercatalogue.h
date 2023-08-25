@@ -2,7 +2,11 @@
 #define MEMBERCATALOGUE_H
 
 #include <QMainWindow>
+
 class MemberHome;
+class MemberOverdue;          // Added the forward declarations
+class MemberPreOrder;
+class MemberMembership;
 
 namespace Ui {
 class MemberCatalogue;
@@ -22,9 +26,18 @@ private slots:
 
     void on_logout_clicked();
 
+    void on_manageBooks_clicked();
+
+    void on_status_clicked();
+
+    void on_membership_clicked();
+
 private:
     Ui::MemberCatalogue *ui;
-    MemberHome *memberhome;
+    MemberHome *memberhome;                    // Creating the member variables
+    MemberMembership *memberMembership;
+    MemberPreOrder *memberPreOrder;
+    MemberOverdue *memberOverdue;
 };
 
 #endif // MEMBERCATALOGUE_H

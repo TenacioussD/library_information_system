@@ -2,6 +2,9 @@
 #include "ui_membercatalogue.h"
 
 #include "memberhome.h"
+#include "memberoverdue.h"
+#include "memberpreorder.h"
+#include "membermembership.h"
 
 #include <QMessageBox>
 
@@ -31,5 +34,28 @@ void MemberCatalogue::on_logout_clicked()                  // Login button press
     if (reply == QMessageBox::Yes) {                       // If "Yes" application will quit
         QApplication::quit();
     }
+}
+
+void MemberCatalogue::on_manageBooks_clicked()
+{
+    hide();
+    MemberOverdue *memberOverdue =new MemberOverdue;                // Opens member home
+    memberOverdue->show();
+}
+
+
+void MemberCatalogue::on_status_clicked()
+{
+    hide();
+    MemberPreOrder *memberPreOrder = new MemberPreOrder;
+    memberPreOrder->show();
+}
+
+
+void MemberCatalogue::on_membership_clicked()
+{
+    hide();
+    MemberMembership *memberMembership =new MemberMembership;
+    memberMembership->show();
 }
 

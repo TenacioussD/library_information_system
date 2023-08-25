@@ -2,6 +2,9 @@
 #include "ui_memberhome.h"
 
 #include "membercatalogue.h"
+#include "memberoverdue.h"
+#include "memberpreorder.h"
+#include "membermembership.h"
 
 #include <QMessageBox>
 
@@ -31,5 +34,29 @@ void MemberHome::on_catalogue_2_clicked()
     hide();
     MemberCatalogue *membercatalogue =new MemberCatalogue;     // Creates a new instance of memberCatalogue
     membercatalogue->show();                                   // Opens the member catalogue
+}
+
+
+void MemberHome::on_overdue_clicked()
+{
+    hide();
+    memberOverdue = new MemberOverdue;
+    memberOverdue->show();
+}
+
+
+void MemberHome::on_booked_clicked()
+{
+    hide();
+    memberPreOrder = new MemberPreOrder;
+    memberPreOrder->show();
+}
+
+
+void MemberHome::on_membership_2_clicked()
+{
+    hide();
+    memberMembership = new MemberMembership;
+    memberMembership->show();
 }
 
