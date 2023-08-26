@@ -482,6 +482,16 @@ background: transparent;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>180</y>
+      <width>641</width>
+      <height>421</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

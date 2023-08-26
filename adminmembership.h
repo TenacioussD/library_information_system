@@ -9,6 +9,7 @@ class AdminManageBooks;
 class AdminAddMember;
 class AdminEditMember;
 class AdminRemoveMember;
+class AdminViewAllMembers;
 
 namespace Ui {
 class AdminMembership;
@@ -37,6 +38,8 @@ private slots:
 
     void on_removeMem_clicked();
 
+    void on_add_Book_2_clicked();
+
 private:
     Ui::AdminMembership *ui;
     AdminHome *adminHome;
@@ -45,6 +48,7 @@ private:
     AdminAddMember *adminAddMember;
     AdminEditMember *adminEditMember;
     AdminRemoveMember *adminRemoveMem;
+    AdminViewAllMembers *adminViewAllMem;
 };
 
 #endif // ADMINMEMBERSHIP_H

@@ -6,6 +6,7 @@
 #include "adminaddmember.h"
 #include "admineditmember.h"
 #include "adminremovemember.h"
+#include "adminviewallmembers.h"
 
 AdminMembership::AdminMembership(QWidget *parent) :
     QDialog(parent),
@@ -26,7 +27,6 @@ void AdminMembership::on_membership_clicked()
     adminHome->show();
 }
 
-
 void AdminMembership::on_catalogue_clicked()
 {
     hide();
@@ -34,14 +34,12 @@ void AdminMembership::on_catalogue_clicked()
     adminCatalogue->show();
 }
 
-
 void AdminMembership::on_manageBooks_clicked()
 {
     hide();
     adminManageBooks = new AdminManageBooks(this);
     adminManageBooks->show();
 }
-
 
 void AdminMembership::on_add_Book_clicked()
 {
@@ -71,4 +69,10 @@ void AdminMembership::on_removeMem_clicked()
     adminRemoveMem->show();
 }
 
+void AdminMembership::on_add_Book_2_clicked()
+{
+    hide();
+    adminViewAllMem = new AdminViewAllMembers(this);
+    adminViewAllMem->show();
+}
 

@@ -28,6 +28,8 @@ private slots:
 
     void on_back_clicked();
 
+    void viewAllMembers();
+
 private:
     Ui::AdminViewAllMembers *ui;
     AdminCatalogue *adminCatalogue;
