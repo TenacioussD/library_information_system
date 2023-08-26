@@ -8,8 +8,7 @@ class AdminCatalogue;                       // Forward Declarations
 class AdminManageBooks;
 class AdminEnterBookUpdate;
 class AdminViewStatus;
-
-// class AdminMembership;
+class AdminMembership;
 
 namespace Ui {
 class AdminHome;
@@ -32,6 +31,8 @@ private slots:
     void on_manageBooks_clicked();
 
     void on_status_clicked();
+
+    void on_membership_clicked();
 
 private:
     Ui::AdminHome *ui;

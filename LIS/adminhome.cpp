@@ -7,8 +7,7 @@
 #include "globalinstances.h"
 #include "adminenterbookupdate.h"
 #include "adminviewstatus.h"
-
-//#include "adminmembership.h"
+#include "adminmembership.h"
 
 #include <QMessageBox>
 
@@ -50,11 +49,17 @@ void AdminHome::on_manageBooks_clicked()                // When manage books is 
     adminmanagebooks->show();
 }
 
-
 void AdminHome::on_status_clicked()          // When status menu item is clicked
 {
     hide();
     AdminViewStatus *adminStatus =new AdminViewStatus(this);         // Opens status page using new instance
     adminStatus->show();
+}
+
+void AdminHome::on_membership_clicked()      // When Membership is clicked
+{
+    hide();
+    AdminMembership *adminMembership =new AdminMembership(this);         // Opens status page using new instance
+    adminMembership->show();
 }
 

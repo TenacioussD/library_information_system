@@ -30,7 +30,6 @@ private slots:
 
     void on_manageBooks_clicked();
 
-
     void on_status_clicked();
 
 private:

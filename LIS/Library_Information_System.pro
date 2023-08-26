@@ -11,16 +11,23 @@ QT += sql
 
 SOURCES += \
     adminaddbook.cpp \
+    adminaddmember.cpp \
     adminbookconfirmation.cpp \
     admincatalogue.cpp \
     admineditbookdialog.cpp \
+    admineditmember.cpp \
+    admineditmemberdetails.cpp \
     adminenterbookupdate.cpp \
     adminhome.cpp \
     adminlogin.cpp \
     adminmanagebooks.cpp \
+    adminmembership.cpp \
     adminoverdue.cpp \
     adminpreorderedbooks.cpp \
+    adminremovemember.cpp \
+    adminremovememconfirm.cpp \
     adminupdatebook.cpp \
+    adminviewallmembers.cpp \
     adminviewstatus.cpp \
     adminviewstatusreturn.cpp \
     globalinstances.cpp \
@@ -35,16 +42,23 @@ SOURCES += \
 
 HEADERS += \
     adminaddbook.h \
+    adminaddmember.h \
     adminbookconfirmation.h \
     admincatalogue.h \
     admineditbookdialog.h \
+    admineditmember.h \
+    admineditmemberdetails.h \
     adminenterbookupdate.h \
     adminhome.h \
     adminlogin.h \
     adminmanagebooks.h \
+    adminmembership.h \
     adminoverdue.h \
     adminpreorderedbooks.h \
+    adminremovemember.h \
+    adminremovememconfirm.h \
     adminupdatebook.h \
+    adminviewallmembers.h \
     adminviewstatus.h \
     adminviewstatusreturn.h \
     globalinstances.h \
@@ -58,16 +72,23 @@ HEADERS += \
 
 FORMS += \
     adminaddbook.ui \
+    adminaddmember.ui \
     adminbookconfirmation.ui \
     admincatalogue.ui \
     admineditbookdialog.ui \
+    admineditmember.ui \
+    admineditmemberdetails.ui \
     adminenterbookupdate.ui \
     adminhome.ui \
     adminlogin.ui \
     adminmanagebooks.ui \
+    adminmembership.ui \
     adminoverdue.ui \
     adminpreorderedbooks.ui \
+    adminremovemember.ui \
+    adminremovememconfirm.ui \
     adminupdatebook.ui \
+    adminviewallmembers.ui \
     adminviewstatus.ui \
     adminviewstatusreturn.ui \
     login.ui \
