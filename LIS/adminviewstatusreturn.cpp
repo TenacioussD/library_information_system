@@ -1,11 +1,13 @@
 #include "adminviewstatusreturn.h"
 #include "ui_adminviewstatusreturn.h"
 
-//#include "AdminCatalogue.h"     // Including the necessary header files
-//#include "AdminmanageBooks.h"
+#include "AdminCatalogue.h"     // Including the necessary header files
+#include "AdminmanageBooks.h"
 #include "AdminViewStatus.h"
 //#include "Adminmembership.h"
-//#include "AdminHome.h"
+#include "AdminHome.h"
+#include "globalinstances.h"
+
 #include <QMessageBox>
 
 AdminViewStatusReturn::AdminViewStatusReturn(QWidget *parent) :
@@ -20,24 +22,24 @@ AdminViewStatusReturn::~AdminViewStatusReturn()
     delete ui;
 }
 
-/*)void AdminViewStatusReturn::on_catalogueButton_clicked()
+void AdminViewStatusReturn::on_catalogueButton_clicked()             // Opens catalogue
 {
-    hide();                                                  // Hide the current AdminViewStatusReturn window
+    hide();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
+}
 
-                                                             // Create a new instance of AdminCatalogue window
-    AdminCatalogue *adminCatalogue = new AdminCatalogue;
-    adminCatalogue->show();                                  // Show the AdminViewStatus window
-}*/
 
-
-/*void AdminViewStatusReturn::on_manageBooksButton_clicked()
+void AdminViewStatusReturn::on_manageBooksButton_clicked()
 {                                                             // Hide the current AdminViewStatusReturn window
     hide();
 
                                                                  // Create and show the ManageBooks window
-   AdminmanageBooks *adminManageBooks = new AdminmanageBooks;
+   AdminManageBooks *adminManageBooks = new AdminManageBooks;
    adminManageBooks->show();
-}*/
+}
 
 
 void AdminViewStatusReturn::on_status_clicked()
@@ -73,9 +75,9 @@ void AdminViewStatusReturn::on_logout_clicked()                  // logout butto
 }
 
 
-/*void AdminViewStatusReturn::on_back_clicked()
+void AdminViewStatusReturn::on_back_clicked()
 {
     hide();                                                       // Hides the current AdminViewStatusReturn page
    AdminHome *adminHomeInstance = new AdminHome;                 // Opens AdminHome
     adminHomeInstance->show();                                    // Show the AdminHome window
-}*/
+}

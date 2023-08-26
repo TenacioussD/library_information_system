@@ -1,10 +1,13 @@
 #include "adminoverdue.h"
 #include "ui_adminoverdue.h"
 
-//#include "admincatalogue.h"        // Including the necessary header files
-//#include "adminmanagebooks.h"
+#include "admincatalogue.h"        // Including the necessary header files
+#include "adminmanagebooks.h"
 #include "adminviewstatus.h"
 //#include "adminmembership.h"
+#include "globalinstances.h"
+#include "adminhome.h"
+
 #include <QMessageBox>
 
 
@@ -21,25 +24,25 @@ AdminOverdue::~AdminOverdue()
     delete ui;
 }
 
-/*void AdminOverdue::on_catalogueButton_clicked()
+void AdminOverdue::on_catalogueButton_clicked()
     {
-      hide();                                                      // Hide the current AdminOverdue window
+    hide();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue                                      // Show the AdminCatalogue window
+    }
 
-                                                                   //Create a new instance of AdminCatalogue window
-    AdminCatalogue *adminCatalogue = new AdminCatalogue;
-    adminCatalogue->show();                                      // Show the AdminCatalogue window
-    }*/
 
 
-
-/*void AdminOverdue::on_manageBooksButton_clicked()
+void AdminOverdue::on_manageBooksButton_clicked()
     {
     hide();                                                        // Hide the current AdminOverdue window
 
                                                                          // Create a new instance of AdminManageBooks window
     AdminManageBooks *adminManageBooks = new AdminManageBooks;
     adminManageBooks->show();                                     // Show the AdminManageBooks window
-}*/
+}
 
 void AdminOverdue::on_adminviewstatus_clicked()
 {
@@ -68,12 +71,12 @@ void AdminOverdue::on_logout_clicked()
    }
 
 
-/*void AdminOverdue::on_back_clicked()                                 // back button pressed
+void AdminOverdue::on_back_clicked()                                 // back button pressed
    {
       hide();                                                       // Hides the current AdminOverdue page
       AdminHome *adminHomeInstance = new AdminHome;                 // Opens AdminHome
       adminHomeInstance->show();                                    // Show the AdminHome window
-   }*/
+   }
 
 
 

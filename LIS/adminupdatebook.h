@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-class AdminHome;
+class AdminHome;                     // Forward declarations
 class AdminCatalogue;
 class AdminEnterBookUpdate;
 class AdminEditBookDialog;

@@ -4,6 +4,9 @@
 #include <QMainWindow>
 
 class AdminViewStatus;
+class AdminHome;
+class AdminCatalogue;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminViewStatusReturn;
@@ -18,9 +21,9 @@ public:
     ~AdminViewStatusReturn();
 
 private slots:
-    //void on_catalogueButton_clicked();
+    void on_catalogueButton_clicked();
 
-    //void on_manageBooksButton_clicked();
+    void on_manageBooksButton_clicked();
 
     void on_status_clicked();
 
@@ -28,7 +31,7 @@ private slots:
 
     void on_logout_clicked();
 
-    //void on_back_clicked();
+    void on_back_clicked();
 
 private:
     Ui::AdminViewStatusReturn *ui;

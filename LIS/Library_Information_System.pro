@@ -18,7 +18,11 @@ SOURCES += \
     adminhome.cpp \
     adminlogin.cpp \
     adminmanagebooks.cpp \
+    adminoverdue.cpp \
+    adminpreorderedbooks.cpp \
     adminupdatebook.cpp \
+    adminviewstatus.cpp \
+    adminviewstatusreturn.cpp \
     globalinstances.cpp \
     main.cpp \
     login.cpp \
@@ -38,7 +42,11 @@ HEADERS += \
     adminhome.h \
     adminlogin.h \
     adminmanagebooks.h \
+    adminoverdue.h \
+    adminpreorderedbooks.h \
     adminupdatebook.h \
+    adminviewstatus.h \
+    adminviewstatusreturn.h \
     globalinstances.h \
     login.h \
     membercatalogue.h \
@@ -57,7 +65,11 @@ FORMS += \
     adminhome.ui \
     adminlogin.ui \
     adminmanagebooks.ui \
+    adminoverdue.ui \
+    adminpreorderedbooks.ui \
     adminupdatebook.ui \
+    adminviewstatus.ui \
+    adminviewstatusreturn.ui \
     login.ui \
     membercatalogue.ui \
     memberhome.ui \

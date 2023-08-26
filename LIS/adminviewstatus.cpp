@@ -1,15 +1,17 @@
 #include "adminviewstatus.h"
 #include "ui_adminviewstatus.h"
 
-//#include "admincatalogue.h"         // Including the necessary header files
-//#include "adminmanagebooks.h"
-//#include "adminmembership.h"
-//#include "adminhome.h"
+#include "admincatalogue.h"         // Including the necessary header files
+#include "adminmanagebooks.h"
+#include "adminhome.h"
 #include "adminoverdue.h"
 #include "adminpreorderedbooks.h"
 #include "adminviewstatusreturn.h"
-#include <QMessageBox>
+#include "globalinstances.h"
 
+//#include "adminmembership.h"
+
+#include <QMessageBox>
 
 AdminViewStatus::AdminViewStatus(QWidget *parent) :
     QMainWindow(parent),
@@ -23,24 +25,24 @@ AdminViewStatus::~AdminViewStatus()
     delete ui;
 }
 
-/*void AdminViewStatus::on_catalogue_clicked()
+void AdminViewStatus::on_catalogue_clicked()                              // opend the catalogue with the globalinstance set up
 {
-    hide();                                                  // Hide the current AdminViewStatus window
+    hide();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
+}
 
-                                                             // Create a new instance of AdminCatalogue window
-    AdminCatalogue *adminCatalogue = new AdminCatalogue;
-    adminCatalogue->show();                                  // Show the AdminViewStatus window
-}*/
 
-
-/*void AdminViewStatus::on_manageBooks_clicked()
+void AdminViewStatus::on_manageBooks_clicked()
 {                                                             // Hide the current AdminViewStatus window
     hide();
 
                                                                // Create and show the ManageBooks window
     AdminManageBooks *adminManageBooks = new AdminManageBooks;
     adminManageBooks->show();
-}*/
+}
 
 
 /*void AdminViewStatus::on_membership_clicked()
@@ -63,12 +65,12 @@ void AdminViewStatus::on_logout_clicked()                          // Logout but
 }
 
 
-/*void AdminViewStatus::on_back_clicked()                           // back button pressed
+void AdminViewStatus::on_back_clicked()                           // back button pressed
 {
     hide();                                                       // Hides the current AdminViewStatus page
     AdminHome *adminHomeInstance = new AdminHome;                 // Opens AdminHome
     adminHomeInstance->show();                                    // Show the AdminHome window
-}*/
+}
 
 
 void AdminViewStatus::on_adminoverdue_clicked()

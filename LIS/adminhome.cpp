@@ -6,8 +6,8 @@
 #include "adminhome.h"
 #include "globalinstances.h"
 #include "adminenterbookupdate.h"
+#include "adminviewstatus.h"
 
-//#include "adminstatus.h"
 //#include "adminmembership.h"
 
 #include <QMessageBox>
@@ -34,7 +34,7 @@ void AdminHome::on_pushButton_clicked()      // Confirmation of logout
     }
 }
 
-void AdminHome::on_catalogue_clicked()
+void AdminHome::on_catalogue_clicked()                   // When catalogue is clicked
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
@@ -43,10 +43,18 @@ void AdminHome::on_catalogue_clicked()
     GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
-void AdminHome::on_manageBooks_clicked()
+void AdminHome::on_manageBooks_clicked()                // When manage books is clicked
 {
     hide();
     AdminManageBooks *adminmanagebooks =new AdminManageBooks(this);         // Opens book management page using new instance
     adminmanagebooks->show();
+}
+
+
+void AdminHome::on_status_clicked()          // When status menu item is clicked
+{
+    hide();
+    AdminViewStatus *adminStatus =new AdminViewStatus(this);         // Opens status page using new instance
+    adminStatus->show();
 }
 

@@ -7,6 +7,9 @@ class AdminOverdue;    // You need to make sure you are using this to connect th
 class AdminPreOrderedBooks;
 class AdminViewStatus;
 class AdminViewStatusReturn;
+class AdminCatalogue;
+class AdminHome;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminViewStatus;
@@ -21,15 +24,15 @@ public:
     ~AdminViewStatus();
 
 private slots:
-    //void on_catalogue_clicked();
+    void on_catalogue_clicked();
 
-    //void on_manageBooks_clicked();
+    void on_manageBooks_clicked();
 
     //void on_membership_clicked();
 
     void on_logout_clicked();
 
-    //void on_back_clicked();
+    void on_back_clicked();
 
     void on_adminoverdue_clicked();
 

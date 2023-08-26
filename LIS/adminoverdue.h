@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 
+class AdminHome;
+class AdminCatalogue;
+class AdminManageBooks;
+class AdminViewStatus;
+
 namespace Ui {
 class AdminOverdue;
 }
@@ -16,9 +21,9 @@ public:
     ~AdminOverdue();
 
 private slots:
-   // void on_catalogueButton_clicked();
+    void on_catalogueButton_clicked();
 
-    //void on_manageBooksButton_clicked();
+    void on_manageBooksButton_clicked();
 
     void on_adminviewstatus_clicked();
 
@@ -26,7 +31,7 @@ private slots:
 
     void on_logout_clicked();
 
-    //void on_back_clicked();
+    void on_back_clicked();
 
 private:
     Ui::AdminOverdue *ui;
