@@ -18,7 +18,7 @@ class AdminRemoveMemConfirm : public QDialog
     Q_OBJECT
 
 public:
-    explicit AdminRemoveMemConfirm(QWidget *parent = nullptr);
+    explicit AdminRemoveMemConfirm(AdminRemoveMember *removeMemberInstance, QWidget *parent = nullptr);
     ~AdminRemoveMemConfirm();
 
 private slots:
@@ -38,7 +38,7 @@ private:
     Ui::AdminRemoveMemConfirm *ui;
     AdminCatalogue *adminCatalogue;
     AdminManageBooks *adminManageBooks;
-    AdminRemoveMember *adminRemoveMem;
+    AdminRemoveMember *adminRemoveMem, *removeMemInstance;
     QVBoxLayout *layout;
     QString lisNum; //Add a member to store the LIS Access Number
 };

@@ -9,11 +9,15 @@
 #include <QFile>
 #include <QTextStream>
 
-AdminRemoveMemConfirm::AdminRemoveMemConfirm(QWidget *parent) :
+AdminRemoveMemConfirm::AdminRemoveMemConfirm(AdminRemoveMember *removeMemberInstance, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AdminRemoveMemConfirm)
+    ui(new Ui::AdminRemoveMemConfirm),
+    adminRemoveMem(removeMemberInstance) //Initialize adminRemoveMem
 {
     ui->setupUi(this);
+
+    //call the displayMember function to populate and display member information
+   displayMember();
 }
 
 AdminRemoveMemConfirm::~AdminRemoveMemConfirm()
@@ -82,6 +86,7 @@ void AdminRemoveMemConfirm::displayMember()
             memberLastName = parts[2];
             phoneNum = parts[3];
 
+
             // Create labels to display member information
             QLabel *accNumLabel = new QLabel("LIS Access Number: " + accNum);
             QLabel *firstNameLabel = new QLabel("First Name: " + memberFirstName);
@@ -107,7 +112,6 @@ void AdminRemoveMemConfirm::displayMember()
     file.close();
 }
 
-
 void AdminRemoveMemConfirm::on_pushButton_clicked() //confirm removal
 {   
     //open the membership file for reading and writing
@@ -118,46 +122,38 @@ void AdminRemoveMemConfirm::on_pushButton_clicked() //confirm removal
         return;
     }
 
-    QTextStream in(&file);
-    QStringList lines;
+    QTextStream stream(&file);
+    QStringList updatedLines;
 
     //Read all lines fron the file and update corresponding m,ember info
 
-    while (!in.atEnd())
+    while (!stream.atEnd())
     {
-        QString line = in.readLine();
-        QStringList parts = line.split(" ");
+        QString removeLine = stream.readLine();
+        QStringList parts = removeLine.split(" ");
         if (parts.size() >= 4)
         {
             QString lisNUM = parts[0];
-            if (lisNUM == lisNum) //Check if the access Number matches current member
+            if (lisNUM != lisNum) //Check if the access Number matches current member
             {
-                lines.append(line);
+                updatedLines.append(removeLine);
             }
         }
     }
-    file.close();
 
-    //Reopen the file in write more to update contents
-
-    QFile writeFile("memberships.txt");
-    if (!writeFile.open(QFile::WriteOnly | QFile::Text | QFile::Truncate))
-    {
-        QMessageBox::warning(this, "File Problem", "File is not open for writing");
-        return;
-    }
-
-    QTextStream out(&writeFile);
+    // Clear the file content
+    file.resize(0);
 
     //write modified lines back to file
+    QTextStream out(&file);
 
-    for (const QString &line : lines)
+    for (const QString &removeLine : updatedLines)
     {
-        out << line << Qt::endl;
+        out << removeLine << Qt::endl;
     }
 
     //close file
-    writeFile.close();
+    file.close();
 
     //Notify admin that removal was successful
     QMessageBox::information(this, "Removal Success", "Member removed successfully.");

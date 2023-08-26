@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QString>
+#include <QDebug>
 
 AdminRemoveMember::AdminRemoveMember(QWidget *parent) :
     QDialog(parent),
@@ -76,7 +77,7 @@ void AdminRemoveMember::on_pushButton_clicked() //Remove Member Push Button
         ui->lastName->setText(lastName);
 
         hide();
-        adminRemoveMemConfirm = new AdminRemoveMemConfirm();
+        adminRemoveMemConfirm = new AdminRemoveMemConfirm(this); // Correct constructor
         adminRemoveMemConfirm->show();
     }
 }
