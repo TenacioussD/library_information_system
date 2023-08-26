@@ -5,6 +5,8 @@
 #include "admincatalogue.h"
 #include "adminbookconfirmation.h"
 #include "globalinstances.h"
+#include "adminviewstatus.h"
+#include "adminmanagebooks.h"
 
 #include <QString>                                          // Declaring the use of QString functions in this file
 #include <QMessageBox>
@@ -56,4 +58,17 @@ void AdminAddBook::on_confirm_clicked()                      // Will open up con
     confirmationPage->show();
 }
 
+void AdminAddBook::on_status_clicked()                      // When status is clicked from the main menu
+{
+    hide();
+    AdminViewStatus *adminStatus = new AdminViewStatus;     // Opens adminViewStatus page
+    adminStatus->show();
+}
+
+void AdminAddBook::on_manageBooks_clicked()                 // When manage books is clicked
+{
+    hide();
+    AdminManageBooks *adminManage = new AdminManageBooks;   // Opens adminManageBooks
+    adminManage->show();
+}
 

@@ -3,10 +3,10 @@
 
 #include <QMainWindow>
 
-
 class AdminHome;                                      // Forward declarations
 class AdminManageBooks;
 class AdminEditBookDialog;
+class AdminViewStatus;
 
 namespace Ui {
 class AdminCatalogue;
@@ -30,6 +30,8 @@ private slots:
 
     void on_manageBooks_clicked();
 
+
+    void on_status_clicked();
 
 private:
     Ui::AdminCatalogue *ui;

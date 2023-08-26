@@ -3,6 +3,9 @@
 
 #include "admineditbookdialog.h"
 #include "adminhome.h"
+#include "admincatalogue.h"
+#include "adminmanagebooks.h"
+#include "adminviewstatus.h"
 #include "globalinstances.h"
 
 #include <QString>
@@ -44,7 +47,6 @@ void AdminEnterBookUpdate::on_confirm_2_clicked()                  // Passes tit
     admineditdialog->show();
 }
 
-
 void AdminEnterBookUpdate::on_catalogue_clicked()
 {
     hide();
@@ -59,7 +61,7 @@ void AdminEnterBookUpdate::handleBookEditCompleted()
     hide();       // Hides the AdminEnterBookUpdate window when connected
 }
 
-void AdminEnterBookUpdate::on_back_clicked()
+void AdminEnterBookUpdate::on_back_clicked()                 // When back button is clicked
 {
     hide();                                                  // Hides previous window/page
     AdminHome *adminhome =new AdminHome (this);              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
@@ -73,5 +75,19 @@ void AdminEnterBookUpdate::on_pushButton_2_clicked()         // When logout clic
     if (reply == QMessageBox::Yes) {                         // If "Yes" application will quit
         QApplication::quit();
     }
+}
+
+void AdminEnterBookUpdate::on_manageBooks_clicked()          // When managebooks is clicked from the main menu
+{
+    hide();                                                  // Hides previous window/page
+    AdminManageBooks *adminManage =new AdminManageBooks (this);      // Opens managebooks by creating a new instance of AdminManageBooks with a variable of adminManage to hold a pointer
+    adminManage->show();
+}
+
+void AdminEnterBookUpdate::on_status_clicked()              // When status is clicked
+{
+    hide();                                                  // Hides previous window/page
+    AdminViewStatus *adminStatus =new AdminViewStatus (this);      // Opens admin managebooks
+    adminStatus->show();
 }
 

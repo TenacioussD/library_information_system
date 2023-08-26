@@ -2,10 +2,12 @@
 #define ADMINMANAGEBOOKS_H
 
 #include <QMainWindow>
+
 class AdminAddBook;
 class AdminHome;
 class AdminCatalogue;
 class AdminUpdateBook;
+class AdminViewStatus;
 
 namespace Ui {
 class AdminManageBooks;
@@ -31,11 +33,11 @@ private slots:
 
     void on_add_Book_3_clicked();
 
+    void on_status_clicked();
+
 private:
     Ui::AdminManageBooks *ui;
-    //AdminAddBook *adminaddbook;
-    //AdminHome *adminhome;
-    //AdminCatalogue *admincatalogue;
+
 };
 
 #endif // ADMINMANAGEBOOKS_H

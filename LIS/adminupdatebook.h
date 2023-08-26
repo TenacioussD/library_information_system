@@ -7,6 +7,8 @@ class AdminHome;                     // Forward declarations
 class AdminCatalogue;
 class AdminEnterBookUpdate;
 class AdminEditBookDialog;
+class AdminViewStatus;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminUpdateBook;
@@ -39,6 +41,10 @@ private slots:
     void on_edit4_clicked();
 
     void updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor);
+
+    void on_status_3_clicked();
+
+    void on_manageBooks_3_clicked();
 
 private:
     Ui::AdminUpdateBook *ui;

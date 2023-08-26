@@ -7,6 +7,8 @@
 class AdminHome;                               // Forward declarations
 class AdminCatalogue;
 class AdminBookConfirmation;
+class AdminViewStatus;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminAddBook;
@@ -29,10 +31,12 @@ private slots:                                    // Member functions of the cla
 
     void on_confirm_clicked();
 
+    void on_status_clicked();
+
+    void on_manageBooks_clicked();
+
 private:
     Ui::AdminAddBook *ui;
-    AdminHome *adminhome;                         // AdminHome pointer variable
-    AdminCatalogue *admincatalogue;               // AdminCatalogue pointer variable
 };
 
 #endif // ADMINADDBOOK_H

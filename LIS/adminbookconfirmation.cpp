@@ -3,6 +3,9 @@
 
 #include "adminhome.h"                                        // Declaring header files
 #include "adminaddbook.h"
+#include "admincatalogue.h"
+#include "adminmanagebooks.h"
+#include "adminviewstatus.h"
 #include "globalinstances.h"
 
 #include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use it
@@ -42,7 +45,6 @@ void AdminBookConfirmation::on_back_2_clicked()            // When back button c
     adminaddbook->show();
 }
 
-
 void AdminBookConfirmation::on_catalogue_3_clicked()
 {
     hide();
@@ -52,13 +54,26 @@ void AdminBookConfirmation::on_catalogue_3_clicked()
     GlobalInstances::adminCatalogueInstance->show();                          // Opens the adminCatalogue page
 }
 
-
-void AdminBookConfirmation::on_pushButton_3_clicked()     // Logout confirmation
+void AdminBookConfirmation::on_pushButton_3_clicked()            // Logout confirmation
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {                      // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                             // If "Yes" application will quit
         QApplication::quit();
     }
+}
+
+void AdminBookConfirmation::on_manageBooks_3_clicked()           // When managebooks is clicked in the main menu
+{
+    hide();
+    AdminManageBooks *adminManage =new AdminManageBooks(this);   // Creates a new instance of AdminManageBooks
+    adminManage->show();                                         // Shows the managebooks page
+}
+
+void AdminBookConfirmation::on_status_3_clicked()                // When status is clicked in the main menu
+{
+    hide();
+    AdminViewStatus *adminStatus =new AdminViewStatus(this);     // Opens adminViewStatus page
+    adminStatus->show();
 }
 

@@ -1,14 +1,14 @@
 #include "adminmanagebooks.h"
 #include "ui_adminmanagebooks.h"
 
-#include "adminaddbook.h"
+#include "adminaddbook.h"               // Include relevant headers
 #include "adminhome.h"
 #include "admincatalogue.h"
 #include "adminupdatebook.h"
 #include "globalinstances.h"
+#include "adminviewstatus.h"
 
 #include <QMessageBox>
-
 
 AdminManageBooks::AdminManageBooks(QWidget *parent) :
     QMainWindow(parent),
@@ -59,5 +59,12 @@ void AdminManageBooks::on_add_Book_3_clicked()
     hide();
     AdminUpdateBook *adminupdatebook =new AdminUpdateBook (this);    // Opens admin add new book page
     adminupdatebook->show();
+}
+
+void AdminManageBooks::on_status_clicked()
+{
+    hide();
+    AdminViewStatus *adminStatus =new AdminViewStatus(this);
+    adminStatus->show();
 }
 

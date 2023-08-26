@@ -5,6 +5,8 @@
 
 class AdminHome;                                 // Forward Declarations
 class AdminAddBook;
+class AdminManageBooks;
+class AdminViewStatus;
 
 namespace Ui {
 class AdminBookConfirmation;
@@ -30,10 +32,12 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_manageBooks_3_clicked();
+
+    void on_status_3_clicked();
+
 private:
     Ui::AdminBookConfirmation *ui;
-    AdminHome *adminhome;
-    AdminAddBook *adminaddbook;
 };
 
 #endif // ADMINBOOKCONFIRMATION_H

@@ -5,6 +5,8 @@
 #include "adminhome.h"
 #include "adminenterbookupdate.h"
 #include "admineditbookdialog.h"
+#include "adminviewstatus.h"
+#include "adminmanagebooks.h"
 #include "globalinstances.h"
 
 #include <QMessageBox>
@@ -32,14 +34,12 @@ void AdminUpdateBook::on_catalogue_3_clicked()                      // When cata
     GlobalInstances::adminCatalogueInstance->show();                // Shows adminCatalogue page
 }
 
-
 void AdminUpdateBook::on_back_2_clicked()                           // When back button clicked
 {
     hide();
     AdminHome *adminhome =new AdminHome (this);                     // Opens admin home
     adminhome->show();
 }
-
 
 void AdminUpdateBook::on_pushButton_3_clicked()                     // When logout clicked
 {
@@ -88,7 +88,6 @@ void AdminUpdateBook::on_edit2_clicked()
     adminenterbookupdate->show();                           // Opens adminEnterBookUpdate page
 }
 
-
 void AdminUpdateBook::on_edit3_clicked()
 {
     int bookIndex = 2;                                      // Sets the index to 2
@@ -104,7 +103,6 @@ void AdminUpdateBook::on_edit3_clicked()
     adminenterbookupdate->show();                           // Opens adminEnterBookUpdate page
 }
 
-
 void AdminUpdateBook::on_edit4_clicked()
 {
     int bookIndex = 3;                                      // Sets the index to 3
@@ -118,5 +116,19 @@ void AdminUpdateBook::on_edit4_clicked()
     AdminEnterBookUpdate *adminenterbookupdate = new AdminEnterBookUpdate(title, author, image, bookIndex, this);     // Creates a  new instance of adminEnterBookUpdate and passes the info specified in the constructor
     connect(adminenterbookupdate, &AdminEnterBookUpdate::bookDetailsUpdated, GlobalInstances::adminCatalogueInstance, &AdminCatalogue::updateBookDetails);  // The connection that is established between bookDetailsUpdated signal and the updateBookDetails slot
     adminenterbookupdate->show();                           // Opens adminEnterBookUpdate page
+}
+
+void AdminUpdateBook::on_status_3_clicked()                 // When status is clicked on from the main menu
+{
+    hide();
+    AdminViewStatus *adminStatus =new AdminViewStatus(this);
+    adminStatus->show();
+}
+
+void AdminUpdateBook::on_manageBooks_3_clicked()            // When manage books is clicked on from the main menu
+{
+    hide();
+    AdminManageBooks *adminManage =new AdminManageBooks(this);
+    adminManage->show();
 }
 

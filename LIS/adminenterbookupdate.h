@@ -8,6 +8,9 @@
 
 class AdminEditBookDialog;          // Forward declaration
 class AdminHome;
+class AdminCatalogue;
+class AdminViewStatus;
+class AdminManageBooks;
 
 namespace Ui {
 class AdminEnterBookUpdate;
@@ -39,6 +42,10 @@ private slots:
     void on_back_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_manageBooks_clicked();
+
+    void on_status_clicked();
 
 private:
     Ui::AdminEnterBookUpdate *ui;

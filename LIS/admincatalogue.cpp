@@ -5,6 +5,7 @@
 #include "adminmanagebooks.h"
 #include "admineditbookdialog.h"
 #include "globalinstances.h"
+#include "adminviewstatus.h"
 
 #include <QMessageBox>
 #include <QPlainTextEdit>
@@ -85,3 +86,11 @@ void AdminCatalogue::updateBookDetails(int bookIndex, const QString &updatedTitl
         ui->author4->setPlainText(updatedAuthor);
     }
 }
+
+void AdminCatalogue::on_status_clicked()               // When status is clicked
+{
+    hide();
+    AdminViewStatus *adminStatus = new AdminViewStatus;   // Opens adminViewStatus page
+    adminStatus->show();
+}
+
