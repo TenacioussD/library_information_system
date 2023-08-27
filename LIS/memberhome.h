@@ -20,7 +20,7 @@ class MemberHome : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MemberHome(QWidget *parent = nullptr);
+    explicit MemberHome(QWidget *parent = nullptr, const QString &username = "", const QString &name = "");
     ~MemberHome();
 
 private slots:
@@ -34,6 +34,8 @@ private slots:
 
     void on_membership_2_clicked();
 
+    void displayName(); //the name of the member that logged in
+
 private:
     Ui::MemberHome *ui;
     MemberCatalogue *membercatalogue;          // class pointer to object membercatalogue
@@ -41,6 +43,8 @@ private:
     MemberMembership *memberMembership;
     MemberPreOrder *memberPreOrder;
     MemberOverdue *memberOverdue;
+    QString loggedInUsername;
+    QString loggedInName;
 };
 
 #endif // MEMBERHOME_H

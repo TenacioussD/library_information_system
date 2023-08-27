@@ -8,11 +8,16 @@
 
 #include <QMessageBox>
 
-MemberHome::MemberHome(QWidget *parent) :
+MemberHome::MemberHome(QWidget *parent, const QString &username, const QString &name) :
     QMainWindow(parent),
-    ui(new Ui::MemberHome)
+    ui(new Ui::MemberHome),
+    loggedInUsername(username),
+    loggedInName(name)
 {
     ui->setupUi(this);
+
+    // Display the logged-in user's name in the plainTextEdit widget
+    displayName();
 }
 
 MemberHome::~MemberHome()
@@ -36,14 +41,12 @@ void MemberHome::on_catalogue_2_clicked()
     membercatalogue->show();                                   // Opens the member catalogue
 }
 
-
 void MemberHome::on_overdue_clicked()
 {
     hide();
     memberOverdue = new MemberOverdue;
     memberOverdue->show();
 }
-
 
 void MemberHome::on_booked_clicked()
 {
@@ -52,7 +55,6 @@ void MemberHome::on_booked_clicked()
     memberPreOrder->show();
 }
 
-
 void MemberHome::on_membership_2_clicked()
 {
     hide();
@@ -60,3 +62,9 @@ void MemberHome::on_membership_2_clicked()
     memberMembership->show();
 }
 
+void MemberHome::displayName() //the name of the user that logged in
+{
+    //to the plainTextEdit called userName
+    QString displayText = "Welcome, " + loggedInName + "!";
+    ui->userName->setPlainText(displayText); // Assuming you have a widget named 'userName' in your UI
+}

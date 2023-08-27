@@ -2,6 +2,7 @@
 
 #include "ui_memberlogin.h"
 #include <QMessageBox>
+#include <QFile>
 
 #include "memberhome.h"
 
@@ -25,15 +26,46 @@ void MemberLogin::on_pushButton_password_clicked()             // Forget passwor
 
 void MemberLogin::on_pushButton_login_clicked()                // Login button clicked, when login button clicked either display next page or error message
 {
-    QString username = ui->lineEdit_username->text();          // Assigning variable username to match the text user input
-    QString password = ui->lineEdit_password->text();          // Assigning variable password to match the text user input
+    QString enteredUsername = ui->lineEdit_username->text();          // Assigning variable username to match the text user input
+    QString enteredPassword = ui->lineEdit_password->text();          // Assigning variable password to match the text user input
 
-    if(username == "member" && password == "member") {         // if statement that checks whether the username and password match
-        hide();
-        MemberHome *memberhome =new MemberHome (this);         // Opens member dashboard if username and password match
-        memberhome->show();
+    //open file
+    QFile file("memberships.txt");
+    if (!file.open(QFile::ReadOnly | QFile::Text))
+    {
+        QMessageBox::warning(this, "Filing Problem", "File is not open");
+        return;
     }
-    else {
+
+    //read file
+    QTextStream in(&file);
+    bool found = false;
+
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList parts = line.split(" ");
+
+        QString password = parts[0];
+        QString username = parts[1];
+        QString lastName = parts[2];
+        QString contactNum = parts[3];
+
+    if(enteredUsername == username && enteredPassword == password)// if statement that checks whether the username and password match
+    {
+        found = true;
+        hide();
+        MemberHome *memberhome =new MemberHome (this, lastName, username); // Pass username and name
+        memberhome->show();
+        break;
+    }
+
+    }
+
+    file.close();
+
+    if (!found)
+    {
         QMessageBox::warning(this, "Login", "Incorrect username and password");       // Error message "Wrong username and password"
     }
 }
