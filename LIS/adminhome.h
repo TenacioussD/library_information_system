@@ -34,6 +34,8 @@ private slots:
 
     void on_membership_clicked();
 
+    void memberCount(); //display amount members
+
 private:
     Ui::AdminHome *ui;
 };

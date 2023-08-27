@@ -5,11 +5,11 @@
 #include "adminmanagebooks.h"
 #include "adminhome.h"
 #include "globalinstances.h"
-#include "adminenterbookupdate.h"
 #include "adminviewstatus.h"
 #include "adminmembership.h"
 
 #include <QMessageBox>
+#include <QFile>
 
 AdminHome::AdminHome(QWidget *parent) :
     QMainWindow(parent),
@@ -17,6 +17,7 @@ AdminHome::AdminHome(QWidget *parent) :
 
 {
     ui->setupUi(this);
+    memberCount();
 }
 
 AdminHome::~AdminHome()
@@ -63,3 +64,27 @@ void AdminHome::on_membership_clicked()      // When Membership is clicked
     adminMembership->show();
 }
 
+void AdminHome::memberCount()
+{
+    QFile file("memberships.txt");
+    if(!file.open(QFile::ReadWrite | QFile::Text))
+    {
+        QMessageBox::warning(this, "Filing Problem", "File is not open");
+        return;
+    }
+
+    //read the file
+    QStringList data;
+    QTextStream in(&file);
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        data.append(line);
+    }
+    file.close();
+
+    int memberCount = data.size(); //calculate the member count
+
+    //Update the QPlainTextEdit to display member count
+    ui->plainTextEdit->setPlainText(QString::number(memberCount));
+}
