@@ -32,6 +32,8 @@ private slots:
 
     void on_membership_clicked();
 
+    void saveBookInfo(); //create a function that will be used to save books and titles
+
 private:
     Ui::MemberCatalogue *ui;
     MemberHome *memberhome;                    // Creating the member variables

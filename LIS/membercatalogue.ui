@@ -551,9 +551,9 @@ subcontrol-origin: margin;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-251</y>
           <width>634</width>
-          <height>678</height>
+          <height>682</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -647,7 +647,7 @@ subcontrol-origin: margin;
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_67">
+              <widget class="QPlainTextEdit" name="titleThree">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -680,7 +680,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_68">
+              <widget class="QPlainTextEdit" name="authorThree">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -754,7 +754,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_69">
+              <widget class="QPlainTextEdit" name="titleTen">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -787,7 +787,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_70">
+              <widget class="QPlainTextEdit" name="authorTen">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -861,7 +861,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_43">
+              <widget class="QPlainTextEdit" name="titleFive">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -894,7 +894,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_44">
+              <widget class="QPlainTextEdit" name="authorFive">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -968,7 +968,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_71">
+              <widget class="QPlainTextEdit" name="titleEleven">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1001,7 +1001,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_72">
+              <widget class="QPlainTextEdit" name="authorEleven">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1075,7 +1075,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_73">
+              <widget class="QPlainTextEdit" name="titleSix">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1108,7 +1108,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_74">
+              <widget class="QPlainTextEdit" name="authorSix">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1182,7 +1182,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_75">
+              <widget class="QPlainTextEdit" name="titleTwelfe">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1215,7 +1215,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_76">
+              <widget class="QPlainTextEdit" name="authorTwelfe">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1289,7 +1289,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_77">
+              <widget class="QPlainTextEdit" name="titleFour">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1322,7 +1322,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_78">
+              <widget class="QPlainTextEdit" name="authorFour">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1396,7 +1396,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_79">
+              <widget class="QPlainTextEdit" name="titleOne">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1429,7 +1429,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_80">
+              <widget class="QPlainTextEdit" name="authorOne">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1503,7 +1503,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_81">
+              <widget class="QPlainTextEdit" name="titleNine">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1536,7 +1536,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_82">
+              <widget class="QPlainTextEdit" name="authorNine">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1610,7 +1610,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_45">
+              <widget class="QPlainTextEdit" name="titleTwo">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1643,7 +1643,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_46">
+              <widget class="QPlainTextEdit" name="authorTwo">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1717,7 +1717,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_83">
+              <widget class="QPlainTextEdit" name="titleEight">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1750,7 +1750,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_84">
+              <widget class="QPlainTextEdit" name="authorEight">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1824,7 +1824,7 @@ background: white;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <widget class="QPlainTextEdit" name="plainTextEdit_85">
+              <widget class="QPlainTextEdit" name="titleSeven">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1857,7 +1857,7 @@ background: white;</string>
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                </property>
               </widget>
-              <widget class="QPlainTextEdit" name="plainTextEdit_86">
+              <widget class="QPlainTextEdit" name="authorSeven">
                <property name="geometry">
                 <rect>
                  <x>0</x>
