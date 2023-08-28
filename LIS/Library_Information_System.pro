@@ -30,6 +30,7 @@ SOURCES += \
     adminviewallmembers.cpp \
     adminviewstatus.cpp \
     adminviewstatusreturn.cpp \
+    clickableimagelabel.cpp \
     globalinstances.cpp \
     main.cpp \
     login.cpp \
@@ -61,6 +62,7 @@ HEADERS += \
     adminviewallmembers.h \
     adminviewstatus.h \
     adminviewstatusreturn.h \
+    clickableimagelabel.h \
     globalinstances.h \
     login.h \
     membercatalogue.h \

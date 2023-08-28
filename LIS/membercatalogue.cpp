@@ -5,18 +5,33 @@
 #include "memberoverdue.h"
 #include "memberpreorder.h"
 #include "membermembership.h"
+#include "clickableimagelabel.h"
 
 #include <QMessageBox>
 #include <QString>
 #include <QFile>
 #include <QTextStream>
 #include <QLineEdit>
+#include <QMouseEvent>
 
 MemberCatalogue::MemberCatalogue(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MemberCatalogue)
 {
     ui->setupUi(this);
+
+    // Create an instance of ClickableImageLabel
+    ClickableImageLabel* clickableLabel = new ClickableImageLabel(this);
+
+    // Set properties and add to layout
+    clickableLabel->setObjectName("labelOne"); // Set the object name
+    clickableLabel->setPixmap(QPixmap(":/images/book_image.png")); // Set the image
+    clickableLabel->setScaledContents(true); // Scale the image to fit the label
+
+    // Connect the ClickableImageLabel's clicked signal to slot
+    connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::onBookClicked);
+
+
     //call function to save book information
     saveBookInfo();
 }
@@ -119,3 +134,26 @@ void MemberCatalogue::saveBookInfo()
     //close file
     file.close();
 }
+
+//Mouse tracking event as QLabel doesn't have a clicked signal
+void MemberCatalogue::mousePressEvent(QMouseEvent *event)
+{
+    //check if the event happend on a QLabel
+    if (event->button() == Qt::LeftButton)
+    {
+        QLabel *clickedLabel = qobject_cast<QLabel *>(childAt(event->pos()));
+        if (clickedLabel)
+        {
+            //extract label num from object name e.g. labelOne
+            QString labelName = clickedLabel->objectName();
+            int labelNumber = labelName.mid(5).toInt();
+
+            //retrive corresponding book title and author
+            QString title = titles[labelNumber - 1];
+            QString author = authors[labelNumber - 1];
+
+            //call new window
+        }
+    }
+}
+
