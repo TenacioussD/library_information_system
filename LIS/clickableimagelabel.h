@@ -1,11 +1,22 @@
 #ifndef CLICKABLEIMAGELABEL_H
 #define CLICKABLEIMAGELABEL_H
 
+#include <QLabel>
+#include <QWidget>
+#include <QMouseEvent>
 
-class ClickableImageLabel
+class ClickableImageLabel : public QLabel
 {
+    Q_OBJECT
+
 public:
-    ClickableImageLabel();
+    explicit ClickableImageLabel(QWidget* parent = nullptr);
+
+signals:
+    void clicked();
+
+protected:
+    void mousePressEvent(QMouseEvent* event) override;
 };
 
 #endif // CLICKABLEIMAGELABEL_H
