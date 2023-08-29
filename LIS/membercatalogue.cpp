@@ -5,8 +5,7 @@
 #include "memberoverdue.h"
 #include "memberpreorder.h"
 #include "membermembership.h"
-#include "clickableimagelabel.h"
-#include "membercatalogueselect.h"
+#include "UserManager.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -14,39 +13,16 @@
 #include <QTextStream>
 #include <QLineEdit>
 #include <QMouseEvent>
+#include <QMessageBox>
 
 MemberCatalogue::MemberCatalogue(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MemberCatalogue)
-{
+   {
     ui->setupUi(this);
 
-    //get layout from QScrollAreas content area
-     QLayout* scrollAreaLayout = ui->scrollAreaWidgetContents->layout();
-
-    if (scrollAreaLayout)
-     {
-         for (int i = 0; i < 12; ++i)
-         {
-             // Retrieve title and author from arrays
-             QString title = titles[i];
-             QString author = authors[i];
-
-             // Create an instance of ClickableImageLabel with title and author
-             ClickableImageLabel* clickableLabel = new ClickableImageLabel(title, author, this);
-
-             // Set properties and add to layout
-             clickableLabel->setObjectName(QString("label%1").arg(i + 1));
-             clickableLabel->setPixmap(QPixmap(":/images/book_image.png"));
-             clickableLabel->setScaledContents(true);
-
-             // Connect the ClickableImageLabel's clicked signal to slot
-             connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::handleImageClicked);
-
-             // Add label to layout inside QScroll Area
-             scrollAreaLayout->addWidget(clickableLabel);
-         }
-     } //end of if statement
+    //Retrieve logged-in user from UserManager
+    loggedInUsername = UserManager::getInstance().getLoggedInUser();
 
     //call function to save book information
     saveBookInfo();
@@ -64,7 +40,7 @@ void MemberCatalogue::on_back_clicked()                    // When back button i
     memberhome->show();
 }
 
-void MemberCatalogue::on_logout_clicked()                  // Login button pressed
+void MemberCatalogue::on_logout_clicked()                  // Logout button pressed
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
@@ -144,44 +120,76 @@ void MemberCatalogue::saveBookInfo()
     for (int i = 0; i < static_cast<int>(sizeof(titles) / sizeof(titles[0])); ++i)
     {
         //Iterate over arrays and write each pair to file
-        out << titles[i] << " " << authors[i] << Qt::endl;
+        out << titles[i] << "/" << authors[i] << Qt::endl;
     }
 
     //close file
     file.close();
 }
 
-//Mouse tracking event as QLabel doesn't have a clicked signal
-void MemberCatalogue::mousePressEvent(QMouseEvent *event)
+//compare ui from form data to catalogue database
+void MemberCatalogue::on_pushButton_clicked()
 {
-    //check if the event happend on a QLabel
-    if (event->button() == Qt::LeftButton)
+    //assign variable to match user inputs
+    QString entreredTitle = ui->lineEdit_title->text();
+    QString entreredAuthor = ui->lineEdit_author->text();
+
+    //open file
+    QFile file("catalogue.txt");
+    if (!file.open(QFile::ReadOnly | QFile::Text))
     {
-        ClickableImageLabel* clickedLabel = qobject_cast<ClickableImageLabel*>(childAt(event->pos()));
-        if (clickedLabel)
-        {
-            //extract label num from object name e.g. labelOne
-            QString labelName = clickedLabel->objectName();
-            int labelNumber = labelName.mid(5).toInt();
-
-            //retrive corresponding book title and author
-            QString title = titles[labelNumber - 1];
-            QString author = authors[labelNumber - 1];
-
-            //call slot function to open new window
-            handleImageClicked(title, author);
-        }
+        QMessageBox::warning(this, "Filing Problem", "File is not open");
+        return;
     }
-}
 
-void MemberCatalogue::handleImageClicked(QString title, QString author)
-{
-    // Open new window as soon as clicked as pass title and author to next page
-    hide();
-    memberCatalogueSelect = new MemberCatalogueSelect(this);
+    //read file
+    QTextStream in(&file);
+    bool found = false;
 
-    //set the title and author values in the new window
-    memberCatalogueSelect->setTitleAndAuthor(title, author);
-    memberCatalogueSelect->show();
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList parts = line.split("/");
+
+        QString bookTitle = parts[0];
+        QString bookAuthor = parts[1];
+
+        if(entreredTitle == bookTitle && entreredAuthor == bookAuthor)
+        {
+            found = true;
+
+            QMessageBox::StandardButton reply = QMessageBox::question(this, "Order", "Would you like to order the book " + bookTitle + " by " + bookAuthor + " ?", QMessageBox::Yes | QMessageBox::No);
+
+            if (reply == QMessageBox::Yes) // If "Yes" add book to order.txt
+            {
+                //create file
+                QFile file("order.txt");
+                //check if file is open
+                if (!file.open(QFile::Append | QFile::Text))
+                {
+                    QMessageBox::warning(this, "Filing Problem", "File is not open");
+                    return; //return if file open fails
+                }
+
+                //write book information to the file
+                QTextStream out(&file);
+
+                    //Iterate over arrays and write each pair to file
+                out << loggedInUsername << "has ordered" << bookTitle << "/" << bookAuthor << Qt::endl;
+
+                //close file
+                file.close();
+
+                QMessageBox::warning(this, "Thank You!", "You have ordered" + bookTitle + " by " + bookAuthor);
+
+                break;
+            }
+            if (!found)
+            {
+             QMessageBox::warning(this, "Wrong Information", "The title and author you have requested is not found in the catalogue, make sure you typed information from the availible catalogue.");
+            }
+        }
+    }//end of while loop
+
 }
 

@@ -10,6 +10,12 @@
     <height>670</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -419,7 +425,7 @@ QPushButton:hover {
        <property name="geometry">
         <rect>
          <x>300</x>
-         <y>20</y>
+         <y>0</y>
          <width>641</width>
          <height>121</height>
         </rect>
@@ -498,9 +504,9 @@ font-size: 13px;</string>
        <property name="geometry">
         <rect>
          <x>290</x>
-         <y>170</y>
+         <y>140</y>
          <width>651</width>
-         <height>431</height>
+         <height>221</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -551,7 +557,7 @@ subcontrol-origin: margin;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-251</y>
+          <y>0</y>
           <width>634</width>
           <height>682</height>
          </rect>
@@ -1883,6 +1889,141 @@ background: white;</string>
              </widget>
             </widget>
            </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>380</y>
+         <width>701</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(220, 245, 255);
+border-radius: 10px;
+border-color: black;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>691</width>
+          <height>219</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPlainTextEdit" name="plainTextEdit">
+             <property name="styleSheet">
+              <string notr="true">font-family: Baloo 2;
+font-weight: bold;
+font-size: 23px;
+background: transparent;</string>
+             </property>
+             <property name="plainText">
+              <string>Add a book you'd like to order</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+font-size: 17px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>Book Title</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_title">
+               <property name="styleSheet">
+                <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(235, 235, 235);</string>
+               </property>
+               <property name="text">
+                <string>Add a book title</string>
+               </property>
+               <property name="placeholderText">
+                <string>Enter title</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="styleSheet">
+                <string notr="true">font-family: Baloo 2;
+font-size: 17px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>Book Author</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_author">
+               <property name="styleSheet">
+                <string notr="true">border: 0.5px solid black;
+border-radius: 5px;
+background: rgb(235, 235, 235);</string>
+               </property>
+               <property name="text">
+                <string>Add the author of the book</string>
+               </property>
+               <property name="placeholderText">
+                <string>Enter title</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+background: rgb(235, 235, 235);
+border-radius: 10px;
+font-size: 14px;
+font-family: open sans;
+color: black;
+font-weight: bold;
+}
+
+
+QPushButton:hover 
+{
+	color: rgb(106, 146, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string>Order book</string>
+           </property>
           </widget>
          </item>
         </layout>

@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::MemberLogin *ui;
     MemberHome *memberhome;
+    QString loggedInUsername;
 };
 
 #endif // MEMBERLOGIN_H

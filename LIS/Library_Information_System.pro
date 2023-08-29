@@ -39,7 +39,8 @@ SOURCES += \
     memberlogin.cpp \
     membermembership.cpp \
     memberoverdue.cpp \
-    memberpreorder.cpp
+    memberpreorder.cpp \
+    usermanager.cpp
 
 HEADERS += \
     adminaddbook.h \
@@ -70,7 +71,8 @@ HEADERS += \
     memberlogin.h \
     membermembership.h \
     memberoverdue.h \
-    memberpreorder.h
+    memberpreorder.h \
+    usermanager.h
 
 FORMS += \
     adminaddbook.ui \

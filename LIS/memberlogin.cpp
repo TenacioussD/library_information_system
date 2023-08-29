@@ -5,6 +5,7 @@
 #include <QFile>
 
 #include "memberhome.h"
+#include "usermanager.h"
 
 MemberLogin::MemberLogin(QWidget *parent) :
     QMainWindow(parent),
@@ -54,6 +55,7 @@ void MemberLogin::on_pushButton_login_clicked()                // Login button c
     if(enteredUsername == username && enteredPassword == password)// if statement that checks whether the username and password match
     {
         found = true;
+        UserManager::getInstance().setLoggedInUser(username); // Store the logged-in username using UserManager
         hide();
         MemberHome *memberhome =new MemberHome (this, lastName, username); // Pass username and name
         memberhome->show();

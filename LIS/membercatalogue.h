@@ -7,7 +7,6 @@ class MemberHome;
 class MemberOverdue;          // Added the forward declarations
 class MemberPreOrder;
 class MemberMembership;
-class MemberCatalogueSelect;
 
 namespace Ui {
 class MemberCatalogue;
@@ -35,6 +34,8 @@ private slots:
 
     void saveBookInfo(); //create a function that will be used to save books and titles
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MemberCatalogue *ui;
     MemberHome *memberhome;                    // Creating the member variables
@@ -43,7 +44,7 @@ private:
     MemberOverdue *memberOverdue;
     QString titles[12]; //12 because there is 12 books in the ui
     QString authors[12];
-    MemberCatalogueSelect *memberCatalogueSelect;
+    QString loggedInUsername;
 };
 
 #endif // MEMBERCATALOGUE_H
