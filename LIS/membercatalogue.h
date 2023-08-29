@@ -36,6 +36,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    bool isBookOrdered(const QString &title, const QString &author);
+
 private:
     Ui::MemberCatalogue *ui;
     MemberHome *memberhome;                    // Creating the member variables

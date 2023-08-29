@@ -127,6 +127,34 @@ void MemberCatalogue::saveBookInfo()
     file.close();
 }
 
+// Add this function definition to your MemberCatalogue class
+bool MemberCatalogue::isBookOrdered(const QString &title, const QString &author)
+{
+    QFile orderFile("order.txt");
+    if (!orderFile.open(QFile::ReadOnly | QFile::Text))
+    {
+        return false; // Assume not ordered if order file cannot be opened
+    }
+
+    QTextStream in(&orderFile);
+
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList parts = line.split("/");
+
+        QString bookTitle = parts[1];
+        QString bookAuthor = parts[2];
+
+        if (title == bookTitle && author == bookAuthor)
+        {
+            return true; // Book is already ordered
+        }
+    }
+
+    return false; // Book is not ordered
+}
+
 //compare ui from form data to catalogue database
 void MemberCatalogue::on_pushButton_clicked()
 {
@@ -158,38 +186,73 @@ void MemberCatalogue::on_pushButton_clicked()
         {
             found = true;
 
-            QMessageBox::StandardButton reply = QMessageBox::question(this, "Order", "Would you like to order the book " + bookTitle + " by " + bookAuthor + " ?", QMessageBox::Yes | QMessageBox::No);
-
-            if (reply == QMessageBox::Yes) // If "Yes" add book to order.txt
+            if (isBookOrdered(bookTitle, bookAuthor))
             {
-                //create file
-                QFile file("order.txt");
-                //check if file is open
-                if (!file.open(QFile::Append | QFile::Text))
-                {
-                    QMessageBox::warning(this, "Filing Problem", "File is not open");
-                    return; //return if file open fails
-                }
+                //if already booked in order.txt
+                    QMessageBox::StandardButton reply = QMessageBox::question(this, "This book has been booked", "The book " + bookTitle + " by " + bookAuthor + " has alreay been booked. would you like to prebook it?", QMessageBox::Yes | QMessageBox::No);
 
-                //write book information to the file
-                QTextStream out(&file);
+                    if (reply == QMessageBox::Yes)//if user would like to prebook book
+                    {
+                        //create file
+                        QFile prebookFile("prebook.txt");
+                        //check if file is open
+                        if (!prebookFile.open(QFile::Append | QFile::Text))
+                        {
+                            QMessageBox::warning(this, "Filing Problem", "File is not open");
+                            return; //return if file open fails
+                        }
 
-                    //Iterate over arrays and write each pair to file
-                out << loggedInUsername << "has ordered" << bookTitle << "/" << bookAuthor << Qt::endl;
+                        //write book information to the file
+                        QTextStream out(&prebookFile);
 
-                //close file
-                file.close();
+                        //Iterate over arrays and write each pair to file
+                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << Qt::endl;
 
-                QMessageBox::warning(this, "Thank You!", "You have ordered" + bookTitle + " by " + bookAuthor);
+                        //close file
+                        prebookFile.close();
 
-                break;
+                        QMessageBox::warning(this, "Thank You!", "You have made a pre-booking on " + bookTitle + " by " + bookAuthor);
+                    }
+                    break;
             }
+            else
+            {
+                //ordering logic
+                    QMessageBox::StandardButton reply = QMessageBox::question(this, "Order", "Would you like to order the book " + bookTitle + " by " + bookAuthor + " ?", QMessageBox::Yes | QMessageBox::No);
+
+                    if (reply == QMessageBox::Yes) // If "Yes" add book to order.txt
+                    {
+                        //create file
+                        QFile orderFile("order.txt");
+                        //check if file is open
+                        if (!orderFile.open(QFile::Append | QFile::Text))
+                        {
+                            QMessageBox::warning(this, "Filing Problem", "File is not open");
+                            return; //return if file open fails
+                        }
+
+                        //write book information to the file
+                        QTextStream out(&orderFile);
+
+                        //Iterate over arrays and write each pair to file
+                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << Qt::endl;
+
+                        //close file
+                        orderFile.close();
+
+                        QMessageBox::warning(this, "Thank You!", "You have ordered" + bookTitle + " by " + bookAuthor);
+                    }
+                    break;
+            }
+        }
+    }
+    //end of while loop
+
+          file.close();
+
             if (!found)
             {
              QMessageBox::warning(this, "Wrong Information", "The title and author you have requested is not found in the catalogue, make sure you typed information from the availible catalogue.");
             }
-        }
-    }//end of while loop
-
-}
+ }
 
