@@ -761,12 +761,12 @@ font-size: 12pt;</string>
          <string>Overdue Books</string>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_13">
+       <widget class="QPlainTextEdit" name="plainTextEdit_6">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>21</width>
+          <x>60</x>
+          <y>60</y>
+          <width>121</width>
           <height>31</height>
          </rect>
         </property>
@@ -779,7 +779,7 @@ font-size: 17px;</string>
          <enum>QFrame::NoFrame</enum>
         </property>
         <property name="plainText">
-         <string>5</string>
+         <string/>
         </property>
        </widget>
       </widget>

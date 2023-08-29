@@ -34,12 +34,15 @@ private slots:
 
     void on_logout_clicked();
 
+    void viewOverdue();
+
 private:
     Ui::MemberOverdue *ui;
     MemberHome *memberHome;
     MemberCatalogue *memberCatalogue;
     MemberMembership *memberMembership;
     MemberPreOrder *memberPreOrder;
+    QString loggedInUsername;
 };
 
 #endif // MEMBEROVERDUE_H

@@ -104,14 +104,10 @@ void MemberPreOrder::viewPreOrder()
 
             //create the model and populate it
 
-            QStandardItemModel *model = new QStandardItemModel(data.size(), 4, this);
-            for(int row = 0; row < data.size(); ++row)
+            QStandardItemModel *model = new QStandardItemModel(1, data.size(), this); // Use 1 row and parts.size() columns
+            for (int col = 0; col < data.size(); ++col)
             {
-                QStringList fields = data.at(row).split("/");
-                for (int col = 0; col < fields.size(); ++col)
-                {
-                    model->setItem(row, col, new QStandardItem(fields.at(col)));
-                }
+                model->setItem(0, col, new QStandardItem(data.at(col))); // Set item at row 0 and column col
             }
 
             QTableView tableView;
