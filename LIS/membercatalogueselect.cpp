@@ -1,6 +1,8 @@
 #include "membercatalogueselect.h"
 #include "ui_membercatalogueselect.h"
 
+#include <QString>
+
 MemberCatalogueSelect::MemberCatalogueSelect(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MemberCatalogueSelect)
@@ -11,4 +13,10 @@ MemberCatalogueSelect::MemberCatalogueSelect(QWidget *parent) :
 MemberCatalogueSelect::~MemberCatalogueSelect()
 {
     delete ui;
+}
+
+void MemberCatalogueSelect::setTitleAndAuthor(const QString& title, const QString& author)
+{
+    selectedTitle = title;
+    selectedAuthor = author;
 }

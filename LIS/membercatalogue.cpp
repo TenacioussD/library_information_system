@@ -21,17 +21,32 @@ MemberCatalogue::MemberCatalogue(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Create an instance of ClickableImageLabel
-    ClickableImageLabel* clickableLabel = new ClickableImageLabel(this);
+    //get layout from QScrollAreas content area
+     QLayout* scrollAreaLayout = ui->scrollAreaWidgetContents->layout();
 
-    // Set properties and add to layout
-    clickableLabel->setObjectName("labelOne"); // Set the object name
-    clickableLabel->setPixmap(QPixmap(":/images/book_image.png")); // Set the image
-    clickableLabel->setScaledContents(true); // Scale the image to fit the label
+    if (scrollAreaLayout)
+     {
+         for (int i = 0; i < 12; ++i)
+         {
+             // Retrieve title and author from arrays
+             QString title = titles[i];
+             QString author = authors[i];
 
-    // Connect the ClickableImageLabel's clicked signal to slot
-   connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::handleImageClicked);
+             // Create an instance of ClickableImageLabel with title and author
+             ClickableImageLabel* clickableLabel = new ClickableImageLabel(title, author, this);
 
+             // Set properties and add to layout
+             clickableLabel->setObjectName(QString("label%1").arg(i + 1));
+             clickableLabel->setPixmap(QPixmap(":/images/book_image.png"));
+             clickableLabel->setScaledContents(true);
+
+             // Connect the ClickableImageLabel's clicked signal to slot
+             connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::handleImageClicked);
+
+             // Add label to layout inside QScroll Area
+             scrollAreaLayout->addWidget(clickableLabel);
+         }
+     } //end of if statement
 
     //call function to save book information
     saveBookInfo();
@@ -142,7 +157,7 @@ void MemberCatalogue::mousePressEvent(QMouseEvent *event)
     //check if the event happend on a QLabel
     if (event->button() == Qt::LeftButton)
     {
-        QLabel *clickedLabel = qobject_cast<QLabel *>(childAt(event->pos()));
+        ClickableImageLabel* clickedLabel = qobject_cast<ClickableImageLabel*>(childAt(event->pos()));
         if (clickedLabel)
         {
             //extract label num from object name e.g. labelOne
@@ -152,6 +167,9 @@ void MemberCatalogue::mousePressEvent(QMouseEvent *event)
             //retrive corresponding book title and author
             QString title = titles[labelNumber - 1];
             QString author = authors[labelNumber - 1];
+
+            //call slot function to open new window
+            handleImageClicked(title, author);
         }
     }
 }
@@ -161,6 +179,9 @@ void MemberCatalogue::handleImageClicked(QString title, QString author)
     // Open new window as soon as clicked as pass title and author to next page
     hide();
     memberCatalogueSelect = new MemberCatalogueSelect(this);
+
+    //set the title and author values in the new window
+    memberCatalogueSelect->setTitleAndAuthor(title, author);
     memberCatalogueSelect->show();
 }
 

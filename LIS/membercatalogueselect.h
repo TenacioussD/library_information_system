@@ -14,9 +14,14 @@ class MemberCatalogueSelect : public QDialog
 public:
     explicit MemberCatalogueSelect(QWidget *parent = nullptr);
     ~MemberCatalogueSelect();
+    //define this function to recieve title and author from MEmberCatalogue class
+    void setTitleAndAuthor(const QString& title, const QString& author);
+
 
 private:
     Ui::MemberCatalogueSelect *ui;
+    QString selectedTitle;
+    QString selectedAuthor;
 };
 
 #endif // MEMBERCATALOGUESELECT_H
