@@ -57,7 +57,7 @@ void MemberLogin::on_pushButton_login_clicked()                // Login button c
         found = true;
         UserManager::getInstance().setLoggedInUser(username); // Store the logged-in username using UserManager
         hide();
-        MemberHome *memberhome =new MemberHome (this, lastName, username); // Pass username and name
+        MemberHome *memberhome =new MemberHome (this); // Pass username and name
         memberhome->show();
         break;
     }

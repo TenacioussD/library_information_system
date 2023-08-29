@@ -5,16 +5,18 @@
 #include "memberoverdue.h"
 #include "memberpreorder.h"
 #include "membermembership.h"
+#include "UserManager.h"
 
 #include <QMessageBox>
 
-MemberHome::MemberHome(QWidget *parent, const QString &username, const QString &name) :
+MemberHome::MemberHome(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MemberHome),
-    loggedInUsername(username),
-    loggedInName(name)
+    ui(new Ui::MemberHome)
 {
     ui->setupUi(this);
+
+    //Retrieve logged-in user from UserManager
+    loggedInUsername = UserManager::getInstance().getLoggedInUser();
 
     // Display the logged-in user's name in the plainTextEdit widget
     displayName();
@@ -65,6 +67,6 @@ void MemberHome::on_membership_2_clicked()
 void MemberHome::displayName() //the name of the user that logged in
 {
     //to the plainTextEdit called userName
-    QString displayText = "Welcome, " + loggedInName + "!";
+    QString displayText = "Welcome, " + loggedInUsername + "!";
     ui->userName->setPlainText(displayText); // Assuming you have a widget named 'userName' in your UI
 }
