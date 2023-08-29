@@ -32,12 +32,15 @@ private slots:
 
     void on_logout_clicked();
 
+    void viewPreOrder();
+
 private:
     Ui::MemberPreOrder *ui;
     MemberHome *memberHome;
     MemberCatalogue *memberCatalogue;
     MemberMembership *memberMembership;
     MemberOverdue *memberOverdue;
+    QString loggedInUsername;
 };
 
 #endif // MEMBERPREORDER_H
