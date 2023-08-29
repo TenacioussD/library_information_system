@@ -14,6 +14,8 @@
 #include <QLineEdit>
 #include <QMouseEvent>
 #include <QMessageBox>
+#include <QDate>
+
 
 MemberCatalogue::MemberCatalogue(QWidget *parent) :
     QMainWindow(parent),
@@ -189,7 +191,7 @@ void MemberCatalogue::on_pushButton_clicked()
             if (isBookOrdered(bookTitle, bookAuthor))
             {
                 //if already booked in order.txt
-                    QMessageBox::StandardButton reply = QMessageBox::question(this, "This book has been booked", "The book " + bookTitle + " by " + bookAuthor + " has alreay been booked. would you like to prebook it?", QMessageBox::Yes | QMessageBox::No);
+                    QMessageBox::StandardButton reply = QMessageBox::question(this, "This book has been booked", "The book " + bookTitle + " by " + bookAuthor + " has alreay been booked. Would you like to prebook it?", QMessageBox::Yes | QMessageBox::No);
 
                     if (reply == QMessageBox::Yes)//if user would like to prebook book
                     {
@@ -206,7 +208,7 @@ void MemberCatalogue::on_pushButton_clicked()
                         QTextStream out(&prebookFile);
 
                         //Iterate over arrays and write each pair to file
-                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << Qt::endl;
+                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << "/" << QDate::currentDate().toString("yyyy-MM-dd") << Qt::endl;
 
                         //close file
                         prebookFile.close();
@@ -235,7 +237,7 @@ void MemberCatalogue::on_pushButton_clicked()
                         QTextStream out(&orderFile);
 
                         //Iterate over arrays and write each pair to file
-                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << Qt::endl;
+                        out << loggedInUsername << "/" << bookTitle << "/" << bookAuthor << "/" << QDate::currentDate().toString("yyyy-MM-dd") << Qt::endl;
 
                         //close file
                         orderFile.close();
