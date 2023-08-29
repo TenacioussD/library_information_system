@@ -35,6 +35,7 @@ SOURCES += \
     main.cpp \
     login.cpp \
     membercatalogue.cpp \
+    membercatalogueselect.cpp \
     memberhome.cpp \
     memberlogin.cpp \
     membermembership.cpp \
@@ -66,6 +67,7 @@ HEADERS += \
     globalinstances.h \
     login.h \
     membercatalogue.h \
+    membercatalogueselect.h \
     memberhome.h \
     memberlogin.h \
     membermembership.h \
@@ -95,6 +97,7 @@ FORMS += \
     adminviewstatusreturn.ui \
     login.ui \
     membercatalogue.ui \
+    membercatalogueselect.ui \
     memberhome.ui \
     memberlogin.ui \
     membermembership.ui \

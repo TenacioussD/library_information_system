@@ -6,6 +6,6 @@ void ClickableImageLabel::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton)
     {
-        emit clicked();
+        emit clicked("Title Value", "Author Value");
     }
 }

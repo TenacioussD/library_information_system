@@ -6,6 +6,7 @@
 #include "memberpreorder.h"
 #include "membermembership.h"
 #include "clickableimagelabel.h"
+#include "membercatalogueselect.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -29,7 +30,7 @@ MemberCatalogue::MemberCatalogue(QWidget *parent) :
     clickableLabel->setScaledContents(true); // Scale the image to fit the label
 
     // Connect the ClickableImageLabel's clicked signal to slot
-    connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::onBookClicked);
+   connect(clickableLabel, &ClickableImageLabel::clicked, this, &MemberCatalogue::handleImageClicked);
 
 
     //call function to save book information
@@ -151,9 +152,15 @@ void MemberCatalogue::mousePressEvent(QMouseEvent *event)
             //retrive corresponding book title and author
             QString title = titles[labelNumber - 1];
             QString author = authors[labelNumber - 1];
-
-            //call new window
         }
     }
+}
+
+void MemberCatalogue::handleImageClicked(QString title, QString author)
+{
+    // Open new window as soon as clicked as pass title and author to next page
+    hide();
+    memberCatalogueSelect = new MemberCatalogueSelect(this);
+    memberCatalogueSelect->show();
 }
 

@@ -13,7 +13,7 @@ public:
     explicit ClickableImageLabel(QWidget* parent = nullptr);
 
 signals:
-    void clicked();
+    void clicked(QString title, QString author);
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;

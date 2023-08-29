@@ -7,6 +7,7 @@ class MemberHome;
 class MemberOverdue;          // Added the forward declarations
 class MemberPreOrder;
 class MemberMembership;
+class MemberCatalogueSelect;
 
 namespace Ui {
 class MemberCatalogue;
@@ -34,8 +35,6 @@ private slots:
 
     void saveBookInfo(); //create a function that will be used to save books and titles
 
-    void onBookClicked(); //this function will be when a book has been clicked on
-
 private:
     Ui::MemberCatalogue *ui;
     MemberHome *memberhome;                    // Creating the member variables
@@ -44,6 +43,8 @@ private:
     MemberOverdue *memberOverdue;
     QString titles[12]; //12 because there is 12 books in the ui
     QString authors[12];
+    MemberCatalogueSelect *memberCatalogueSelect;
+    void handleImageClicked(QString title, QString author);
 
 protected:
     void mousePressEvent (QMouseEvent *event) override; //attempting to enable mouse tracking as QLabel does not have a clicked signal
