@@ -4,6 +4,7 @@
 #include "adminmanagebooks.h"
 #include "adminmembership.h"
 #include "admineditmemberdetails.h"
+#include "globalinstances.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -24,8 +25,10 @@ AdminEditMember::~AdminEditMember()
 void AdminEditMember::on_catalogue_clicked()
 {
     hide();
-    adminCatalogue = new AdminCatalogue(this);
-    adminCatalogue->show();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
 void AdminEditMember::on_manageBooks_clicked()

@@ -3,6 +3,7 @@
 #include "admincatalogue.h"
 #include "adminmanagebooks.h"
 #include "adminremovemember.h"
+#include "globalinstances.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -28,8 +29,10 @@ AdminRemoveMemConfirm::~AdminRemoveMemConfirm()
 void AdminRemoveMemConfirm::on_catalogue_clicked()
 {
     hide();
-    adminCatalogue = new AdminCatalogue(this);
-    adminCatalogue->show();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
 void AdminRemoveMemConfirm::on_manageBooks_clicked()
