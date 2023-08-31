@@ -22,7 +22,7 @@ public:
     ~AdminEditBookDialog();
 
 signals:
-    //void bookDetailsUpdated(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);     // Signal to pass the updated book details when user selects confirm
+    void bookDetailsUpdated(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);     // Signal to pass the updated book details when user selects confirm
 
     void bookEditCompleted();   // to close the adminupdatebookdetails page
 

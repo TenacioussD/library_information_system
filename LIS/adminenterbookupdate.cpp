@@ -43,7 +43,7 @@ void AdminEnterBookUpdate::on_confirm_2_clicked()                  // Passes tit
     qDebug() << "emitting: " << currentBookIndex << ", " << title << " and " << author;      // qDebug message to ensure the emit signal emits the correct details
 
     AdminEditBookDialog *admineditdialog = new AdminEditBookDialog (title, author);          // Passess the stored title and author to the dialog
-    //connect(admineditdialog, &AdminEditBookDialog::bookEditCompleted, this, &AdminEnterBookUpdate::handleBookEditCompleted);     // connects the closing of enterbookupdate
+    connect(admineditdialog, &AdminEditBookDialog::bookEditCompleted, this, &AdminEnterBookUpdate::handleBookEditCompleted);     // connects the closing of enterbookupdate
     admineditdialog->show();
 }
 
