@@ -84,11 +84,17 @@ void AdminViewAllMembers::viewAllMembers()
         QStringList fields = data.at(row).split(" ");
         for (int col = 0; col < fields.size(); ++col)
         {
-              model->setItem(row, col, new QStandardItem(fields.at(col)));
+            QStandardItem *item = new QStandardItem(fields.at(col));
+            QFont font("Segoe UI", 9, QFont::Normal); // Create QFont instance with Segoe UI, size 9, and normal style
+            item->setFont(font); // Apply the font to the item
+            model->setItem(row, col, item); // Set the item in the model
         }
     }
 
-    QTableView tableView;
-    ui->tableView->setModel(model); //call the local UI model
-    tableView.show();
+    ui->tableView->setModel(model);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Set columns to stretch to fit
+
+    // Hide row and column headers
+    ui->tableView->verticalHeader()->setVisible(false);
+    ui->tableView->horizontalHeader()->setVisible(false);
 }

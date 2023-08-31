@@ -43,6 +43,7 @@ private:
     MemberMembership *memberMembership;
     MemberPreOrder *memberPreOrder;
     QString loggedInUsername;
-};
+    QSet<QString> addedEntries;
+   };
 
 #endif // MEMBEROVERDUE_H

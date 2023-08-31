@@ -73,6 +73,28 @@ void MemberCatalogue::on_membership_clicked()
 
 void MemberCatalogue::saveBookInfo()
 {
+
+    //Read exsiting catalogue information
+    QMap<QString, QString> existingCatalogue;
+    QFile file("catalogue.txt");
+    if (file.open(QFile::ReadOnly | QFile::Text))
+    {
+        QTextStream in(&file);
+        while (!in.atEnd())
+        {
+            QString line = in.readLine();
+            QStringList parts = line.split("/");
+            if (parts.size() >= 2)
+            {
+                QString title = parts[0];
+                QString author = parts[1];
+                existingCatalogue.insert(title, author);
+            }
+        }
+        file.close();
+    }
+
+
     //retrieve data from each created UI to store in attempt to create a database
     //add titles and authors into arays to make code shorted
 
@@ -95,37 +117,42 @@ void MemberCatalogue::saveBookInfo()
     QString authors[]=
         {
             ui->authorOne->toPlainText(),
-            ui->titleTwo->toPlainText(),
-            ui->titleThree->toPlainText(),
+            ui->authorTwo->toPlainText(),
+            ui->authorThree->toPlainText(),
             ui->authorFour->toPlainText(),
-            ui->titleFive->toPlainText(),
-            ui->titleSix->toPlainText(),
-            ui->titleSeven->toPlainText(),
-            ui->titleEight->toPlainText(),
-            ui->titleNine->toPlainText(),
-            ui->titleTen->toPlainText(),
-            ui->titleEleven->toPlainText(),
-            ui->titleTwelfe->toPlainText(),
+            ui->authorFive->toPlainText(),
+            ui->authorSix->toPlainText(),
+            ui->authorSeven->toPlainText(),
+            ui->authorEight->toPlainText(),
+            ui->authorNine->toPlainText(),
+            ui->authorTen->toPlainText(),
+            ui->authorEleven->toPlainText(),
+            ui->authorTwelfe->toPlainText(),
         };
 
-    //create a file
-    QFile file("catalogue.txt");
-    //check if file is open
-    if (!file.open(QFile::Append | QFile::Text))
-    {
-        QMessageBox::warning(this, "Filing Problem", "File is not open");
-        return; //return if file open fails
-    }
-    //write book information to the file
-    QTextStream out(&file);
+    bool catalogueChanged = false;
     for (int i = 0; i < static_cast<int>(sizeof(titles) / sizeof(titles[0])); ++i)
     {
-        //Iterate over arrays and write each pair to file
-        out << titles[i] << "/" << authors[i] << Qt::endl;
+        if (!existingCatalogue.contains(titles[i]) || existingCatalogue[titles[i]] != authors[i])
+        {
+            catalogueChanged = true;
+            existingCatalogue[titles[i]] = authors[i];
+        }
     }
 
-    //close file
-    file.close();
+    // If changes were made, update the file
+    if (catalogueChanged)
+    {
+        if (file.open(QFile::WriteOnly | QFile::Text))
+        {
+            QTextStream out(&file);
+            for (const QString &title : existingCatalogue.keys())
+            {
+                out << title << "/" << existingCatalogue[title] << Qt::endl;
+            }
+            file.close();
+        }
+    }
 }
 
 // Add this function definition to your MemberCatalogue class

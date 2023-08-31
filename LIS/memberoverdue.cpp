@@ -13,6 +13,7 @@
 #include <QDate>
 #include <QTableView>
 #include <QStandardItemModel>
+#include <QVBoxLayout>
 
 MemberOverdue::MemberOverdue(QWidget *parent) :
     QDialog(parent),
@@ -38,7 +39,6 @@ void MemberOverdue::on_back_clicked()
     memberHome = new MemberHome(this);
     memberHome->show();
 }
-
 
 void MemberOverdue::on_catalogue_clicked()
 {
@@ -76,6 +76,14 @@ void MemberOverdue::on_logout_clicked()
 
 void MemberOverdue::viewOverdue()
 {
+    QFile overdueClean("overdue.txt");
+
+    if (overdueClean.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
+        overdueClean.close();
+    } else {
+        QMessageBox::warning(this, "File Problem", "Could not clear the file.");
+    }
+
     //open order.txt to check if data needs to be added to overdue
     QFile file("order.txt");
 
@@ -124,15 +132,12 @@ void MemberOverdue::viewOverdue()
             {
                 QMessageBox::warning(this, "Filing Problem", "Overdue file could not be opened");
             }
-
-            QMessageBox::information(this, "Updated", "Overdue status is up to date");
-
         }
     }
 
     if (!hasOverdue)
     {
-        QMessageBox::information(this, "Updated", "Overdue status is up to date");
+        return;
     }
 
     file.close();
@@ -177,9 +182,24 @@ void MemberOverdue::viewOverdue()
                 model->setItem(0, col, new QStandardItem(parts.at(col))); // Set item at row 0 and column col
             }
 
-            QTableView tableView;
-            ui->viewOverdue->setModel(model); //call the ui model
-            tableView.show();
+            QTableView *tableView = new QTableView(this);
+            tableView->setModel(model);
+
+            // Apply styling changes
+            QFont font("Segoe UI", 9, QFont::Normal);
+            tableView->setFont(font);
+
+            tableView->horizontalHeader()->hide();
+            tableView->verticalHeader()->hide();
+            tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+            tableView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+            tableView->resizeColumnsToContents();
+
+            QVBoxLayout *layout = new QVBoxLayout(); // Create a vertical layout
+            layout->addWidget(tableView); // Add the table view to the layout
+
+            ui->viewOverdue->setLayout(layout);
 
         }
     }
