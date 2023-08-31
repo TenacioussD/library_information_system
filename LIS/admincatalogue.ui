@@ -545,7 +545,7 @@ subcontrol-origin: margin;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-231</y>
           <width>634</width>
           <height>678</height>
          </rect>
@@ -693,6 +693,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Kylan Gentry</string>
                </property>
@@ -799,6 +802,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>John Glover</string>
@@ -907,6 +913,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Mia Gas</string>
                </property>
@@ -1013,6 +1022,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>Tatiana McGregor</string>
@@ -1121,6 +1133,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Julies Maldover</string>
                </property>
@@ -1227,6 +1242,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>Marceline Avila</string>
@@ -1335,6 +1353,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Bowen Higgins</string>
                </property>
@@ -1441,6 +1462,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>Peter Jackson</string>
@@ -1549,6 +1573,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Kane Dyer</string>
                </property>
@@ -1655,6 +1682,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>Franklin Sierra</string>
@@ -1763,6 +1793,9 @@ background: white;</string>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
                <property name="plainText">
                 <string>Tim Smith</string>
                </property>
@@ -1869,6 +1902,9 @@ background: white;</string>
                </property>
                <property name="verticalScrollBarPolicy">
                 <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
                <property name="plainText">
                 <string>Samantha Dee</string>

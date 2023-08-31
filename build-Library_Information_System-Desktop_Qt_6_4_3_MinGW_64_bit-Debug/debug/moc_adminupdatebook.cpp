@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../Desktop/DEV with MJ code/LIS/adminupdatebook.h"
+#include "../../LIS/adminupdatebook.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'adminupdatebook.h' doesn't include <QObject>."
@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_AdminUpdateBook_t {
-    uint offsetsAndSizes[40];
+    uint offsetsAndSizes[42];
     char stringdata0[16];
     char stringdata1[16];
     char stringdata2[1];
@@ -47,6 +47,7 @@ struct qt_meta_stringdata_AdminUpdateBook_t {
     char stringdata17[14];
     char stringdata18[20];
     char stringdata19[25];
+    char stringdata20[24];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_AdminUpdateBook_t::offsetsAndSizes) + ofs), len 
@@ -71,7 +72,8 @@ Q_CONSTINIT static const qt_meta_stringdata_AdminUpdateBook_t qt_meta_stringdata
         QT_MOC_LITERAL(217, 12),  // "updatedTitle"
         QT_MOC_LITERAL(230, 13),  // "updatedAuthor"
         QT_MOC_LITERAL(244, 19),  // "on_status_3_clicked"
-        QT_MOC_LITERAL(264, 24)   // "on_manageBooks_3_clicked"
+        QT_MOC_LITERAL(264, 24),  // "on_manageBooks_3_clicked"
+        QT_MOC_LITERAL(289, 23)   // "on_membership_3_clicked"
     },
     "AdminUpdateBook",
     "editBookClicked",
@@ -92,7 +94,8 @@ Q_CONSTINIT static const qt_meta_stringdata_AdminUpdateBook_t qt_meta_stringdata
     "updatedTitle",
     "updatedAuthor",
     "on_status_3_clicked",
-    "on_manageBooks_3_clicked"
+    "on_manageBooks_3_clicked",
+    "on_membership_3_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -103,7 +106,7 @@ Q_CONSTINIT static const uint qt_meta_data_AdminUpdateBook[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,19 +114,20 @@ Q_CONSTINIT static const uint qt_meta_data_AdminUpdateBook[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    4,   80,    2, 0x06,    1 /* Public */,
+       1,    4,   86,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       7,    0,   89,    2, 0x08,    6 /* Private */,
-       8,    0,   90,    2, 0x08,    7 /* Private */,
-       9,    0,   91,    2, 0x08,    8 /* Private */,
-      10,    0,   92,    2, 0x08,    9 /* Private */,
-      11,    0,   93,    2, 0x08,   10 /* Private */,
-      12,    0,   94,    2, 0x08,   11 /* Private */,
-      13,    0,   95,    2, 0x08,   12 /* Private */,
-      14,    3,   96,    2, 0x08,   13 /* Private */,
-      18,    0,  103,    2, 0x08,   17 /* Private */,
-      19,    0,  104,    2, 0x08,   18 /* Private */,
+       7,    0,   95,    2, 0x08,    6 /* Private */,
+       8,    0,   96,    2, 0x08,    7 /* Private */,
+       9,    0,   97,    2, 0x08,    8 /* Private */,
+      10,    0,   98,    2, 0x08,    9 /* Private */,
+      11,    0,   99,    2, 0x08,   10 /* Private */,
+      12,    0,  100,    2, 0x08,   11 /* Private */,
+      13,    0,  101,    2, 0x08,   12 /* Private */,
+      14,    3,  102,    2, 0x08,   13 /* Private */,
+      18,    0,  109,    2, 0x08,   17 /* Private */,
+      19,    0,  110,    2, 0x08,   18 /* Private */,
+      20,    0,  111,    2, 0x08,   19 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QPixmap, QMetaType::Int,    3,    4,    5,    6,
@@ -137,6 +141,7 @@ Q_CONSTINIT static const uint qt_meta_data_AdminUpdateBook[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::QString, QMetaType::QString,   15,   16,   17,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -180,6 +185,8 @@ Q_CONSTINIT const QMetaObject AdminUpdateBook::staticMetaObject = { {
         // method 'on_status_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_manageBooks_3_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_membership_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -202,6 +209,7 @@ void AdminUpdateBook::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 8: _t->updateCatalogue((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         case 9: _t->on_status_3_clicked(); break;
         case 10: _t->on_manageBooks_3_clicked(); break;
+        case 11: _t->on_membership_3_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -235,13 +243,13 @@ int AdminUpdateBook::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

@@ -37,8 +37,8 @@ void AdminEditBookDialog::on_pushButton_clicked()        // Thank you pop-up whe
     connect(messageBox, &QMessageBox::finished, this, &AdminEditBookDialog::handleMessageBoxFinished);
     messageBox->exec();
 
-    AdminHome *adminhome =new AdminHome(this);
-    adminhome->show();                              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
+   // AdminHome *adminhome =new AdminHome(this);
+   //adminhome->show();                              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
 
 }
 

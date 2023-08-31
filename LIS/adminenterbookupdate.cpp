@@ -7,6 +7,7 @@
 #include "adminmanagebooks.h"
 #include "adminviewstatus.h"
 #include "globalinstances.h"
+#include "adminmembership.h"
 
 #include <QString>
 #include <QLineEdit>
@@ -86,8 +87,15 @@ void AdminEnterBookUpdate::on_manageBooks_clicked()          // When managebooks
 
 void AdminEnterBookUpdate::on_status_clicked()              // When status is clicked
 {
-    hide();                                                  // Hides previous window/page
+    hide();                                                 // Hides previous window/page
     AdminViewStatus *adminStatus =new AdminViewStatus (this);      // Opens admin managebooks
     adminStatus->show();
+}
+
+void AdminEnterBookUpdate::on_membership_clicked()          // When membership is clicked from the main menu
+{
+    hide();
+    AdminMembership *adminMembership = new AdminMembership (this); // Creates a new instance of AdminMembership
+    adminMembership->show();                                // Opens the membership page
 }
 

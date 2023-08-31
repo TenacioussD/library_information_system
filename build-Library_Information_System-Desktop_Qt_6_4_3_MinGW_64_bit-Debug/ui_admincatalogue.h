@@ -345,7 +345,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 634, 678));
+        scrollAreaWidgetContents->setGeometry(QRect(0, -231, 634, 678));
         scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8("border-style: none;"));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_3->setObjectName("verticalLayout_3");
@@ -394,6 +394,7 @@ public:
 "background: white;"));
         author3->setFrameShape(QFrame::NoFrame);
         author3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        author3->setReadOnly(true);
         frame_61 = new QFrame(frame_4);
         frame_61->setObjectName("frame_61");
         frame_61->setGeometry(QRect(159, 442, 144, 210));
@@ -427,6 +428,7 @@ public:
 "background: white;"));
         plainTextEdit_70->setFrameShape(QFrame::NoFrame);
         plainTextEdit_70->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_70->setReadOnly(true);
         frame_63 = new QFrame(frame_4);
         frame_63->setObjectName("frame_63");
         frame_63->setGeometry(QRect(9, 225, 144, 211));
@@ -460,6 +462,7 @@ public:
 "background: white;"));
         plainTextEdit_44->setFrameShape(QFrame::NoFrame);
         plainTextEdit_44->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_44->setReadOnly(true);
         frame_65 = new QFrame(frame_4);
         frame_65->setObjectName("frame_65");
         frame_65->setGeometry(QRect(309, 442, 143, 210));
@@ -493,6 +496,7 @@ public:
 "background: white;"));
         plainTextEdit_72->setFrameShape(QFrame::NoFrame);
         plainTextEdit_72->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_72->setReadOnly(true);
         frame_67 = new QFrame(frame_4);
         frame_67->setObjectName("frame_67");
         frame_67->setGeometry(QRect(159, 225, 144, 211));
@@ -526,6 +530,7 @@ public:
 "background: white;"));
         plainTextEdit_74->setFrameShape(QFrame::NoFrame);
         plainTextEdit_74->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_74->setReadOnly(true);
         frame_69 = new QFrame(frame_4);
         frame_69->setObjectName("frame_69");
         frame_69->setGeometry(QRect(458, 442, 144, 210));
@@ -559,6 +564,7 @@ public:
 "background: white;"));
         plainTextEdit_76->setFrameShape(QFrame::NoFrame);
         plainTextEdit_76->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_76->setReadOnly(true);
         frame_71 = new QFrame(frame_4);
         frame_71->setObjectName("frame_71");
         frame_71->setGeometry(QRect(458, 9, 144, 210));
@@ -592,6 +598,7 @@ public:
 "background: white;"));
         author4->setFrameShape(QFrame::NoFrame);
         author4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        author4->setReadOnly(true);
         book1 = new QFrame(frame_4);
         book1->setObjectName("book1");
         book1->setGeometry(QRect(9, 9, 144, 210));
@@ -625,6 +632,7 @@ public:
 "background: white;"));
         author1->setFrameShape(QFrame::NoFrame);
         author1->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        author1->setReadOnly(true);
         frame_75 = new QFrame(frame_4);
         frame_75->setObjectName("frame_75");
         frame_75->setGeometry(QRect(9, 442, 144, 210));
@@ -658,6 +666,7 @@ public:
 "background: white;"));
         plainTextEdit_82->setFrameShape(QFrame::NoFrame);
         plainTextEdit_82->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_82->setReadOnly(true);
         book2 = new QFrame(frame_4);
         book2->setObjectName("book2");
         book2->setGeometry(QRect(159, 9, 144, 210));
@@ -691,6 +700,7 @@ public:
 "background: white;"));
         author2->setFrameShape(QFrame::NoFrame);
         author2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        author2->setReadOnly(true);
         frame_77 = new QFrame(frame_4);
         frame_77->setObjectName("frame_77");
         frame_77->setGeometry(QRect(458, 225, 144, 211));
@@ -724,6 +734,7 @@ public:
 "background: white;"));
         plainTextEdit_84->setFrameShape(QFrame::NoFrame);
         plainTextEdit_84->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_84->setReadOnly(true);
         frame_79 = new QFrame(frame_4);
         frame_79->setObjectName("frame_79");
         frame_79->setGeometry(QRect(309, 225, 143, 211));
@@ -757,6 +768,7 @@ public:
 "background: white;"));
         plainTextEdit_86->setFrameShape(QFrame::NoFrame);
         plainTextEdit_86->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_86->setReadOnly(true);
 
         verticalLayout_3->addWidget(frame_3);
 

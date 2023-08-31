@@ -7,6 +7,7 @@
 #include "adminmanagebooks.h"
 #include "adminviewstatus.h"
 #include "globalinstances.h"
+#include "adminmembership.h"
 
 #include <QMessageBox>                                        // Declaring the use of QMessageBox to be able to use it
 
@@ -75,5 +76,12 @@ void AdminBookConfirmation::on_status_3_clicked()                // When status 
     hide();
     AdminViewStatus *adminStatus =new AdminViewStatus(this);     // Opens adminViewStatus page
     adminStatus->show();
+}
+
+void AdminBookConfirmation::on_membership_3_clicked()            // When membership is clicked from the main menu
+{
+    hide();
+    AdminMembership *adminMembership = new AdminMembership(this);  // Creates a new instance of AdminMembership
+    adminMembership->show();                                     // Opens the membership page
 }
 

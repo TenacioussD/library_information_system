@@ -275,7 +275,7 @@ public:
         plainTextEdit_5->setFrameShape(QFrame::NoFrame);
         plainTextEdit = new QPlainTextEdit(frame_2);
         plainTextEdit->setObjectName("plainTextEdit");
-        plainTextEdit->setGeometry(QRect(70, 50, 121, 31));
+        plainTextEdit->setGeometry(QRect(70, 40, 121, 31));
         plainTextEdit->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "font-weight: bold;\n"
 "font-size: 17px;"));
@@ -339,7 +339,7 @@ public:
         plainTextEdit_12->setFrameShape(QFrame::NoFrame);
         plainTextEdit_6 = new QPlainTextEdit(frame_4);
         plainTextEdit_6->setObjectName("plainTextEdit_6");
-        plainTextEdit_6->setGeometry(QRect(60, 60, 121, 31));
+        plainTextEdit_6->setGeometry(QRect(70, 40, 121, 31));
         plainTextEdit_6->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "font-weight: bold;\n"
 "font-size: 17px;"));

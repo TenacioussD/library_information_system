@@ -7,6 +7,7 @@
 #include "globalinstances.h"
 #include "adminviewstatus.h"
 #include "adminmanagebooks.h"
+#include "adminmembership.h"
 
 #include <QString>                                          // Declaring the use of QString functions in this file
 #include <QMessageBox>
@@ -70,5 +71,13 @@ void AdminAddBook::on_manageBooks_clicked()                 // When manage books
     hide();
     AdminManageBooks *adminManage = new AdminManageBooks;   // Opens adminManageBooks
     adminManage->show();
+}
+
+
+void AdminAddBook::on_membership_clicked()                  // When membership page is clicked
+{
+    hide();
+    AdminMembership *adminMembership =new AdminMembership(this);         // Opens adminMembership page
+    adminMembership->show();
 }
 

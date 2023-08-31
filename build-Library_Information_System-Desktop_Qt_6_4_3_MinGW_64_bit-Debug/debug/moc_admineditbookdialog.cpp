@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../Desktop/DEV with MJ code/LIS/admineditbookdialog.h"
+#include "../../LIS/admineditbookdialog.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'admineditbookdialog.h' doesn't include <QObject>."
