@@ -475,6 +475,9 @@ background: transparent;</string>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
         <property name="plainText">
          <string>Add New Book Confirmation</string>
         </property>
@@ -498,6 +501,9 @@ font-size: 13px;</string>
         </property>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="plainText">
          <string>Please confirm that you are happy for this book to be added to the catalogue</string>

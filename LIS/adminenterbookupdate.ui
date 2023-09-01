@@ -472,6 +472,12 @@ background: transparent;</string>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
         <property name="plainText">
          <string>Update Book</string>
         </property>
@@ -492,6 +498,12 @@ font-size: 13px;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="plainText">
          <string>Please enter the revised information</string>

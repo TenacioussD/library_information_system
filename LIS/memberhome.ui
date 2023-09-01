@@ -428,48 +428,60 @@ border-radius: 10px;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QPlainTextEdit" name="userName">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>621</width>
-          <height>91</height>
+          <x>20</x>
+          <y>40</y>
+          <width>619</width>
+          <height>31</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QPlainTextEdit" name="userName">
-           <property name="styleSheet">
-            <string notr="true">font-family: Baloo 2;
+        <property name="styleSheet">
+         <string notr="true">font-family: Baloo 2;
 font-weight: bold;
 font-size: 23px;
 background: transparent;</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="plainText">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPlainTextEdit" name="plainTextEdit_4">
-           <property name="styleSheet">
-            <string notr="true">background: transparent;
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="plainText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>619</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
 font-family: Baloo 2;
 font-size: 13px;</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="plainText">
-            <string>Please head to the Member Menu to start your day.</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="plainText">
+         <string>Please head to the Member Menu to start your day.</string>
+        </property>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_5">

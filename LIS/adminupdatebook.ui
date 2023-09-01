@@ -475,6 +475,9 @@ background: transparent;</string>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
         <property name="plainText">
          <string>Update Book Details</string>
         </property>
@@ -498,6 +501,9 @@ font-size: 13px;</string>
         </property>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="plainText">
          <string>Please select a book to change its details</string>
@@ -561,7 +567,7 @@ subcontrol-origin: margin;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-215</y>
+          <y>0</y>
           <width>634</width>
           <height>678</height>
          </rect>

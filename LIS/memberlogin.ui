@@ -122,6 +122,12 @@ font-weight: bold;
 font-weight: bold;
 font-size: 20px;</string>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
         <property name="plainText">
          <string>NATIONAL LIBRARY</string>
         </property>
@@ -137,6 +143,12 @@ font-size: 20px;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">font-family: Baloo 2;</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="plainText">
          <string>Please login below to access the library's services.</string>

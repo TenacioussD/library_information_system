@@ -474,6 +474,12 @@ background: transparent;</string>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
         <property name="plainText">
          <string>View the Catalogue</string>
         </property>
@@ -494,6 +500,12 @@ font-size: 13px;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="plainText">
          <string>Here you can browse for books currently in the system</string>
@@ -559,7 +571,7 @@ subcontrol-origin: margin;
           <x>0</x>
           <y>0</y>
           <width>634</width>
-          <height>682</height>
+          <height>678</height>
          </rect>
         </property>
         <property name="styleSheet">
