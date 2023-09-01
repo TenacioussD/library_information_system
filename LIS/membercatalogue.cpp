@@ -130,26 +130,27 @@ void MemberCatalogue::saveBookInfo()
             ui->authorTwelfe->toPlainText(),
         };
 
-    //check if the catalogue information has changed
-    bool catalogueChanged = false;
+    //create a new QMAp to track update entries
+    QMap<QString, QString> updatedCatalogue;
+
+    // Check if the catalogue information has changed
     for (int i = 0; i < static_cast<int>(sizeof(titles) / sizeof(titles[0])); ++i)
     {
         if (!existingCatalogue.contains(titles[i]) || existingCatalogue[titles[i]] != authors[i])
         {
-            catalogueChanged = true;
-            existingCatalogue[titles[i]] = authors[i];
+            updatedCatalogue.insert(titles[i], authors[i]);
         }
     }
 
-    // If changes were made, update the file
-    if (catalogueChanged)
+    // Update the file with the updated entries
+    if (!updatedCatalogue.isEmpty())
     {
         if (file.open(QFile::WriteOnly | QFile::Text))
         {
             QTextStream out(&file);
-            for (const QString &title : existingCatalogue.keys())
+            for (const QString &title : updatedCatalogue.keys())
             {
-                out << title << "/" << existingCatalogue[title] << Qt::endl;
+                out << title << "/" << updatedCatalogue[title] << Qt::endl;
             }
             file.close();
         }

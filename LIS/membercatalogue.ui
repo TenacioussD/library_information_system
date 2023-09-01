@@ -1392,7 +1392,7 @@ background: white;</string>
                <rect>
                 <x>0</x>
                 <y>140</y>
-                <width>111</width>
+                <width>141</width>
                 <height>51</height>
                </rect>
               </property>
@@ -1407,7 +1407,7 @@ background: white;</string>
                 <rect>
                  <x>0</x>
                  <y>10</y>
-                 <width>91</width>
+                 <width>141</width>
                  <height>21</height>
                 </rect>
                </property>
@@ -1429,7 +1429,7 @@ background: white;</string>
                 <enum>QPlainTextEdit::WidgetWidth</enum>
                </property>
                <property name="plainText">
-                <string>Great Lakes</string>
+                <string>Winds of Change</string>
                </property>
                <property name="textInteractionFlags">
                 <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -1440,7 +1440,7 @@ background: white;</string>
                 <rect>
                  <x>0</x>
                  <y>30</y>
-                 <width>104</width>
+                 <width>141</width>
                  <height>21</height>
                 </rect>
                </property>
@@ -1455,7 +1455,7 @@ background: white;</string>
                 <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
                <property name="plainText">
-                <string>Peter Jackson</string>
+                <string>Susan Jackson</string>
                </property>
               </widget>
              </widget>
