@@ -6,6 +6,7 @@
 #include "admineditbookdialog.h"
 #include "globalinstances.h"
 #include "adminviewstatus.h"
+#include "adminmembership.h"
 
 #include <QMessageBox>
 #include <QPlainTextEdit>
@@ -92,5 +93,12 @@ void AdminCatalogue::on_status_clicked()               // When status is clicked
     hide();
     AdminViewStatus *adminStatus = new AdminViewStatus;   // Opens adminViewStatus page
     adminStatus->show();
+}
+
+void AdminCatalogue::on_membership_clicked()           // When membership is clicked
+{
+    hide();
+    adminMembership = new AdminMembership (this);      // Creates a new instance of AdminMembership
+    adminMembership->show();                           // Opens the membership page
 }
 

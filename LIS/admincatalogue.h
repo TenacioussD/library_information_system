@@ -7,6 +7,7 @@ class AdminHome;                                      // Forward declarations
 class AdminManageBooks;
 class AdminEditBookDialog;
 class AdminViewStatus;
+class AdminMembership;
 
 namespace Ui {
 class AdminCatalogue;
@@ -20,7 +21,7 @@ public:
     explicit AdminCatalogue(QWidget *parent = nullptr);
     ~AdminCatalogue();
 
-    void updateBookDetails(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);
+    void updateBookDetails(int bookIndex, const QString &updatedTitle, const QString &updatedAuthor);   // Member function that handles the receiving signal to update books in the catalogue
 
 private slots:
 
@@ -32,8 +33,11 @@ private slots:
 
     void on_status_clicked();
 
+    void on_membership_clicked();
+
 private:
     Ui::AdminCatalogue *ui;
+    AdminMembership *adminMembership;
 };
 
 #endif // ADMINCATALOGUE_H

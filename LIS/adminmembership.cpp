@@ -7,6 +7,7 @@
 #include "admineditmember.h"
 #include "adminremovemember.h"
 #include "adminviewallmembers.h"
+#include "globalinstances.h"
 
 AdminMembership::AdminMembership(QWidget *parent) :
     QDialog(parent),
@@ -30,8 +31,10 @@ void AdminMembership::on_membership_clicked()
 void AdminMembership::on_catalogue_clicked()
 {
     hide();
-    adminCatalogue = new AdminCatalogue(this);
-    adminCatalogue->show();
+    if (!GlobalInstances::adminCatalogueInstance) {
+        GlobalInstances::adminCatalogueInstance = new AdminCatalogue(this);   // Creates a new instance of adminCatalogue if it hasn't been set up prior
+    }
+    GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
 void AdminMembership::on_manageBooks_clicked()

@@ -9,6 +9,7 @@ class AdminCatalogue;
 class AdminBookConfirmation;
 class AdminViewStatus;
 class AdminManageBooks;
+class AdminMembership;
 
 namespace Ui {
 class AdminAddBook;
@@ -34,6 +35,8 @@ private slots:                                    // Member functions of the cla
     void on_status_clicked();
 
     void on_manageBooks_clicked();
+
+    void on_membership_clicked();
 
 private:
     Ui::AdminAddBook *ui;

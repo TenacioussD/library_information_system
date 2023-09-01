@@ -8,6 +8,7 @@
 #include "adminviewstatus.h"
 #include "adminmanagebooks.h"
 #include "globalinstances.h"
+#include "adminmembership.h"
 
 #include <QMessageBox>
 #include <QString>
@@ -130,5 +131,12 @@ void AdminUpdateBook::on_manageBooks_3_clicked()            // When manage books
     hide();
     AdminManageBooks *adminManage =new AdminManageBooks(this);
     adminManage->show();
+}
+
+void AdminUpdateBook::on_membership_3_clicked()             // When membership is clicked from the main menu
+{
+    hide();
+    AdminMembership *adminMembership = new AdminMembership (this); // Creates a new instance of AdminMembership
+    adminMembership->show();                                // Opens the membership page
 }
 

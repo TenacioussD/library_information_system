@@ -555,7 +555,7 @@ font-size: 12pt;</string>
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>50</y>
+          <y>40</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -764,8 +764,8 @@ font-size: 12pt;</string>
        <widget class="QPlainTextEdit" name="plainTextEdit_6">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>60</y>
+          <x>70</x>
+          <y>40</y>
           <width>121</width>
           <height>31</height>
          </rect>
