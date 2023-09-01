@@ -19,6 +19,7 @@ AdminHome::AdminHome(QWidget *parent) :
     ui->setupUi(this);
     memberCount();
     overdueCount();
+    booksAmount();
 }
 
 AdminHome::~AdminHome()
@@ -111,8 +112,33 @@ void AdminHome::overdueCount()
     }
     file.close();
 
-    int overdueCount = data.size(); //calulate overdue books
+    int overdueCount = data.size(); //calculate overdue books
 
     //update ui
     ui->plainTextEdit_6->setPlainText((QString::number(overdueCount)));
+}
+
+void AdminHome::booksAmount()
+{
+    QFile file("catalogue.txt");
+    if(!file.open(QFile::ReadWrite | QFile::Text))
+    {
+        QMessageBox::warning(this, "Filing Problem", "File is not open");
+        return;
+    }
+    //read file
+    QStringList data;
+    QTextStream in(&file);
+
+    while(!in.atEnd())
+    {
+        QString line = in.readLine();
+        data.append(line);
+    }
+    file.close();
+
+    int booksAmount = data.size(); //calculate amount books
+
+    //update ui
+    ui->booksAmount->setPlainText((QString::number(booksAmount)));
 }

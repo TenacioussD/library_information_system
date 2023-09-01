@@ -531,46 +531,45 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_5">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>20</y>
-          <width>131</width>
-          <height>31</height>
+          <x>60</x>
+          <y>10</y>
+          <width>141</width>
+          <height>81</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-size: 12pt;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>Total Members</string>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>121</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-weight: bold;
-font-size: 17px;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string/>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit_5">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string>Total Members</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_3">
@@ -636,46 +635,45 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_10">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>20</y>
-          <width>131</width>
-          <height>31</height>
+          <x>60</x>
+          <y>10</y>
+          <width>141</width>
+          <height>81</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-size: 12pt;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>Books Available</string>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_11">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>61</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-weight: bold;
-font-size: 17px;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>1,950</string>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit_10">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(220, 245, 255);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string>Books Available</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="booksAmount">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(220, 245, 255);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_4">
@@ -741,46 +739,45 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_12">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>20</y>
-          <width>121</width>
-          <height>31</height>
+          <x>57</x>
+          <y>10</y>
+          <width>271</width>
+          <height>81</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-size: 12pt;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string>Overdue Books</string>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit_6">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>40</y>
-          <width>121</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: transparent;
-font-weight: bold;
-font-size: 17px;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="plainText">
-         <string/>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit_12">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string>Overdue Books</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit_6">
+           <property name="styleSheet">
+            <string notr="true">background: rgb(235, 235, 235);
+border-radius: 10px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="plainText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_5">
@@ -967,9 +964,9 @@ font-weight: bold;</string>
        <widget class="QPlainTextEdit" name="plainTextEdit_15">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>20</y>
-          <width>61</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>

@@ -38,6 +38,8 @@ private slots:
 
     void overdueCount(); //display overdue books
 
+    void booksAmount(); //display amount books
+
 private:
     Ui::AdminHome *ui;
 };
