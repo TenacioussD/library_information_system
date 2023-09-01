@@ -76,11 +76,14 @@ void MemberOverdue::on_logout_clicked()
 
 void MemberOverdue::viewOverdue()
 {
+    //clean and reload the file and check for updates
     QFile overdueClean("overdue.txt");
 
-    if (overdueClean.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
+    if (overdueClean.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text))
+    {
         overdueClean.close();
-    } else {
+    } else
+    {
         QMessageBox::warning(this, "File Problem", "Could not clear the file.");
     }
 

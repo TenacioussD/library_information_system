@@ -62,6 +62,7 @@ void AdminViewAllMembers::on_back_clicked() //back button
 void AdminViewAllMembers::viewAllMembers()
 {
     QFile file("memberships.txt");
+    //check if file is open
     if(!file.open(QFile::ReadWrite | QFile::Text))
     {
         QMessageBox::warning(this, "Filing Problem", "File is not open");
