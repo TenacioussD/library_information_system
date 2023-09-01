@@ -130,6 +130,7 @@ void MemberCatalogue::saveBookInfo()
             ui->authorTwelfe->toPlainText(),
         };
 
+    //check if the catalogue information has changed
     bool catalogueChanged = false;
     for (int i = 0; i < static_cast<int>(sizeof(titles) / sizeof(titles[0])); ++i)
     {

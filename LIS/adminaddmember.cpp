@@ -65,6 +65,7 @@ void AdminAddMember::on_addMemberBut_clicked()
     {
         QFile file("memberships.txt");
 
+        //check if file is open, if it's not then an message should display indicating
         if (!file.open(QFile::Append | QFile::Text))
         {
             QMessageBox::warning(this, "Filing Problem", "File is not open");
