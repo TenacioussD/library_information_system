@@ -59,12 +59,12 @@ void AdminEditMember::on_back_clicked()
 void AdminEditMember::on_addMemberBut_clicked()
 {
     //fetching input values from UI
-    QString firstName = ui->firstName->text();
-    QString lastName = ui->lastName->text();
-    QString lisNum = ui->lisNum->text();
+    QString enterFirstName = ui->firstName->text();
+    QString enterLastName = ui->lastName->text();
+    QString enterLisNum = ui->lisNum->text();
     QString contactNum;
 
-    if (!firstName.isEmpty() && !lastName.isEmpty() && !lisNum.isEmpty())
+    if (!enterFirstName.isEmpty() && !enterLastName.isEmpty() && !enterLisNum.isEmpty())
     {
         QFile file("memberships.txt");
 
@@ -73,16 +73,38 @@ void AdminEditMember::on_addMemberBut_clicked()
             QMessageBox::warning(this, "Filing Problem", "File is not open");
         }
         QTextStream in(&file); //in means we are reading from the file
+        bool inDatabase = false; //create bool
 
-        QString lineToRead = lisNum + " " + firstName + " " + contactNum + "\n";
-        in.readAll();
-        ui->lisNum->setText(lisNum);
-        ui->firstName->setText(firstName);
-        ui->lastName->setText(lastName);
+        while (!in.atEnd())
+        {
+            QString line = in.readLine();
+            //the parts gets split by spaces
+            QStringList parts = line.split(" ");
 
-        hide();
-        adminEditMemberDetails = new AdminEditMemberDetails(firstName, lastName, contactNum, lisNum);
-        adminEditMemberDetails->show();
+            //assign strings to diffrent parts
+            QString lisNum = parts[0];
+            QString firstName = parts[1];
+            QString lastName = parts[2];
+            contactNum = parts[3];
+
+            //compare ui information with parts
+            if (enterFirstName == firstName && enterLastName == lastName && enterLisNum == lisNum)
+            {
+                //if the bool is true member information can be edited
+                inDatabase = true;
+                hide();
+                adminEditMemberDetails = new AdminEditMemberDetails(firstName, lastName, contactNum, lisNum);
+                adminEditMemberDetails->show();
+            }
         }
+        file.close();
+
+        //if bool is false then message will display
+        if (!inDatabase)
+        {
+            QMessageBox::warning(this, "Member Not Found", "Sorry, the information is not in the database, please make sure you have the correct credentials");
+        }
+    }
+
 }
 
