@@ -16,14 +16,12 @@ Login::~Login()
     delete ui;
 }
 
-
 void Login::on_pushButton_2_clicked()                     // Admin login
 {
     hide();
     AdminLogin *adminlogin =new AdminLogin(this);         // Opens admin login page
     adminlogin->show();
 }
-
 
 void Login::on_pushButton_3_clicked()                     // Member Login
 {

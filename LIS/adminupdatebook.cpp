@@ -1,7 +1,7 @@
 #include "adminupdatebook.h"
 #include "ui_adminupdatebook.h"
 
-#include "admincatalogue.h"
+#include "admincatalogue.h"                                       // Declaraing relevant headers
 #include "adminhome.h"
 #include "adminenterbookupdate.h"
 #include "admineditbookdialog.h"
@@ -26,7 +26,7 @@ AdminUpdateBook::~AdminUpdateBook()
     delete ui;
 }
 
-void AdminUpdateBook::on_catalogue_3_clicked()                      // When catalogue is clicked from the menu section
+void AdminUpdateBook::on_catalogue_3_clicked()                      // Slot for when catalogue is clicked from the menu section
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
@@ -35,14 +35,14 @@ void AdminUpdateBook::on_catalogue_3_clicked()                      // When cata
     GlobalInstances::adminCatalogueInstance->show();                // Shows adminCatalogue page
 }
 
-void AdminUpdateBook::on_back_2_clicked()                           // When back button clicked
+void AdminUpdateBook::on_back_2_clicked()                           // Slot for when back button clicked
 {
-    hide();
-    AdminHome *adminhome =new AdminHome (this);                     // Opens admin home
-    adminhome->show();
+    hide();                                                         // hides the current window
+    AdminHome *adminhome =new AdminHome (this);                     // creates new insance of AdminHome
+    adminhome->show();                                              // Shows AdminHome window
 }
 
-void AdminUpdateBook::on_pushButton_3_clicked()                     // When logout clicked
+void AdminUpdateBook::on_pushButton_3_clicked()                     // Slot for when logout clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
@@ -51,9 +51,9 @@ void AdminUpdateBook::on_pushButton_3_clicked()                     // When logo
     }
 }
 
-void AdminUpdateBook::updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor)
+void AdminUpdateBook::updateCatalogue(int index, const QString &updatedTitle, const QString &updatedAuthor)   // Slot for when catalogue is clicked from the main menu
 {
-    if (GlobalInstances::adminCatalogueInstance)       // Checks if adminCatalogue is not nullptr
+    if (GlobalInstances::adminCatalogueInstance)       // Checks if adminCatalogue is nullptr
     {
         GlobalInstances::adminCatalogueInstance->updateBookDetails(index, updatedTitle, updatedAuthor);   // If condition is true, this calls the updateBookDetails function in catalogue and passes the three arguments to it
     }

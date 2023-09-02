@@ -1,7 +1,7 @@
 #ifndef GLOBALINSTANCES_H
 #define GLOBALINSTANCES_H
 
-#include "admineditbookdialog.h"
+#include "admineditbookdialog.h"                              // Declaring the relevant headers
 #include "admincatalogue.h"
 #include "adminenterbookupdate.h"
 
@@ -13,7 +13,7 @@ public:
 
     static AdminEnterBookUpdate *enterBookUpdateInstance;
 
-    static void initializeGlobalInstances();
+    static void initializeGlobalInstances();                  // Declaring the member fucntion
 };
 
 #endif // GLOBALINSTANCES_H

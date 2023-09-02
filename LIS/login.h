@@ -26,8 +26,6 @@ private slots:
 
 private:
     Ui::Login *ui;
-   //AdminLogin *adminlogin;          // points to admin login page
-    //MemberLogin *memberlogin;        // points to member login page
 };
 
 

@@ -34,7 +34,7 @@ AdminEnterBookUpdate::~AdminEnterBookUpdate()
     delete ui;
 }
 
-void AdminEnterBookUpdate::on_confirm_2_clicked()                  // Passes title and author to the dialog to be displayed
+void AdminEnterBookUpdate::on_confirm_2_clicked()                  // Slot for when confirmed button clicked - Passes title and author to the dialog to be displayed
 {
     QString title = ui->lineEditTitle->text();                     // Takes the information entered in the lineEdit by storing the text in a variable
     QString author = ui->lineEditAuthor->text();
@@ -48,7 +48,7 @@ void AdminEnterBookUpdate::on_confirm_2_clicked()                  // Passes tit
     admineditdialog->show();
 }
 
-void AdminEnterBookUpdate::on_catalogue_clicked()
+void AdminEnterBookUpdate::on_catalogue_clicked()                   // Slot for when calalogu clicked from main menu
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
@@ -57,19 +57,19 @@ void AdminEnterBookUpdate::on_catalogue_clicked()
     GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue page
 }
 
-void AdminEnterBookUpdate::handleBookEditCompleted()
+void AdminEnterBookUpdate::handleBookEditCompleted()         // Slot for when connection is estalished to close window
 {
-    hide();       // Hides the AdminEnterBookUpdate window when connected
+    hide();                                                  // Hides the AdminEnterBookUpdate window when connected
 }
 
-void AdminEnterBookUpdate::on_back_clicked()                 // When back button is clicked
+void AdminEnterBookUpdate::on_back_clicked()                 // Slot for when back button is clicked
 {
     hide();                                                  // Hides previous window/page
     AdminHome *adminhome =new AdminHome (this);              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
     adminhome->show();                                       // Using the show() method will display the AdminHome page
 }
 
-void AdminEnterBookUpdate::on_pushButton_2_clicked()         // When logout clicked
+void AdminEnterBookUpdate::on_pushButton_2_clicked()         // Slot for when logout clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
@@ -78,21 +78,21 @@ void AdminEnterBookUpdate::on_pushButton_2_clicked()         // When logout clic
     }
 }
 
-void AdminEnterBookUpdate::on_manageBooks_clicked()          // When managebooks is clicked from the main menu
+void AdminEnterBookUpdate::on_manageBooks_clicked()          // Slot for when managebooks is clicked from the main menu
 {
     hide();                                                  // Hides previous window/page
     AdminManageBooks *adminManage =new AdminManageBooks (this);      // Opens managebooks by creating a new instance of AdminManageBooks with a variable of adminManage to hold a pointer
     adminManage->show();
 }
 
-void AdminEnterBookUpdate::on_status_clicked()              // When status is clicked
+void AdminEnterBookUpdate::on_status_clicked()               // Slot for when status is clicked
 {
-    hide();                                                 // Hides previous window/page
+    hide();                                                  // Hides previous window/page
     AdminViewStatus *adminStatus =new AdminViewStatus (this);      // Opens admin managebooks
     adminStatus->show();
 }
 
-void AdminEnterBookUpdate::on_membership_clicked()          // When membership is clicked from the main menu
+void AdminEnterBookUpdate::on_membership_clicked()           // Slot for when membership is clicked from the main menu
 {
     hide();
     AdminMembership *adminMembership = new AdminMembership (this); // Creates a new instance of AdminMembership

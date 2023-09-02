@@ -27,16 +27,16 @@ AdminHome::~AdminHome()
     delete ui;
 }
 
-void AdminHome::on_pushButton_clicked()      // Confirmation of logout
+void AdminHome::on_pushButton_clicked()                                       // Slot for when logout clicked - confirmation of logout
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {         // If "Yes" application will quit
+    if (reply == QMessageBox::Yes) {                                          // If "Yes" application will quit
         QApplication::quit();
     }
 }
 
-void AdminHome::on_catalogue_clicked()                   // When catalogue is clicked
+void AdminHome::on_catalogue_clicked()                                        // Slot for when catalogue is clicked
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
@@ -45,25 +45,25 @@ void AdminHome::on_catalogue_clicked()                   // When catalogue is cl
     GlobalInstances::adminCatalogueInstance->show();                          // Opens adminCatalogue
 }
 
-void AdminHome::on_manageBooks_clicked()                // When manage books is clicked
+void AdminHome::on_manageBooks_clicked()                                      // Slot for when manage books is clicked
 {
-    hide();
-    AdminManageBooks *adminmanagebooks =new AdminManageBooks(this);         // Opens book management page using new instance
-    adminmanagebooks->show();
+    hide();                                                                   // Hides current window
+    AdminManageBooks *adminmanagebooks =new AdminManageBooks(this);           // Creates a new instance of AdminManageBooks
+    adminmanagebooks->show();                                                 // Shows the page
 }
 
-void AdminHome::on_status_clicked()          // When status menu item is clicked
+void AdminHome::on_status_clicked()                                           // Slot for when status menu item is clicked
 {
-    hide();
-    AdminViewStatus *adminStatus =new AdminViewStatus(this);         // Opens status page using new instance
-    adminStatus->show();
+    hide();                                                                   // Hides current window
+    AdminViewStatus *adminStatus =new AdminViewStatus(this);                  // Creates a new instance of AdminStatus
+    adminStatus->show();                                                      // Shows the window
 }
 
-void AdminHome::on_membership_clicked()      // When Membership is clicked
+void AdminHome::on_membership_clicked()                                       // Slot for when Membership is clicked
 {
-    hide();
-    AdminMembership *adminMembership =new AdminMembership(this);         // Opens status page using new instance
-    adminMembership->show();
+    hide();                                                                   // Hides current window
+    AdminMembership *adminMembership =new AdminMembership(this);              // creates a new instance of AdminMembership
+    adminMembership->show();                                                  // Shows the window
 }
 
 void AdminHome::memberCount()

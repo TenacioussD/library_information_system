@@ -24,14 +24,14 @@ AdminAddBook::~AdminAddBook()
     delete ui;
 }
 
-void AdminAddBook::on_back_clicked()                         // Back button clicked
+void AdminAddBook::on_back_clicked()                         // Slot for when Back button clicked
 {
     hide();                                                  // Hides previous window/page
     AdminHome *adminhome =new AdminHome (this);              // Opens admin home by creating a new instance of AdminHome with a variable of adminhome to hold a pointer
     adminhome->show();                                       // Using the show() method will display the AdminHome page
 }
 
-void AdminAddBook::on_pushButton_2_clicked()                 // Logout button pressed
+void AdminAddBook::on_pushButton_2_clicked()                 // Slot for when Logout button pressed
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);    // Opens a message box with the options yes and no
 
@@ -40,7 +40,7 @@ void AdminAddBook::on_pushButton_2_clicked()                 // Logout button pr
     }
 }
 
-void AdminAddBook::on_catalogue_clicked()                    // When catalogue is clicked
+void AdminAddBook::on_catalogue_clicked()                    // Slot for when catalogue is clicked
 {
     hide();
     if (!GlobalInstances::adminCatalogueInstance) {
@@ -49,7 +49,7 @@ void AdminAddBook::on_catalogue_clicked()                    // When catalogue i
     GlobalInstances::adminCatalogueInstance->show();
 }
 
-void AdminAddBook::on_confirm_clicked()                      // Will open up confirmation page
+void AdminAddBook::on_confirm_clicked()                      // Slot for when user clicks on confirm button. open up confirmation page
 {
     QString title = ui->lineEdit_title->text();              // Get text from LineEdit for title
     QString author = ui->lineEdit_author->text();            // Get text from LineEdit for author
@@ -59,25 +59,25 @@ void AdminAddBook::on_confirm_clicked()                      // Will open up con
     confirmationPage->show();
 }
 
-void AdminAddBook::on_status_clicked()                      // When status is clicked from the main menu
+void AdminAddBook::on_status_clicked()                      // Slot for when status is clicked from the main menu
 {
     hide();
-    AdminViewStatus *adminStatus = new AdminViewStatus;     // Opens adminViewStatus page
-    adminStatus->show();
+    AdminViewStatus *adminStatus = new AdminViewStatus;     // Creates new instance of adminViewStatus
+    adminStatus->show();                                    // Opens adminViewStatus page
 }
 
-void AdminAddBook::on_manageBooks_clicked()                 // When manage books is clicked
+void AdminAddBook::on_manageBooks_clicked()                 // Slot for when manage books is clicked
 {
     hide();
-    AdminManageBooks *adminManage = new AdminManageBooks;   // Opens adminManageBooks
-    adminManage->show();
+    AdminManageBooks *adminManage = new AdminManageBooks;   // Creates new instance of adminManageBooks
+    adminManage->show();                                    // Opens adminManageBooks
 }
 
 
-void AdminAddBook::on_membership_clicked()                  // When membership page is clicked
+void AdminAddBook::on_membership_clicked()                  // Slot for when membership page is clicked
 {
     hide();
-    AdminMembership *adminMembership =new AdminMembership(this);         // Opens adminMembership page
-    adminMembership->show();
+    AdminMembership *adminMembership =new AdminMembership(this);  // Create new instance of adminMembership
+    adminMembership->show();                                // Opens adminMembership page
 }
 
