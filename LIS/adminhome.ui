@@ -543,7 +543,7 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QWidget" name="widgetOne" native="true">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -673,7 +673,7 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QWidget" name="widgetTwo" native="true">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -795,7 +795,7 @@ border-radius: 10px;</string>
          <set>Qt::NoTextInteraction</set>
         </property>
        </widget>
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QWidget" name="widgetThree" native="true">
         <property name="geometry">
          <rect>
           <x>70</x>
