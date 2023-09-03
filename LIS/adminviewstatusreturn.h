@@ -7,6 +7,7 @@ class AdminViewStatus;
 class AdminHome;
 class AdminCatalogue;
 class AdminManageBooks;
+class AdminMembership;
 
 namespace Ui {
 class AdminViewStatusReturn;
@@ -27,11 +28,11 @@ private slots:
 
     void on_status_clicked();
 
-    //void on_membershipButton_clicked();
-
     void on_logout_clicked();
 
     void on_back_clicked();
+
+    void on_membershipButton_clicked();
 
 private:
     Ui::AdminViewStatusReturn *ui;

@@ -5,7 +5,7 @@
 #include "adminmanagebooks.h"
 #include "adminviewstatus.h"
 #include "adminhome.h"
-//#include "adminmembership.h"
+#include "adminmembership.h"
 #include "globalinstances.h"
 
 #include <QMessageBox>
@@ -58,16 +58,6 @@ void AdminPreOrderedBooks::on_status_clicked()
      }
 
 
-/*void AdminPreOrderedBooks::on_membershipButton_clicked()
-     {
-                                                                     // Hide the current AdminPreOrderedBooks window
-       hide();
-
-                                                                    // Create and show the Membership window
-      AdminMembership *adminMembership = new AdminMembership;
-      adminMembership->show();
-     }*/
-
 void AdminPreOrderedBooks::on_logout_clicked()
 {
        QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
@@ -83,5 +73,13 @@ void AdminPreOrderedBooks::on_back_clicked()
        hide();
        AdminHome *adminhome =new AdminHome (this);                     // Opens admin home
        adminhome->show();
+}
+
+
+void AdminPreOrderedBooks::on_membershipButton_clicked()
+{
+       hide();
+       AdminMembership *adminMembership = new AdminMembership;
+       adminMembership->show();
 }
 

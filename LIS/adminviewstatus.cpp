@@ -8,6 +8,7 @@
 #include "adminpreorderedbooks.h"
 #include "adminviewstatusreturn.h"
 #include "globalinstances.h"
+#include "adminmembership.h"
 
 //#include "adminmembership.h"
 
@@ -103,4 +104,10 @@ void AdminViewStatus::on_adminreturn_clicked()
    adminViewStatusReturn->show();
 }
 
+void AdminViewStatus::on_membership_clicked()
+{
+   hide();
+   AdminMembership *adminMembership = new AdminMembership;
+   adminMembership->show();
+}
 

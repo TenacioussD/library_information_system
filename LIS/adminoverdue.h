@@ -7,6 +7,7 @@ class AdminHome;
 class AdminCatalogue;
 class AdminManageBooks;
 class AdminViewStatus;
+class AdminMembership;
 
 namespace Ui {
 class AdminOverdue;
@@ -27,11 +28,11 @@ private slots:
 
     void on_adminviewstatus_clicked();
 
-   // void on_membershipButton_clicked();
-
     void on_logout_clicked();
 
     void on_back_clicked();
+
+    void on_membershipButton_clicked();
 
 private:
     Ui::AdminOverdue *ui;

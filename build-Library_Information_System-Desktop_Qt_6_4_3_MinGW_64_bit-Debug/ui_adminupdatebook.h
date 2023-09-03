@@ -307,6 +307,7 @@ public:
 "background: transparent;"));
         plainTextEdit_13->setFrameShape(QFrame::NoFrame);
         plainTextEdit_13->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_13->setReadOnly(true);
         plainTextEdit_14 = new QPlainTextEdit(heading_4);
         plainTextEdit_14->setObjectName("plainTextEdit_14");
         plainTextEdit_14->setGeometry(QRect(30, 70, 571, 31));
@@ -315,6 +316,7 @@ public:
 "font-size: 13px;"));
         plainTextEdit_14->setFrameShape(QFrame::NoFrame);
         plainTextEdit_14->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_14->setReadOnly(true);
         scrollArea = new QScrollArea(frame_2);
         scrollArea->setObjectName("scrollArea");
         scrollArea->setGeometry(QRect(300, 180, 651, 431));
@@ -358,7 +360,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, -215, 634, 678));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 634, 678));
         scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8("border-style: none;"));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_3->setObjectName("verticalLayout_3");

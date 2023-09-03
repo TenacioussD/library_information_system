@@ -318,6 +318,8 @@ public:
 "font-size: 23px;\n"
 "background: transparent;"));
         plainTextEdit_3->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_3->setReadOnly(true);
         plainTextEdit_4 = new QPlainTextEdit(heading);
         plainTextEdit_4->setObjectName("plainTextEdit_4");
         plainTextEdit_4->setGeometry(QRect(30, 70, 411, 31));
@@ -325,6 +327,8 @@ public:
 "font-family: Baloo 2;\n"
 "font-size: 13px;"));
         plainTextEdit_4->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_4->setReadOnly(true);
         scrollArea = new QScrollArea(frame);
         scrollArea->setObjectName("scrollArea");
         scrollArea->setGeometry(QRect(290, 140, 651, 221));
@@ -368,7 +372,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 634, 682));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 634, 678));
         scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8("border-style: none;"));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_3->setObjectName("verticalLayout_3");
@@ -627,12 +631,12 @@ public:
         labelOne->setScaledContents(true);
         frame_74 = new QFrame(frame_73);
         frame_74->setObjectName("frame_74");
-        frame_74->setGeometry(QRect(0, 140, 111, 51));
+        frame_74->setGeometry(QRect(0, 140, 141, 51));
         frame_74->setFrameShape(QFrame::StyledPanel);
         frame_74->setFrameShadow(QFrame::Raised);
         titleOne = new QPlainTextEdit(frame_74);
         titleOne->setObjectName("titleOne");
-        titleOne->setGeometry(QRect(0, 10, 91, 21));
+        titleOne->setGeometry(QRect(0, 10, 141, 21));
         titleOne->setStyleSheet(QString::fromUtf8("font-weight: bold;\n"
 "font-family: Baloo 2;\n"
 "background: white;"));
@@ -643,7 +647,7 @@ public:
         titleOne->setTextInteractionFlags(Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
         authorOne = new QPlainTextEdit(frame_74);
         authorOne->setObjectName("authorOne");
-        authorOne->setGeometry(QRect(0, 30, 104, 21));
+        authorOne->setGeometry(QRect(0, 30, 141, 21));
         authorOne->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;\n"
 "background: white;"));
         authorOne->setFrameShape(QFrame::NoFrame);
@@ -921,8 +925,8 @@ public:
         titleFour->setPlainText(QCoreApplication::translate("MemberCatalogue", "Atomic Love", nullptr));
         authorFour->setPlainText(QCoreApplication::translate("MemberCatalogue", "Bowen Higgins", nullptr));
         labelOne->setText(QString());
-        titleOne->setPlainText(QCoreApplication::translate("MemberCatalogue", "Great Lakes", nullptr));
-        authorOne->setPlainText(QCoreApplication::translate("MemberCatalogue", "Peter Jackson", nullptr));
+        titleOne->setPlainText(QCoreApplication::translate("MemberCatalogue", "Winds of Change", nullptr));
+        authorOne->setPlainText(QCoreApplication::translate("MemberCatalogue", "Susan Jackson", nullptr));
         labelNine->setText(QString());
         titleNine->setPlainText(QCoreApplication::translate("MemberCatalogue", "Comic Book", nullptr));
         authorNine->setPlainText(QCoreApplication::translate("MemberCatalogue", "Kane Dyer", nullptr));

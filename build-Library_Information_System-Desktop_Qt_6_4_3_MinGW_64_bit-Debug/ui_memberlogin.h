@@ -91,10 +91,14 @@ public:
         plainTextEdit->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;\n"
 "font-weight: bold;\n"
 "font-size: 20px;"));
+        plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit->setReadOnly(true);
         plainTextEdit_2 = new QPlainTextEdit(centreFrame);
         plainTextEdit_2->setObjectName("plainTextEdit_2");
         plainTextEdit_2->setGeometry(QRect(80, 160, 311, 31));
         plainTextEdit_2->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;"));
+        plainTextEdit_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_2->setReadOnly(true);
         label = new QLabel(centreFrame);
         label->setObjectName("label");
         label->setGeometry(QRect(80, 50, 71, 61));

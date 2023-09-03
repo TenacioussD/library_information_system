@@ -20,12 +20,14 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_AdminAddMember
 {
 public:
+    QVBoxLayout *verticalLayout;
     QFrame *frame;
     QGroupBox *menuPanel;
     QLabel *logo;
@@ -64,9 +66,10 @@ public:
         if (AdminAddMember->objectName().isEmpty())
             AdminAddMember->setObjectName("AdminAddMember");
         AdminAddMember->resize(1019, 670);
+        verticalLayout = new QVBoxLayout(AdminAddMember);
+        verticalLayout->setObjectName("verticalLayout");
         frame = new QFrame(AdminAddMember);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(10, 0, 997, 648));
         frame->setStyleSheet(QString::fromUtf8("background: white;"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
@@ -301,6 +304,9 @@ public:
         label_4->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;\n"
 "font-weight: bold;"));
 
+        verticalLayout->addWidget(frame);
+
+
         retranslateUi(AdminAddMember);
 
         QMetaObject::connectSlotsByName(AdminAddMember);
@@ -323,8 +329,8 @@ public:
         pushButton_2->setText(QCoreApplication::translate("AdminAddMember", "Logout", nullptr));
         back->setText(QCoreApplication::translate("AdminAddMember", "Back", nullptr));
         plainTextEdit_9->setPlainText(QString());
-        plainTextEdit_10->setPlainText(QCoreApplication::translate("AdminAddMember", "Add New Book", nullptr));
-        plainTextEdit_11->setPlainText(QCoreApplication::translate("AdminAddMember", "Please enter the book's information below", nullptr));
+        plainTextEdit_10->setPlainText(QCoreApplication::translate("AdminAddMember", "Enter New Member", nullptr));
+        plainTextEdit_11->setPlainText(QCoreApplication::translate("AdminAddMember", "Please enter the member's information below", nullptr));
         firstName->setText(QCoreApplication::translate("AdminAddMember", "Enter First Name", nullptr));
         firstName->setPlaceholderText(QCoreApplication::translate("AdminAddMember", "Enter title", nullptr));
         label_2->setText(QCoreApplication::translate("AdminAddMember", "Name", nullptr));

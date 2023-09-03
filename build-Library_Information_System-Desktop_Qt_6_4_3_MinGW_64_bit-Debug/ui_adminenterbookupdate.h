@@ -250,6 +250,8 @@ public:
 "font-size: 23px;\n"
 "background: transparent;"));
         plainTextEdit_10->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_10->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_10->setReadOnly(true);
         plainTextEdit_11 = new QPlainTextEdit(heading_3);
         plainTextEdit_11->setObjectName("plainTextEdit_11");
         plainTextEdit_11->setGeometry(QRect(30, 70, 411, 31));
@@ -257,6 +259,8 @@ public:
 "font-family: Baloo 2;\n"
 "font-size: 13px;"));
         plainTextEdit_11->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_11->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_11->setReadOnly(true);
         frame_9 = new QFrame(frame);
         frame_9->setObjectName("frame_9");
         frame_9->setGeometry(QRect(300, 200, 641, 401));

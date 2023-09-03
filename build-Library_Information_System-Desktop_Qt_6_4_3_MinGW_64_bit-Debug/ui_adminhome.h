@@ -54,16 +54,19 @@ public:
     QFrame *frame_2;
     QPlainTextEdit *plainTextEdit_7;
     QLabel *label;
+    QWidget *widgetOne;
     QPlainTextEdit *plainTextEdit_5;
     QPlainTextEdit *plainTextEdit;
     QFrame *frame_3;
     QPlainTextEdit *plainTextEdit_8;
     QLabel *label_2;
+    QWidget *widgetTwo;
     QPlainTextEdit *plainTextEdit_10;
-    QPlainTextEdit *plainTextEdit_11;
+    QPlainTextEdit *booksAmount;
     QFrame *frame_4;
     QPlainTextEdit *plainTextEdit_9;
     QLabel *label_3;
+    QWidget *widgetThree;
     QPlainTextEdit *plainTextEdit_12;
     QPlainTextEdit *plainTextEdit_6;
     QFrame *frame_5;
@@ -235,12 +238,14 @@ public:
         plainTextEdit_2->setFrameShadow(QFrame::Raised);
         plainTextEdit_3 = new QPlainTextEdit(heading);
         plainTextEdit_3->setObjectName("plainTextEdit_3");
-        plainTextEdit_3->setGeometry(QRect(30, 40, 411, 41));
+        plainTextEdit_3->setGeometry(QRect(30, 40, 411, 36));
         plainTextEdit_3->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;\n"
 "font-weight: bold;\n"
 "font-size: 23px;\n"
 "background: transparent;"));
         plainTextEdit_3->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_3->setReadOnly(true);
         plainTextEdit_4 = new QPlainTextEdit(heading);
         plainTextEdit_4->setObjectName("plainTextEdit_4");
         plainTextEdit_4->setGeometry(QRect(30, 70, 411, 31));
@@ -248,6 +253,8 @@ public:
 "font-family: Baloo 2;\n"
 "font-size: 13px;"));
         plainTextEdit_4->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_4->setReadOnly(true);
         frame_2 = new QFrame(frame);
         frame_2->setObjectName("frame_2");
         frame_2->setGeometry(QRect(300, 150, 201, 101));
@@ -267,19 +274,27 @@ public:
         label->setScaledContents(true);
         label->setAlignment(Qt::AlignCenter);
         label->setTextInteractionFlags(Qt::NoTextInteraction);
-        plainTextEdit_5 = new QPlainTextEdit(frame_2);
+        widgetOne = new QWidget(frame_2);
+        widgetOne->setObjectName("widgetOne");
+        widgetOne->setGeometry(QRect(80, 20, 101, 51));
+        widgetOne->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);"));
+        plainTextEdit_5 = new QPlainTextEdit(widgetOne);
         plainTextEdit_5->setObjectName("plainTextEdit_5");
-        plainTextEdit_5->setGeometry(QRect(70, 20, 131, 31));
-        plainTextEdit_5->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-size: 12pt;"));
+        plainTextEdit_5->setGeometry(QRect(1, 1, 101, 31));
+        plainTextEdit_5->setAutoFillBackground(true);
+        plainTextEdit_5->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);\n"
+"font-weight: bold;"));
         plainTextEdit_5->setFrameShape(QFrame::NoFrame);
-        plainTextEdit = new QPlainTextEdit(frame_2);
+        plainTextEdit_5->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_5->setReadOnly(true);
+        plainTextEdit = new QPlainTextEdit(widgetOne);
         plainTextEdit->setObjectName("plainTextEdit");
-        plainTextEdit->setGeometry(QRect(70, 40, 121, 31));
-        plainTextEdit->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-weight: bold;\n"
-"font-size: 17px;"));
+        plainTextEdit->setGeometry(QRect(0, 20, 91, 31));
+        plainTextEdit->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);\n"
+"font-size: 12px;\n"
+""));
         plainTextEdit->setFrameShape(QFrame::NoFrame);
+        plainTextEdit->setReadOnly(true);
         frame_3 = new QFrame(frame);
         frame_3->setObjectName("frame_3");
         frame_3->setGeometry(QRect(520, 150, 201, 101));
@@ -299,19 +314,23 @@ public:
         label_2->setScaledContents(true);
         label_2->setAlignment(Qt::AlignCenter);
         label_2->setTextInteractionFlags(Qt::NoTextInteraction);
-        plainTextEdit_10 = new QPlainTextEdit(frame_3);
+        widgetTwo = new QWidget(frame_3);
+        widgetTwo->setObjectName("widgetTwo");
+        widgetTwo->setGeometry(QRect(70, 20, 101, 51));
+        widgetTwo->setStyleSheet(QString::fromUtf8("background: rgb(220, 245, 255);"));
+        plainTextEdit_10 = new QPlainTextEdit(widgetTwo);
         plainTextEdit_10->setObjectName("plainTextEdit_10");
-        plainTextEdit_10->setGeometry(QRect(70, 20, 131, 31));
-        plainTextEdit_10->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-size: 12pt;"));
+        plainTextEdit_10->setGeometry(QRect(1, 1, 101, 31));
+        plainTextEdit_10->setStyleSheet(QString::fromUtf8("background: rgb(220, 245, 255);\n"
+"font-weight: bold;"));
         plainTextEdit_10->setFrameShape(QFrame::NoFrame);
-        plainTextEdit_11 = new QPlainTextEdit(frame_3);
-        plainTextEdit_11->setObjectName("plainTextEdit_11");
-        plainTextEdit_11->setGeometry(QRect(70, 40, 61, 31));
-        plainTextEdit_11->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-weight: bold;\n"
-"font-size: 17px;"));
-        plainTextEdit_11->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_10->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        booksAmount = new QPlainTextEdit(widgetTwo);
+        booksAmount->setObjectName("booksAmount");
+        booksAmount->setGeometry(QRect(0, 20, 91, 31));
+        booksAmount->setStyleSheet(QString::fromUtf8("background: rgb(220, 245, 255);"));
+        booksAmount->setFrameShape(QFrame::NoFrame);
+        booksAmount->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         frame_4 = new QFrame(frame);
         frame_4->setObjectName("frame_4");
         frame_4->setGeometry(QRect(740, 150, 201, 101));
@@ -331,19 +350,23 @@ public:
         label_3->setScaledContents(true);
         label_3->setAlignment(Qt::AlignCenter);
         label_3->setTextInteractionFlags(Qt::NoTextInteraction);
-        plainTextEdit_12 = new QPlainTextEdit(frame_4);
+        widgetThree = new QWidget(frame_4);
+        widgetThree->setObjectName("widgetThree");
+        widgetThree->setGeometry(QRect(70, 20, 111, 51));
+        widgetThree->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);"));
+        plainTextEdit_12 = new QPlainTextEdit(widgetThree);
         plainTextEdit_12->setObjectName("plainTextEdit_12");
-        plainTextEdit_12->setGeometry(QRect(70, 20, 121, 31));
-        plainTextEdit_12->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-size: 12pt;"));
+        plainTextEdit_12->setGeometry(QRect(1, 1, 259, 32));
+        plainTextEdit_12->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);\n"
+"font-weight: bold;"));
         plainTextEdit_12->setFrameShape(QFrame::NoFrame);
-        plainTextEdit_6 = new QPlainTextEdit(frame_4);
+        plainTextEdit_12->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_6 = new QPlainTextEdit(widgetThree);
         plainTextEdit_6->setObjectName("plainTextEdit_6");
-        plainTextEdit_6->setGeometry(QRect(70, 40, 121, 31));
-        plainTextEdit_6->setStyleSheet(QString::fromUtf8("background: transparent;\n"
-"font-weight: bold;\n"
-"font-size: 17px;"));
+        plainTextEdit_6->setGeometry(QRect(0, 20, 259, 31));
+        plainTextEdit_6->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);"));
         plainTextEdit_6->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_6->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         frame_5 = new QFrame(frame);
         frame_5->setObjectName("frame_5");
         frame_5->setGeometry(QRect(300, 280, 421, 321));
@@ -378,6 +401,7 @@ public:
         plainTextEdit_16->setFrameShape(QFrame::Box);
         plainTextEdit_16->setFrameShadow(QFrame::Plain);
         plainTextEdit_16->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_16->setReadOnly(true);
         plainTextEdit_17 = new QPlainTextEdit(frame_6);
         plainTextEdit_17->setObjectName("plainTextEdit_17");
         plainTextEdit_17->setGeometry(QRect(10, 90, 181, 31));
@@ -390,6 +414,7 @@ public:
         plainTextEdit_17->setFrameShape(QFrame::Box);
         plainTextEdit_17->setFrameShadow(QFrame::Plain);
         plainTextEdit_17->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_17->setReadOnly(true);
         plainTextEdit_18 = new QPlainTextEdit(frame_6);
         plainTextEdit_18->setObjectName("plainTextEdit_18");
         plainTextEdit_18->setGeometry(QRect(10, 130, 181, 31));
@@ -401,6 +426,7 @@ public:
 ""));
         plainTextEdit_18->setFrameShape(QFrame::Box);
         plainTextEdit_18->setFrameShadow(QFrame::Plain);
+        plainTextEdit_18->setReadOnly(true);
         plainTextEdit_19 = new QPlainTextEdit(frame_6);
         plainTextEdit_19->setObjectName("plainTextEdit_19");
         plainTextEdit_19->setGeometry(QRect(70, 170, 81, 31));
@@ -408,6 +434,8 @@ public:
 "font-size: 10pt;\n"
 "font-weight: bold;"));
         plainTextEdit_19->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_19->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_19->setReadOnly(true);
         plainTextEdit_15 = new QPlainTextEdit(frame_6);
         plainTextEdit_15->setObjectName("plainTextEdit_15");
         plainTextEdit_15->setGeometry(QRect(70, 20, 61, 31));
@@ -415,6 +443,8 @@ public:
 "font-size: 10pt;\n"
 "font-weight: bold;"));
         plainTextEdit_15->setFrameShape(QFrame::NoFrame);
+        plainTextEdit_15->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_15->setReadOnly(true);
         plainTextEdit_20 = new QPlainTextEdit(frame_6);
         plainTextEdit_20->setObjectName("plainTextEdit_20");
         plainTextEdit_20->setGeometry(QRect(10, 200, 181, 31));
@@ -426,6 +456,7 @@ public:
 ""));
         plainTextEdit_20->setFrameShape(QFrame::Box);
         plainTextEdit_20->setFrameShadow(QFrame::Plain);
+        plainTextEdit_20->setReadOnly(true);
         plainTextEdit_21 = new QPlainTextEdit(frame_6);
         plainTextEdit_21->setObjectName("plainTextEdit_21");
         plainTextEdit_21->setGeometry(QRect(10, 240, 181, 31));
@@ -437,6 +468,7 @@ public:
 ""));
         plainTextEdit_21->setFrameShape(QFrame::Box);
         plainTextEdit_21->setFrameShadow(QFrame::Plain);
+        plainTextEdit_21->setReadOnly(true);
         plainTextEdit_22 = new QPlainTextEdit(frame_6);
         plainTextEdit_22->setObjectName("plainTextEdit_22");
         plainTextEdit_22->setGeometry(QRect(10, 280, 181, 31));
@@ -448,6 +480,7 @@ public:
 ""));
         plainTextEdit_22->setFrameShape(QFrame::Box);
         plainTextEdit_22->setFrameShadow(QFrame::Plain);
+        plainTextEdit_22->setReadOnly(true);
 
         verticalLayout->addWidget(frame);
 
@@ -483,7 +516,7 @@ public:
         plainTextEdit_8->setPlainText(QString());
         label_2->setText(QString());
         plainTextEdit_10->setPlainText(QCoreApplication::translate("AdminHome", "Books Available", nullptr));
-        plainTextEdit_11->setPlainText(QCoreApplication::translate("AdminHome", "1,950", nullptr));
+        booksAmount->setPlainText(QString());
         plainTextEdit_9->setPlainText(QString());
         label_3->setText(QString());
         plainTextEdit_12->setPlainText(QCoreApplication::translate("AdminHome", "Overdue Books", nullptr));

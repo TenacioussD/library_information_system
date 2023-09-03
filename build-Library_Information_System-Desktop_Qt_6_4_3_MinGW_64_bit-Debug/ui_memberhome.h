@@ -49,8 +49,6 @@ public:
     QLabel *label;
     QFrame *heading;
     QPlainTextEdit *plainTextEdit_2;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout_2;
     QPlainTextEdit *userName;
     QPlainTextEdit *plainTextEdit_4;
     QFrame *frame_5;
@@ -214,31 +212,25 @@ public:
         plainTextEdit_2->setStyleSheet(QString::fromUtf8("background: rgb(235, 235, 235);\n"
 "border-radius: 10px;"));
         plainTextEdit_2->setFrameShadow(QFrame::Raised);
-        widget = new QWidget(heading);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 20, 621, 91));
-        verticalLayout_2 = new QVBoxLayout(widget);
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        userName = new QPlainTextEdit(widget);
+        userName = new QPlainTextEdit(heading);
         userName->setObjectName("userName");
+        userName->setGeometry(QRect(20, 40, 619, 31));
         userName->setStyleSheet(QString::fromUtf8("font-family: Baloo 2;\n"
 "font-weight: bold;\n"
 "font-size: 23px;\n"
 "background: transparent;"));
         userName->setFrameShape(QFrame::NoFrame);
-
-        verticalLayout_2->addWidget(userName);
-
-        plainTextEdit_4 = new QPlainTextEdit(widget);
+        userName->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        userName->setReadOnly(true);
+        plainTextEdit_4 = new QPlainTextEdit(heading);
         plainTextEdit_4->setObjectName("plainTextEdit_4");
+        plainTextEdit_4->setGeometry(QRect(20, 70, 619, 31));
         plainTextEdit_4->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "font-family: Baloo 2;\n"
 "font-size: 13px;"));
         plainTextEdit_4->setFrameShape(QFrame::NoFrame);
-
-        verticalLayout_2->addWidget(plainTextEdit_4);
-
+        plainTextEdit_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_4->setReadOnly(true);
         frame_5 = new QFrame(frame);
         frame_5->setObjectName("frame_5");
         frame_5->setGeometry(QRect(300, 180, 641, 431));

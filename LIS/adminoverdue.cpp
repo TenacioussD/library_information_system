@@ -4,12 +4,11 @@
 #include "admincatalogue.h"        // Including the necessary header files
 #include "adminmanagebooks.h"
 #include "adminviewstatus.h"
-//#include "adminmembership.h"
+#include "adminmembership.h"
 #include "globalinstances.h"
 #include "adminhome.h"
 
 #include <QMessageBox>
-
 
 
 AdminOverdue::AdminOverdue(QWidget *parent) :
@@ -51,16 +50,6 @@ void AdminOverdue::on_adminviewstatus_clicked()
 }
 
 
-/*void AdminOverdue::on_membershipButton_clicked()
-   {
-     hide();                                                               // Hide the current AdminOverdue window
-
-                                                                          // Create a new instance of AdminMembership window
-     AdminMembership *adminMembership = new AdminMembership;
-     adminMembership->show();                                            // Show the AdminMembership window
-   }*/
-
-
 void AdminOverdue::on_logout_clicked()
                                                                              // Logout button pressed
    {
@@ -79,5 +68,10 @@ void AdminOverdue::on_back_clicked()                                 // back but
    }
 
 
-
+void AdminOverdue::on_membershipButton_clicked()
+{
+      hide();
+      AdminMembership *adminMembership = new AdminMembership;
+      adminMembership->show();
+}
 

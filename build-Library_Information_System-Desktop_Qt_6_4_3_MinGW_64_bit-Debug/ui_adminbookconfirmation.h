@@ -246,6 +246,7 @@ public:
 "background: transparent;"));
         plainTextEdit_13->setFrameShape(QFrame::NoFrame);
         plainTextEdit_13->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_13->setReadOnly(true);
         plainTextEdit_14 = new QPlainTextEdit(heading_4);
         plainTextEdit_14->setObjectName("plainTextEdit_14");
         plainTextEdit_14->setGeometry(QRect(30, 70, 571, 31));
@@ -254,6 +255,7 @@ public:
 "font-size: 13px;"));
         plainTextEdit_14->setFrameShape(QFrame::NoFrame);
         plainTextEdit_14->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        plainTextEdit_14->setReadOnly(true);
         frame_10 = new QFrame(frame_2);
         frame_10->setObjectName("frame_10");
         frame_10->setGeometry(QRect(340, 200, 541, 401));

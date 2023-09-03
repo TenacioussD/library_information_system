@@ -4,7 +4,7 @@
 #include "AdminCatalogue.h"     // Including the necessary header files
 #include "AdminmanageBooks.h"
 #include "AdminViewStatus.h"
-//#include "Adminmembership.h"
+#include "Adminmembership.h"
 #include "AdminHome.h"
 #include "globalinstances.h"
 
@@ -52,20 +52,6 @@ void AdminViewStatusReturn::on_status_clicked()
 }
 
 
-
-/*void AdminViewStatusReturn::on_membershipButton_clicked()
-{
-                                                              // Hide the current AdminViewStatusReturn window
-    hide();
-
-                                                                // Create and show the AdminMembership window
-    Adminmembership *adminMembership = new AdminMembership;
-    adminMembership->show();
-}*/
-
-
-
-
 void AdminViewStatusReturn::on_logout_clicked()                  // logout button clicked
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Logout", "Are you sure you want to logout?", QMessageBox::Yes | QMessageBox::No);
@@ -81,3 +67,11 @@ void AdminViewStatusReturn::on_back_clicked()
    AdminHome *adminHomeInstance = new AdminHome;                 // Opens AdminHome
     adminHomeInstance->show();                                    // Show the AdminHome window
 }
+
+void AdminViewStatusReturn::on_membershipButton_clicked()
+{
+    hide();
+    AdminMembership *adminMembership = new AdminMembership;
+    adminMembership->show();
+}
+
